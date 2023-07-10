@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<!-- Корнаухов М.Д.© Архитектура сервиса Антиплагиат (MIT License) -->
+
+	<title>Биржа копирайтинга FLL.ru</title>
+
+	<meta name='yandex-verification' content='4a66c83bb9ac7574' />
+	<meta name="google-site-verification" content="6zyzJOToEvgOjRUtxtVPL84-kftssZvIM0d7fFufKSg" />
+	<META NAME="webmoney.attestation.label" CONTENT="webmoney attestation label#09D88686-D16B-4F4B-839D-4B09BF3E3B8D"> 
+	<META NAME="webmoney.attestation.label" CONTENT="webmoney attestation label#2C280B53-BAF2-4E7C-8DE5-D36A84FE3462"> 
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+
+	<link rel="stylesheet" href="/files/design19/css/reset.css">
+	<link rel="stylesheet" href="/files/design19/css/style.css?202009">
+
+	<script src="/files/design19/js/jquery-3.2.1.min.js"></script>
+	<script src="/files/design19/js/app.js?202010"></script>
+
+	<meta name="webmoney" content="09D88686-D16B-4F4B-839D-4B09BF3E3B8D"/>
+</head>
+
+<body>
+
+	<header>
+		<div class="wrapper">
+			<div class="row">
+				<div class="col contacts">
+					<!--a href="tel:8800">8 800 2000 305</a><br>
+					<span>Горячая линия FLL<br>
+					Звонок бесплатный по россии</span-->
+
+									</div>
+				<div class="col">
+					<a href="/" class="logo"></a>
+				</div>
+				<div class="col user">
+					
+
+			<a href="#login" class="login">Вход</a>
+			<a href="/user/registration" class="register">Регистрация</a>
+
+			<div id="authForm" class="overscreen">
+				<form action="/user/authorization?action=authorization_verify" method="POST">
+					<div class="fields">
+						<label for="login">Логин</label>
+						<input name="user_login" id="login" type="text" />
+					</div>
+					<div class="fields">
+						<label for="password">Пароль</label>
+						<input name="user_password" id="password" type="password" />
+					</div>
+					<input type="submit" class="submit" value="Войти" />
+				</form>
+
+				<div class="links">
+					<a href="/user/registration">Регистрация</a>
+					<a href="/user/remind_password">Забыли пароль?</a>
+				</div>
+
+			</div>
+
+			<script type="text/javascript">
+			$(function(){
+				$("a[href='#login']").click(function(){
+					if ($("#overlay").length) { $("#overlay").show(); }
+					else { $("<div />").attr("id", "overlay").appendTo("body"); }
+					$("#authForm").show();
+					return false;
+				});
+
+				$("body").delegate("#overlay", "click", function(){
+					$("#overlay").hide();
+					$(".overscreen").hide();
+				});
+			});
+			</script>
+    	
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="banner">
+		<div class="data">
+			<div class="txt1">Качественные тексты</div>
+			<div class="txt2">БИРЖА КОПИРАЙТИНГА</div>
+			<div class="txt3">
+				Заказать яркую аналитическую статью, грамотно оптимизированный SEO-текст, эффективный пресс-релиз, оригинальную текстовую рекламу
+				или стимулирующее коммерческое предложение.
+			</div>
+			<div class="txt4">
+				<a href="/fast_order" class="btn">Заказать текст</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="screen wrapper">
+		<h2>Проверка текста на уникальность</h2>
+		<p align="center">Бесплатное определение уникальности текстов</p>
+
+		<div class="text-check">
+			<textarea placeholder="Вставьте текст"></textarea>
+			<div class="info">
+				<span>Всего символов:  <span id="textCheckTotal">0</span></span>
+				<span>Без пробелов:  <span id="textCheckSymbol">0</span></span>
+				<span>Количество слов:  <span id="textCheckWord">0</span></span>
+			</div>
+			<div class="buttons">
+				<button class="btn btn-white" onclick="document.location.href = '/fast_order';">Заказать текст</button>
+				<button class="btn jSubmit">Проверить на уникальность</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="screen wrapper">
+		<h2>Биржа копирайтинга FLL - тексты на заказ</h2>
+		<p align="center">Заказывайте тексты за минимум действий</p>
+
+		<div class="row block-tryorders">
+			<div class="col block-calc">
+				<h3>Расчет стоимости текста</h3>
+				<p>Заполните необходимые поля и получите полный рассчет</p>
+				<div class="step step1">
+					<div class="fields">
+						<div class="edit jDefault" contenteditable="true" id="calcText">Введите текст задания...</div>
+						<div class="files" id="filesData">
+							<div class="files-add"><b><input type="file"><span>Добавить файлы</span></b><span> Не более 3-х файлов до 5 МБ.</span></div>
+						</div>
+					</div>
+					<div class="buttons">
+						<button class="btn" id="calcButton">Продолжить</button>
+					</div>
+
+					<script>
+						
+						jQuery(function($){
+
+							var filesNewField = function() {
+								if ($('#filesData .files-add').length == 0) {
+									$('#filesData').append('<div class="files-add"><b><input type="file"><span>Добавить файлы</span></b><span> Не более 3-х файлов до 5 МБ.</span></div>');
+								}
+							}
+
+							$('#calcText').focus(function(){
+								if ($(this).hasClass('jDefault')) {
+									$(this).html('').removeClass('jDefault');
+								}
+							});
+
+							$('#filesData')
+								.delegate('.files-el i', 'click', function() {
+									var el = $(this).closest('#filesData');
+
+									$(this).closest('.files-el').remove();
+									filesNewField();
+								})
+
+								.delegate('.files-add input', 'change', function() {
+									var el = $(this).closest('.files-add')
+									var container = $(this).closest('.files');
+
+									if ($(this)[0].files[0].name) {
+										el.addClass('files-el').removeClass('files-add');
+										$('b', el).append($(this)[0].files[0].name);
+										$('span', el).remove();
+										el.append('<i></i>');
+
+										if ($('.files-el', container).length < 3) {
+											filesNewField();
+										}
+									}
+								});
+
+							$('#calcButton').click(function() {
+								$(this).closest('.buttons').find('.errormessage').remove();
+
+								var form_data = new FormData();
+
+								var k = 0;
+								$('#filesData .files-el input[type=file]').each(function(){
+									form_data.append('file' + (++k), $(this).prop('files')[0]);
+								});
+
+								if (!$('#calcText').hasClass('jDefault')) {
+									form_data.append('text', $('#calcText').text());
+								}
+
+								$.ajax({
+									url: '/?mode=front-gateway&module=copyright_market&format=json&controller=api&action=calcText',
+									dataType: 'json',
+									cache: false,
+									contentType: false,
+									processData: false,
+									data: form_data,
+									type: 'post',
+									success: function(result) {
+										if (result.success) {
+											$('#calcButton').replaceWith(result.content);
+										}
+										else {
+											$('#calcButton').before('<div class="errormessage">' + result.errors[0] + '</div>');
+										}
+									}
+								});
+
+							});
+						});
+						
+					</script>
+				</div>
+
+				<div class="step step2">
+					Подтвердите заказ
+				</div>
+
+				<div class="step step3">
+					Мы напишем текст
+				</div>
+			</div>
+			<div class="col block-about">
+				<h3>Тексты на заказ</h3>
+
+				<p>Биржа копирайтинга - заказать яркую аналитическую статью, грамотно оптимизированный SEO-текст, эффективный пресс-релиз, оригинальную текстовую рекламу или  коммерческое предложение.</p>
+
+				<ul>
+					<li>Тексты для лендингов</li>
+					<li>Цены от 50 руб. за 1000 зн.</li>
+
+					<li>Копирайтинг и рерайтинг</li>
+					<li>Комиссия - 0%</li>
+
+					<li>Инфостатьи и новости</li>
+					<li>Скидки и подарки</li>
+
+					<li>SEO-тексты для сайтов</li>
+					<li>Просто и удобно </li>
+
+					<li>Рекламные тексты</li>
+					<li>Качественные тексты </li>
+
+					<li>Комментарии и отзывы</li>
+					<li>Корректор бесплатно </li>
+
+					<li>Расшифровка аудио и видео</li>
+					<li>Богатый функционал </li>
+				</ul>
+
+				<p>
+					<a href="/fast_order" class="btn">Создать заказ</a>
+				</p>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="screen wrapper">
+		<h2>Нам доверяют</h2>
+		
+		<div class="block-clients">
+			<div class="clients-data">
+				<div class="clients-inner clearfix">
+					<div><a ><img src="/files/clients/rosco.png" width="170px"></a></div>
+					
+					<div><a ><img src="/files/clients/01.png"></a></div>
+					<div><a ><img src="/files/clients/02.png"></a></div>
+					<div><a ><img src="/files/clients/03.png"></a></div>
+					<div><a ><img src="/files/clients/04.png"></a></div>
+					<div><a ><img src="/files/clients/05.png"></a></div>
+					<div><a ><img src="/files/clients/06.png"></a></div>
+					<div><a ><img src="/files/clients/07.png"></a></div>
+					<div><a ><img src="/files/clients/08.png"></a></div>
+					<div><a ><img src="/files/clients/09.png"></a></div>
+					<div><a ><img src="/files/clients/10.png"></a></div>
+					<div><a ><img src="/files/clients/11.png"></a></div>
+					<div><a ><img src="/files/clients/12.png"></a></div>
+					<div><a ><img src="/files/clients/13.png"></a></div>
+					<div><a ><img src="/files/clients/14.png"></a></div>
+					<div><a ><img src="/files/clients/15.png"></a></div>
+					<div><a ><img src="/files/clients/16.png"></a></div>
+					<div><a ><img src="/files/clients/17.png"></a></div>
+					<div><a ><img src="/files/clients/18.png"></a></div>
+					<div><a ><img src="/files/clients/19.png"></a></div>
+					<div><a ><img src="/files/clients/20.png"></a></div>
+				</div>
+			</div>
+		</div> 
+	</div>
+
+	<div class="screen wrapper">
+		<div class="row">
+			<div class="col block-reviews">
+				<h2>Отзывы</h2>
+				
+				<div class="reviews">
+					<div class="reviews-data">
+						
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1449824308.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Куликова Ольга</div>
+								<div class="desc"> менеджер Demis Group</div>
+							</div>
+						</div>
+						<div class="text">Я довольна сотрудничеством – учитываются самые различные пожелания к текстам, отдельно отмечу пунктуальность в соблюдении сроков, а также оперативное взаимодействие со стороны менеджера проекта, вплоть до решения вопросов в выходные или поздно вечером. Спасибо!</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1397566610.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Елена Межова и Игорь Ильин</div>
+								<div class="desc"> wikimart.ru</div>
+							</div>
+						</div>
+						<div class="text">С Вами работать, конечно, комфортнее. Очень удобны мультиаккаунты для групповой работы над проектами, отличный сервис для обработки крупных массивов данных.</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1398071778.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Егоров Виталий</div>
+								<div class="desc"> директор it-palitra.ru</div>
+							</div>
+						</div>
+						<div class="text">Весьма довольны качеством услуг. Как правило, нам нужны материалы на узкоспециальную тематику и в достаточно сжатые сроки, что само по себе непросто. Но на Fll.ru с этим успешно справляются, за что, конечно же, огромное спасибо!</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1394205843.png" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Станислав</div>
+								<div class="desc"> inpromotion.ru</div>
+							</div>
+						</div>
+						<div class="text">Весьма доволен плодотворным сотрудничеством с командой &quot;Fll&quot;! Радуют приемлемые цены на качественные тексты, довольно многочисленная команда высокопрофессиональных копирайтеров, а также внимательное отношение администрации к каждому заказчику.</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1394031218.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Андрей Волосович</div>
+								<div class="desc"></div>
+							</div>
+						</div>
+						<div class="text">Биржа очень нравится тем, что можно создать ленту по наполнению сайта, можно её оптимизировать именно под свои требования. Этот тот большой плюс которого нет ни у какой другой биржи, по крайней мере когда я искал подобный функционал.</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1397192849.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Комарцова Мария</div>
+								<div class="desc"> Редактор ИА &quot;Бел.Ру&quot;</div>
+							</div>
+						</div>
+						<div class="text">Информационное агентство &quot;Бел.Ру&quot; на протяжение двух месяцев сотрудничало с копирайтинговой компанией. Мы довольны результатами сотрудничества, получали материалы высокого качества и точно в срок.</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1397625811.png" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Ахметов И.Р.</div>
+								<div class="desc"> akhmadi-invest.com</div>
+							</div>
+						</div>
+						<div class="text">Агентство копирайтинга осуществляет подбор новостей по тематике нашего сайта и публикует их, что позволяет нам поддерживать обновление нашего сайта и привлекать больше посетителей.</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1397641445.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Бузенкова Мария</div>
+								<div class="desc"> Domnatamani.ru</div>
+							</div>
+						</div>
+						<div class="text">Высокий профессиональный уровень авторов, интуитивно понятный удобный интерфейс сайта, использование современных технологий, оперативная обратная связь администрации с заказчиками. Будем рады дальнейшему плодотворному сотрудничеству на постоянной основе.</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1397901512.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Подтыкан Я. А.</div>
+								<div class="desc"> yavshoke.net, gm-lab.ru</div>
+							</div>
+						</div>
+						<div class="text">Долго искали надежных партнеров, которые смогли бы обеспечить качественный контент в нужном объеме и в оговоренные сроки. Сотрудничество с этим агентством позволило полностью делегировать многие задачи, отнимающие массу времени и сил.</div>
+					</div>
+					<div class="review">
+						<div class="row user">
+							<div class="col image">
+								<img src="/files/14/userphoto/48x48_photo_1398350159.jpg" border="0">
+							</div>
+							<div class="col info">
+								<div class="name">Дроздов Вадим</div>
+								<div class="desc"> директор importkama.ru</div>
+							</div>
+						</div>
+						<div class="text">Требовались достаточно сложные материалы технической направленности,  с чем агентство копирайтинга замечательно справилось. Команда работает быстро и слаженно, учитывая все наши пожелания и комментарии.</div>
+					</div>
+					</div>
+				</div>
+			</div>
+						<div class="col block-blog">
+				<h2>Объявления</h2>
+				
+				
+<div class="blogs">
+
+
+	<div class="item">
+		<div class="date">
+			23 мая 2022
+		</div>
+		<div class="name">
+			<a href="/blog?action=show&blog_id=197">Отформатирую Ваш текст! </a>
+		</div>
+		<div class="desc">
+			Быстро и...
+		</div>
+	</div>
+
+
+	<div class="item">
+		<div class="date">
+			14 мая 2022
+		</div>
+		<div class="name">
+			<a href="/blog?action=show&blog_id=196">farah</a>
+		</div>
+		<div class="desc">
+			готова писать что угодно могу на 100% дать гарантию что не...
+		</div>
+	</div>
+
+
+	<div class="item">
+		<div class="date">
+			27 апреля 2022
+		</div>
+		<div class="name">
+			<a href="/blog?action=show&blog_id=195">Набор текстов</a>
+		</div>
+		<div class="desc">
+			Добрый день!!! Быстро и качественно наберу текст с различных источников скан, фото...
+		</div>
+	</div>
+
+
+</div>
+
+				<div class="blogs-more">
+					<a href="/blog">Все объявления</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="screen wrapper">
+		<h2>Биржа копирайтинга и рерайтинга</h2>
+		
+		<div class="row works"><div class="col item" data-id="129498"><div class="name">Открыта вакансия для людей которые любят работать текстом копирайтеров рерайтеров</div><div class="desc">Основные задачи:<br />
+-работа в программе Ворд<br />
+-перенос текстов с фото в Ворд<br />
+-иногда работа в Excel<br />
+Требования:<br />
+-доступ к ПК или телефону<br />
+-доступ к...</div><div class="info"><span>1000 знаков</span><span>Срок 24 часа</span><span>08.01.2023</span></div></div><div class="col item" data-id="129471"><div class="name">Работа с текстом</div><div class="desc">Идёт набор сотрудников в нашу команду!<br />
+Ищем редакторов, копирайтеров и просто людей, которые любят работать с текстом<br />
+Основной задачей будет печать...</div><div class="info"><span>1000 знаков</span><span>Срок 24 часа</span><span>07.11.2022</span></div></div><div class="col item" data-id="129117"><div class="name">Антиоксиданты для волос в лечении алопеции</div><div class="desc">Описание<br />
+Написать текст по прилагающемуся ТЗ. Тематика - волосы.<br />
+Внимательно читайте файл задания!!!<br />
+Поскольку нам нужны качественные...</div><div class="info"><span>12000 знаков</span><span>Срок 3,0 суток</span><span>18.07.2022</span></div></div><div class="col item" data-id="129116"><div class="name">Как правильно ухаживать за волосами</div><div class="desc">Написать текст по прилагающемуся ТЗ. Тематика - волосы.<br />
+Внимательно читайте файл задания!!!<br />
+Поскольку нам нужны качественные информативные тексты,...</div><div class="info"><span>12000 знаков</span><span>Срок 3,0 суток</span><span>18.07.2022</span></div></div><div class="col item" data-id="129115"><div class="name">Как восстановить волосы после ковида</div><div class="desc">Написать текст по прилагающемуся ТЗ. Тематика - волосы.<br />
+Внимательно читайте файл задания!!!<br />
+Поскольку нам нужны качественные информативные тексты,...</div><div class="info"><span>12000 знаков</span><span>Срок 3,0 суток</span><span>18.07.2022</span></div></div><div class="col item" data-id="129114"><div class="name">Карликовая пальма для волос в лечении алопеции</div><div class="desc">Написать текст по прилагающемуся ТЗ. Тематика - волосы.<br />
+Внимательно читайте файл задания!!!<br />
+Поскольку нам нужны качественные информативные тексты,...</div><div class="info"><span>12000 знаков</span><span>Срок 3,0 суток</span><span>18.07.2022</span></div></div></div>
+	</div>
+
+	
+	<footer>
+		<div class="wrapper">
+
+			<div class="contacts">
+				<div class="name">
+					Служба поддержки
+				</div>
+								<div class="email">
+					E-mail:
+					<a href="mailto:support@fll.ru">support@fll.ru</a>
+				</div>
+			</div>
+
+			<div class="navi">
+				<ul>
+					<li><a href="/faq">Помощь</a></li>
+					<li><a href="/txtapi">API</a></li>
+					<li><a href="/partner">Партнерская программа</a></li>
+
+									</ul>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(24011077, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/24011077" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+    
+
+
+
+
+
+</body>
+</html>

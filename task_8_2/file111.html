@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+<meta name="yandex-verification" content="4178a781addcaa08" />
+<meta name="keywords" content="1С фриланс, 1С Freelance, 1с программист, 1с настройка, обслуживание 1с, программирование 1с"/>
+<meta name="description" content="Сервис удаленной работы для 1С программистов (1С фриланс, 1C freelance). обслуживание 1С, 1С настройка, программирование 1С :: 1Clancer.ru"/>
+
+    <title>Сервис удаленной работы для 1С программистов (1С фриланс, 1C freelance). обслуживание 1С, 1С настройка, программирование 1С :: 1Clancer.ru</title>
+    <link id="faviconid" rel="icon" href="/favicon.ico" type="image/x-icon"/><link rel="stylesheet" href="/css/main.css?t=22" type="text/css" />
+<link rel="stylesheet" href="/css/global.css?t=24" type="text/css" />
+<link rel="canonical" href="https://1clancer.ru/"><!--[if lt IE 8]>
+<script type="text/javascript" src="/js/noie.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/jquery.1.8.js"></script> <script type="text/javascript" src="/js/vote.js"></script>
+<script type="text/javascript" src="/js/common.js?t=7"></script>
+<script type="text/javascript" src="/js/plugins.js?t=2"></script>
+    <script src="https://node.1clancer.ru/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/js/eventmanager.js?t=14"></script>
+
+<script type="text/javascript" src="/js/pages.all.js?t=48"></script>
+<script type="text/javascript" src="/js/pages.main.js?t=3"></script>
+
+	
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-22558882-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script>
+	$(window).bind("message", function(event) {
+		try {
+			var data = JSON.parse(event.originalEvent.data);
+		} catch (e){return;}
+		if (typeof(data) != "undefined" && data.token) {
+			$('#redirectForm').remove();
+			$('<form id="redirectForm" action="/social-auth" method="post"><input name="token" type="hidden" value="'+data.token+'"></form>').appendTo('body').submit();
+		}
+	});
+</script>
+</head>
+<body>
+<noindex><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) +  ";" +Math.random();</script></noindex>
+<div class="infopanel hide" title="Панель личной информации" id="infopanel">
+<div id="signals" class="hide">
+<span class="redbg white brad5 pdlr5">новое событие</span>
+<div id="sound-tumbler" rel="on"><span class="nosound" rel="on" title="выключить звук"></span><span class="sound_on hidden" title="включить звук" rel="off"></span></div>
+</div>
+</div><div class="topline w100"></div>
+<div class="wrap bgcol brad5-top capgrad">
+<div class="cap mb40">
+<div class="menu">
+	<a href="/" class="menu tasks">Задания</a>
+	<a href="/vacancies/" class="menu vacancy">Вакансии</a>
+	<a href="/members/" class="menu users">Участники</a>
+	<a href="/article/" class="menu articles">Материалы</a>
+	<a href="/catalog/" class="menu catalog">Разработки</a>
+	<a href="/forum/" class="menu forum">Форум</a>
+</div>
+
+	<ul class="lsn newitems">
+	<li class="newitem" title="" value="" rel="1" class="blankitems">&nbsp;</span></li>
+	<li class="newitem" title="" value="" rel="2" class="blankitems">&nbsp;</span></li>
+	<li class="newitem">&nbsp;</li>
+	<li class="newitem" title="" value="" rel="3" class="blankitems">&nbsp;</span></li>
+	<li class="newitem" title="" value="" rel="4" class="blankitems">&nbsp;</span></li>
+	<li class="newitem wd85" title="" value="" rel="5" class="blankitems">&nbsp;</span></li>
+	</ul>
+<div class="topadv2 hide"></div>
+</div><div id="expandwrap" class="centerwrap rlt  hide" rel="1">
+<div class="rpl-header">
+<div class="close-sets pointer" title="Закрыть" onclick="javascript:hideInfotok();"></div>
+<span id="infhead" title="Живая лента событий на сайте">Информационный поток</span>
+</div>
+<div class="chtype mtb10 cntr">
+
+<span class="active-cb nice-cb" rel="1">Задания</span>
+<span class="nice-cb" rel="2">вакансии</span>
+<span class="nice-cb" rel="3">материалы</span>
+<span class="nice-cb" rel="4">разработки</span>
+<span class="nice-cb" rel="5">сообщения форума</span>
+
+</div>
+<ul class="infotok lightbl brad5" id="expandedItem">
+</ul>
+<div class="rpl-footer"><span id="infmore" onclick="javascript:moreInfo();">еще &darr;</span></div>
+</div>
+
+<div id="cntwrap" class="mh1000 ovh">
+<div onclick="javascript:toggleZev(this);" class="z100 flr helpbtnwrap mr40" rel="0">
+	<span class="togglebtn" style="display: none;">+ <span class="always_hw">Экспресс-помощь</span></span>
+    <span class="togglebtn" >— <span
+				class="always_hw">Свернуть</span></span>
+</div>
+<div class="clear" id="carusel">
+			<div class="ovh clear" id="how-stage">
+			<div id="imgstart" class="leftwrap fll h280 mr20"></div>
+			<div class="qhelpdescr fs1 h280 mb30">
+				<ul class="tophelp">
+					<li class="tophelp acttophelp"><span class="pseudo" onclick="javascript:changeTopHelpType(this,0);">Информация для заказчика</span>
+					</li>
+					<li class="tophelp ml10"><span class="pseudo" onclick="javascript:changeTopHelpType(this,1);">Информация для специалиста 1С</span>
+					</li>
+				</ul>
+				Главное &mdash; это ваше желание получить помощь по 1С. За право ее оказать борются программисты и
+				специалисты 1С из всех стран СНГ, которые делают вам самые выгодные предложения. В итоге вы
+				гарантированно решаете свои задачи по самой приемлемой для Вас цене без посредников, переплат и
+				комиссий.
+			</div>
+		</div>
+	</div>
+<div class="leftwrap fll mh1000 mb40">	<!--<div class="leftdescr">Новости 1С и не только</div><ul class="left pdb15">
+</ul> -->
+		<div class="leftdescr">Яндекс-директ</div>
+	<div class="left discussbg">
+		            <!-- Yandex.RTB R-A-77513-1 -->
+        <div id="yandex_rtb_R-A-77513-1"></div>
+        <script type="text/javascript">
+            (function(w, d, n, s, t) {
+                w[n] = w[n] || [];
+                w[n].push(function() {
+                    Ya.Context.AdvManager.render({
+                        blockId: "R-A-77513-1",
+                        renderTo: "yandex_rtb_R-A-77513-1",
+                        async: true
+                    });
+                });
+                t = d.getElementsByTagName("script")[0];
+                s = d.createElement("script");
+                s.type = "text/javascript";
+                s.src = "//an.yandex.ru/system/context.js";
+                s.async = true;
+                t.parentNode.insertBefore(s, t);
+            })(this, this.document, "yandexContextAsyncCallbacks");
+        </script>
+    	</div>
+	<!---->
+		<div class="leftdescr mt30">ТОП 11 исполнителей *</div>
+	<ol class="left"><span class="leftdescr fs-1">*Кроме тех, кто не был на сайте более  30 дней</span><span
+				class="fll cl-descr">исполнитель</span> <span class="flr cl-descr pdr25">рейтинг</span>
+					<li class="clear rline"><a class="a-left" href="/user.info/userId=1077"
+									   title="Петров Дмитрий">Петров Дмитрий</a><span
+					class="flr cl-descr">131190</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="40px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=3140"
+									   title="Кириллов Роман">Кириллов Роман</a><span
+					class="flr cl-descr">82933</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="25px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=8334"
+									   title="Артур Салаватович">Артур Салаватович</a><span
+					class="flr cl-descr">57218</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="17px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=7950"
+									   title="Nazarov Dmitry">Nazarov Dmitry</a><span
+					class="flr cl-descr">47635</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="15px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=1551"
+									   title="Завладаев Алексей Игоревич">Завладаев Алексей Иг...</a><span
+					class="flr cl-descr">40170</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="12px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=4365"
+									   title="Вадим OCS Павлов">Вадим OCS Павлов</a><span
+					class="flr cl-descr">38765</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="12px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=7870"
+									   title="Kratinov Anton">Kratinov Anton</a><span
+					class="flr cl-descr">37315</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="11px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=38352"
+									   title="Capricornus">Capricornus</a><span
+					class="flr cl-descr">35410</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="11px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=57405"
+									   title="Марк Данилов">Марк Данилов</a><span
+					class="flr cl-descr">35340</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="11px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=4050"
+									   title="Алексей">Алексей</a><span
+					class="flr cl-descr">33894</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="10px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=281"
+									   title="Эдуард">Эдуард</a><span
+					class="flr cl-descr">33530</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="10px"></div>
+			</li>		<a class="cntr block fs-1 underline" href="/members/">все специалисты 1с</a>
+	</ol>
+		<div class="leftdescr mt30">ТОП 11 заказчиков *</div>
+	<ol class="left"><span class="leftdescr fs-1 block">*Кроме тех, кто не был на сайте более  90 дней</span><span
+				class="fll cl-descr">заказчик</span> <span class="flr cl-descr pdr25">рейтинг</span>
+					<li class="clear rline"><a class="a-left" href="/user.info/userId=8143"
+									   title="Wesley">Wesley</a><span
+					class="flr cl-descr">846710</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="40px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=1038"
+									   title="erotoman">erotoman</a><span
+					class="flr cl-descr">598676</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="28px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=2724"
+									   title="Matros">Matros</a><span
+					class="flr cl-descr">345050</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="16px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=16144"
+									   title="Людмила">Людмила</a><span
+					class="flr cl-descr">289600</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="14px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=20845"
+									   title="kits">kits</a><span
+					class="flr cl-descr">195800</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="9px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=11015"
+									   title="Игорь">Игорь</a><span
+					class="flr cl-descr">190700</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="9px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=21033"
+									   title="Татьяна Л.">Татьяна Л.</a><span
+					class="flr cl-descr">159000</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="8px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=1122"
+									   title="severiana">severiana</a><span
+					class="flr cl-descr">152980</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="7px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=58520"
+									   title="Бехруз Ниязов">Бехруз Ниязов</a><span
+					class="flr cl-descr">128200</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="6px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=4188"
+									   title="Ефимов Александр ФРАНЧ 1С">Ефимов Александр ФРА...</a><span
+					class="flr cl-descr">118549</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="6px"></div>
+			</li>			<li class="clear rline"><a class="a-left" href="/user.info/userId=6076"
+									   title="Александр">Александр</a><span
+					class="flr cl-descr">115100</span>
+
+			<div class="norate"><img src="/i/rate-bg.png" width="5px"></div>
+			</li>
+	</ol>
+
+
+</div><div class="rightwrap"> 	<div class="mt5 mb30 rlt "><span class="bigcolor fs4 bold">Список заданий</span>
+
+		
+	</div>
+	<div class="mainbtn fs3 mb20" id="add_request">Добавить <br/>заявку</div>
+	
+
+	<label id="addform_place"></label>
+
+	
+
+	<ul  class="listblock mr10 r_col brad5 rlt">
+    
+        <li rel="68719" class="tblock answertask">
+                                    
+            <div class="budget r-135">                <p class="block usesrself"></p>                                            </div>
+            <div class="date">Сегодня 21:13:03</div>
+            <a class="customer ago1"
+               href="/user.info/userId=12505">SIBERTUK</a>                <div class="was">был                :1 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68719">Снять пароль с расширения</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68719"
+                           title="Снять пароль с расширения"> 0</a></li>
+                    <li class="looks">42</li>
+                                                        </ul>
+                <p rel="68719"
+                 class="li-state tender"></p>
+                            <div title="Партнерское задание" class="r_top"><img src="/i/forum1c.ico"
+                                                                    class="fll op06 mr5"><span class="linkrep"
+                                                                                               title="http://lancer.forum-1c.ru">Форум 1С</span>
+                </div>                    </li>
+
+    
+        <li rel="68717" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="single-about">26250р</div>                                             </div>
+            <div class="date">Вчера 22:24:35</div>
+            <a class="customer ago1"
+               href="/user.info/userId=75152">Roman_</a>                <div class="was">был                :1 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68717">Доработка по учету поступлений денежных средств</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68717"
+                           title="Доработка по учету поступлений денежных средств"> 4</a></li>
+                    <li class="looks">168</li>
+                                                        </ul>
+                <p rel="68717"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68716" class="tblock answertask">
+                                    
+            <div class="budget r-135">                <p class="block usesrself"></p>                                            </div>
+            <div class="date">Вчера 18:16:09</div>
+            <a class="customer ago1"
+               href="/user.info/userId=75554">Vagang6</a>                <div class="was">был                :2 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68716">Сделать сайт заново или доделать тот, который есть</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68716"
+                           title="Сделать сайт заново или доделать тот, который есть"> 2</a></li>
+                    <li class="looks">122</li>
+                                                        </ul>
+                <p rel="68716"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68714" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">4000р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1600р/час</div>                                            </div>
+            <div class="date">Вчера 09:48:00</div>
+            <a class="customer ago4"
+               href="/user.info/userId=16508">Булдаков Илья Александрович</a>                <div class="was">был                :1 дн. 6 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68714">Сломалась база, не выгружает dt.</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68714"
+                           title="Сломалась база, не выгружает dt."> 5</a></li>
+                    <li class="looks">189</li>
+                                                        </ul>
+                <p rel="68714"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68712" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="single-about">4380р</div>                                             </div>
+            <div class="date">07.07.2023 19:32:52</div>
+            <a class="customer ago4"
+               href="/user.info/userId=46192">bravo.nsk</a>                <div class="was">был                :1 дн. 12 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68712">УТ 11.5 Нужна внешняя обработка для автоматизации заполнения формы элемента справочника.</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68712"
+                           title="УТ 11.5 Нужна внешняя обработка для автоматизации заполнения формы элемента справочника."> 12</a></li>
+                    <li class="looks">156</li>
+                                                        </ul>
+                <p rel="68712"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68707" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="budg-cust bord1">1000 р</div>                        <div class="all-about">2150р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1700р/час</div>                                            </div>
+            <div class="date">07.07.2023 17:48:16</div>
+            <a class="customer ago5"
+               href="/user.info/userId=28656">armen-av</a>                <div class="was">был                :2 дн. 4 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68707">Разобраться в ошибке при проведении поступлении и реализации товаров и услуг в ут11</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68707"
+                           title="Разобраться в ошибке при проведении поступлении и реализации товаров и услуг в ут11"> 6</a></li>
+                    <li class="looks">136</li>
+                                                        </ul>
+                <p rel="68707"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68708" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="single-about">4800р</div>                                             </div>
+            <div class="date">07.07.2023 17:46:00</div>
+            <a class="customer ago3"
+               href="/user.info/userId=1122">severiana</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68708">Сделать печатные формы внешними (УПД, ТТН, ТОРГ-12, Счет-фактура, акт сверки, Заказа клиента)</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68708"
+                           title="Сделать печатные формы внешними (УПД, ТТН, ТОРГ-12, Счет-фактура, акт сверки, Заказа клиента)"> 10</a></li>
+                    <li class="looks">412</li>
+                                                        </ul>
+                <p rel="68708"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68704" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">3530р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">3300р/час</div>                                            </div>
+            <div class="date">07.07.2023 14:01:49</div>
+            <a class="customer ago2"
+               href="/user.info/userId=73130">market</a>                <div class="was">был                :7 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68704">добавить команду</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68704"
+                           title="добавить команду"> 13</a></li>
+                    <li class="looks">215</li>
+                                                        </ul>
+                <p rel="68704"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68701" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                    <div class="budg-close">Закрытый тендер</div>                            </div>
+            <div class="date">07.07.2023 11:32:04</div>
+            <a class="customer ago4"
+               href="/user.info/userId=75539">Григорьев Никита Сергеевич</a>                <div class="was">был                :1 дн. 18 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68701">Доработка раздела производства в 1С: ЕРП 2.4</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68701"
+                           title="Доработка раздела производства в 1С: ЕРП 2.4"> 4</a></li>
+                    <li class="looks">121</li>
+                                                        </ul>
+                <p rel="68701"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68702" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2430р/час</div>                                             </div>
+            <div class="date">07.07.2023 11:31:47</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68702">Доработать внешний отчет.</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68702"
+                           title="Доработать внешний отчет."> 3</a></li>
+                    <li class="looks">7241</li>
+                                                        </ul>
+                <p rel="68702"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68692" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">5000р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2430р/час</div>                                            </div>
+            <div class="date">06.07.2023 17:26:01</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68692">Наладить выгрузку из УТ10,3 в 3.0</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68692"
+                           title="Наладить выгрузку из УТ10,3 в 3.0"> 5</a></li>
+                    <li class="looks">142</li>
+                                                        </ul>
+                <p rel="68692"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68691" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2000р/час</div>                                             </div>
+            <div class="date">06.07.2023 17:23:22</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68691">УНФ 1.6 - сбой при синхронизации с мобильной кассой</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68691"
+                           title="УНФ 1.6 - сбой при синхронизации с мобильной кассой"> 2</a></li>
+                    <li class="looks">90</li>
+                                                        </ul>
+                <p rel="68691"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68690" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">6250р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2650р/час</div>                                            </div>
+            <div class="date">06.07.2023 16:15:59</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68690">Доработать внешний отчет.</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68690"
+                           title="Доработать внешний отчет."> 4</a></li>
+                    <li class="looks">194</li>
+                                                        </ul>
+                <p rel="68690"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68689" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">2340р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2150р/час</div>                                            </div>
+            <div class="date">06.07.2023 16:15:51</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68689">БП - доработать расширение по заполнению данных на основании другого документа.</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68689"
+                           title="БП - доработать расширение по заполнению данных на основании другого документа."> 7</a></li>
+                    <li class="looks">149</li>
+                                                        </ul>
+                <p rel="68689"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68688" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">52400р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">3500р/час</div>                                            </div>
+            <div class="date">06.07.2023 16:06:55</div>
+            <a class="customer ago5"
+               href="/user.info/userId=75530">FISA</a>                <div class="was">был                :3 дн. 3 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68688">Внедрение 1С:ERP</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68688"
+                           title="Внедрение 1С:ERP"> 4</a></li>
+                    <li class="looks">173</li>
+                                                        </ul>
+                <p rel="68688"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68687" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">2100р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2150р/час</div>                                            </div>
+            <div class="date">06.07.2023 15:06:14</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68687">АльфаАвто - сделать внешнюю обработку по замене данных в документах</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68687"
+                           title="АльфаАвто - сделать внешнюю обработку по замене данных в документах"> 11</a></li>
+                    <li class="looks">159</li>
+                                                        </ul>
+                <p rel="68687"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68686" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">1800р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1730р/час</div>                                            </div>
+            <div class="date">06.07.2023 14:19:28</div>
+            <a class="customer ago5"
+               href="/user.info/userId=8867">lopast</a>                <div class="was">был                :3 дн. 7 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68686">Адаптировать расширение</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68686"
+                           title="Адаптировать расширение"> 11</a></li>
+                    <li class="looks">181</li>
+                                                        </ul>
+                <p rel="68686"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68684" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2430р/час</div>                                             </div>
+            <div class="date">06.07.2023 12:50:33</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68684">Бэкофис 3.0 с настройками с тестовой базы перенести на рабочую</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68684"
+                           title="Бэкофис 3.0 с настройками с тестовой базы перенести на рабочую"> 3</a></li>
+                    <li class="looks">137</li>
+                                                        </ul>
+                <p rel="68684"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68682" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">4610р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1650р/час</div>                                            </div>
+            <div class="date">06.07.2023 12:20:27</div>
+            <a class="customer ago5"
+               href="/user.info/userId=75528">kudri-ls91</a>                <div class="was">был                :3 дн. 7 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68682">Обновить расширение</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68682"
+                           title="Обновить расширение"> 17</a></li>
+                    <li class="looks">214</li>
+                                                        </ul>
+                <p rel="68682"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68681" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                    <div class="budg-close">Закрытый тендер</div>                        <div class="budg-sub-close">23`000 р</div>                            </div>
+            <div class="date">06.07.2023 11:02:56</div>
+            <a class="customer ago5"
+               href="/user.info/userId=37240">Olga_KS</a>                <div class="was">был                :2 дн. 12 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68681">Правки по ПЭО</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68681"
+                           title="Правки по ПЭО"> 1</a></li>
+                    <li class="looks">181</li>
+                                                        </ul>
+                <p rel="68681"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68679" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">2530р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2000р/час</div>                                            </div>
+            <div class="date">06.07.2023 06:47:24</div>
+            <a class="customer ago5"
+               href="/user.info/userId=59566">FourIT</a>                <div class="was">был                :4 дн. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68679">Перенести 1С на другой компьютер</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68679"
+                           title="Перенести 1С на другой компьютер"> 6</a></li>
+                    <li class="looks">214</li>
+                                                        </ul>
+                <p rel="68679"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68677" class="tblock answertask">
+                                    
+            <div class="budget r-135">                <p class="block usesrself"></p>                                            </div>
+            <div class="date">06.07.2023 06:47:07</div>
+            <a class="customer ago3"
+               href="/user.info/userId=63285">Инфотех</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                    target="_blank"
+                    href="/vacancy/7278">Консультант 1С БГУ (удаленно)</a>
+                               </h3>
+
+
+                            <div class="italic ml30 mb40 bold">
+                                            Вакансия для удаленной работы
+                                    </div>
+            <p rel="68677"
+                 class="li-state"></p>
+                                </li>
+
+    
+        <li rel="68673" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2000р/час</div>                                             </div>
+            <div class="date">05.07.2023 17:19:21</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68673">Доработка 1С Бухгалтерия 3.0 + БИТ.Автотранспорт 3.0</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68673"
+                           title="Доработка 1С Бухгалтерия 3.0 + БИТ.Автотранспорт 3.0"> 2</a></li>
+                    <li class="looks">135</li>
+                                                        </ul>
+                <p rel="68673"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68672" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">50000р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">3150р/час</div>                                            </div>
+            <div class="date">05.07.2023 15:39:14</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68672">В 1с создать процедуру запуска скрипта чат-бота по событию в БД</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68672"
+                           title="В 1с создать процедуру запуска скрипта чат-бота по событию в БД"> 4</a></li>
+                    <li class="looks">146</li>
+                                                        </ul>
+                <p rel="68672"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68671" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">3000р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2150р/час</div>                                            </div>
+            <div class="date">05.07.2023 15:39:06</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68671">УТ 10.3.31.1 настроить выгрузку УПД в формате XML для ЭДО</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68671"
+                           title="УТ 10.3.31.1 настроить выгрузку УПД в формате XML для ЭДО"> 3</a></li>
+                    <li class="looks">121</li>
+                                                        </ul>
+                <p rel="68671"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68668" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">1960р/час</div>                                             </div>
+            <div class="date">05.07.2023 12:40:44</div>
+            <a class="customer ago5"
+               href="/user.info/userId=57698">Фомин Анатолий</a>                <div class="was">был                :4 дн. 8 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68668">Настроить УТ, ред. 11.5</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68668"
+                           title="Настроить УТ, ред. 11.5"> 11</a></li>
+                    <li class="looks">181</li>
+                                                        </ul>
+                <p rel="68668"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68667" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">5450р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2030р/час</div>                                            </div>
+            <div class="date">05.07.2023 12:40:37</div>
+            <a class="customer ago5"
+               href="/user.info/userId=50524">anderslons</a>                <div class="was">был                :3 дн. 6 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68667">Загрузка остатков из xlsx файла 1с 8.3</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68667"
+                           title="Загрузка остатков из xlsx файла 1с 8.3"> 14</a></li>
+                    <li class="looks">237</li>
+                                                        </ul>
+                <p rel="68667"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68666" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2000р/час</div>                                             </div>
+            <div class="date">05.07.2023 11:46:09</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68666">Подключить Атол 55ф версия драйвера 10.8 к Розница 1.0</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68666"
+                           title="Подключить Атол 55ф версия драйвера 10.8 к Розница 1.0"> 3</a></li>
+                    <li class="looks">111</li>
+                                                        </ul>
+                <p rel="68666"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68665" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2260р/час</div>                                             </div>
+            <div class="date">05.07.2023 11:12:45</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68665">Загрузить номенклатуру с 1с Розница 2.3 в весы Масса-к</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68665"
+                           title="Загрузить номенклатуру с 1с Розница 2.3 в весы Масса-к"> 5</a></li>
+                    <li class="looks">111</li>
+                                                        </ul>
+                <p rel="68665"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68664" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">9850р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2000р/час</div>                                            </div>
+            <div class="date">05.07.2023 11:12:34</div>
+            <a class="customer ago5"
+               href="/user.info/userId=75513">Наталья Викторовна</a>                <div class="was">была                :3 дн. 13 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68664">Требуется выгрузка отчетов с маркетплейсов WB в 1С Комплексная Автоматизация 2</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68664"
+                           title="Требуется выгрузка отчетов с маркетплейсов WB в 1С Комплексная Автоматизация 2"> 7</a></li>
+                    <li class="looks">123</li>
+                                                        </ul>
+                <p rel="68664"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68662" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">2300р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2330р/час</div>                                            </div>
+            <div class="date">05.07.2023 09:02:03</div>
+            <a class="customer ago5"
+               href="/user.info/userId=4050">Алексей</a>                <div class="was">был                :2 дн. 11 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68662">Необходимо сформировать внешний отчет для УНФ 3.0 во Fresh</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68662"
+                           title="Необходимо сформировать внешний отчет для УНФ 3.0 во Fresh"> 4</a></li>
+                    <li class="looks">134</li>
+                                                        </ul>
+                <p rel="68662"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68566" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2250р/час</div>                                             </div>
+            <div class="date">05.07.2023 08:56:28</div>
+            <a class="customer ago5"
+               href="/user.info/userId=75418">larionov34</a>                <div class="was">был                :4 дн. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68566">Интеграция и настройка 1с для работы с Маркетплейсами по системе FBS</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68566"
+                           title="Интеграция и настройка 1с для работы с Маркетплейсами по системе FBS"> 6</a></li>
+                    <li class="looks">248</li>
+                                            <li class="isup"></li>                                    </ul>
+                <p rel="68566"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68660" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">102900р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1000р/час</div>                                            </div>
+            <div class="date">05.07.2023 08:38:24</div>
+            <a class="customer ago5"
+               href="/user.info/userId=29729">garipova</a>                <div class="was">был                :4 дн. 4 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68660">Отчет по форме 2 о доходах и расходах 1С:ERP</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68660"
+                           title="Отчет по форме 2 о доходах и расходах 1С:ERP"> 6</a></li>
+                    <li class="looks">127</li>
+                                                        </ul>
+                <p rel="68660"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68588" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">3630р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1400р/час</div>                                            </div>
+            <div class="date">29.06.2023 07:16:33</div>
+            <a class="customer ago5"
+               href="/user.info/userId=23175">xedlor</a>                <div class="was">был                :4 дн. 18 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68588">Переписать обработку загрузки из Excel для Бух 2.0 под Бух 3.0</a>
+                               </h3>
+
+
+                            <div class="italic ml30 mb40">8.x Бухгалтерия Предприятия</div>
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68588"
+                           title="Переписать обработку загрузки из Excel для Бух 2.0 под Бух 3.0"> 23</a></li>
+                    <li class="looks">321</li>
+                                                        </ul>
+                <p rel="68588"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68656" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">40000р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2060р/час</div>                                            </div>
+            <div class="date">04.07.2023 17:55:39</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68656">УТ10.3 - доработки</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68656"
+                           title="УТ10.3 - доработки"> 7</a></li>
+                    <li class="looks">173</li>
+                                                        </ul>
+                <p rel="68656"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68579" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                    <div class="budg-close">Закрытый тендер</div>                            </div>
+            <div class="date">28.06.2023 12:28:33</div>
+            <a class="customer ago5"
+               href="/user.info/userId=67591">V17</a>                <div class="was">был                :3 дн. 10 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68579">Доработка отчета 1С 8.3, УТ 10.2</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68579"
+                           title="Доработка отчета 1С 8.3, УТ 10.2"> 13</a></li>
+                    <li class="looks">367</li>
+                                                        </ul>
+                <p rel="68579"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68655" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">10400р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1960р/час</div>                                            </div>
+            <div class="date">04.07.2023 12:51:55</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68655">УНФ - ошибка в расширении с обменом сайта</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68655"
+                           title="УНФ - ошибка в расширении с обменом сайта"> 7</a></li>
+                    <li class="looks">163</li>
+                                                        </ul>
+                <p rel="68655"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68652" class="tblock answertask">
+                                    
+            <div class="budget r-135">                <p class="block usesrself"></p>                                            </div>
+            <div class="date">04.07.2023 12:34:14</div>
+            <a class="customer ago5"
+               href="/user.info/userId=73314">abdula</a>                <div class="was">был                :2 дн. 7 ч. назад</div>
+            <h3><a class="inlink fs2"
+                    target="_blank"
+                    href="/vacancy/7200">Программист 1С с опытом от 4х лет(удаленная работа 15-20 часов в неделю)</a>
+                               </h3>
+
+
+                            <div class="italic ml30 mb40 bold">
+                                            <span class="goodbg fs1 normal bold mr5 pdlr5 brad5" title="рекламное размещение">промо</span> Обновлено размещение вакансии
+                                    </div>
+            <p rel="68652"
+                 class="li-state"></p>
+                                </li>
+
+    
+        <li rel="68651" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">3330р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2030р/час</div>                                            </div>
+            <div class="date">04.07.2023 10:37:03</div>
+            <a class="customer ago5"
+               href="/user.info/userId=3133">Reist</a>                <div class="was">был                :4 дн. 20 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68651">Разобраться и поправить ошибку (самописная база)</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68651"
+                           title="Разобраться и поправить ошибку (самописная база)"> 12</a></li>
+                    <li class="looks">313</li>
+                                                        </ul>
+                <p rel="68651"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68644" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2430р/час</div>                                             </div>
+            <div class="date">03.07.2023 16:54:43</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68644">Подключить ТСД к ЕРП 2.4</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68644"
+                           title="Подключить ТСД к ЕРП 2.4"> 3</a></li>
+                    <li class="looks">137</li>
+                                                        </ul>
+                <p rel="68644"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68635" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div class="all-about">4270р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2100р/час</div>                                            </div>
+            <div class="date">03.07.2023 15:13:13</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68635">1с ЕРП 2.5 доработать обработку загружающую номенклатуру по API.</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68635"
+                           title="1с ЕРП 2.5 доработать обработку загружающую номенклатуру по API."> 6</a></li>
+                    <li class="looks">159</li>
+                                                        </ul>
+                <p rel="68635"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68633" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">6660р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2150р/час</div>                                            </div>
+            <div class="date">03.07.2023 12:19:44</div>
+            <a class="customer ago3"
+               href="/user.info/userId=75195">Pavel_77</a>                <div class="was">был                :12 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68633">доработать отчет</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68633"
+                           title="доработать отчет"> 4</a></li>
+                    <li class="looks">198</li>
+                                                        </ul>
+                <p rel="68633"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68632" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2000р/час</div>                                             </div>
+            <div class="date">03.07.2023 11:45:54</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68632">Исправить ошибки после перехода с камин 3 на камин 5</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68632"
+                           title="Исправить ошибки после перехода с камин 3 на камин 5"> 2</a></li>
+                    <li class="looks">129</li>
+                                                        </ul>
+                <p rel="68632"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68577" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">6040р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1700р/час</div>                                            </div>
+            <div class="date">03.07.2023 11:10:24</div>
+            <a class="customer ago5"
+               href="/user.info/userId=75427">Конев Сергей Евгеньевич</a>                <div class="was">был                :5 дн. 16 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68577">Доработать обмен между УНФ и БП новым документом Заявка на расход денег</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68577"
+                           title="Доработать обмен между УНФ и БП новым документом Заявка на расход денег"> 14</a></li>
+                    <li class="looks">250</li>
+                                            <li class="isup"></li>                                    </ul>
+                <p rel="68577"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68629" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">3300р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1000р/час</div>                                            </div>
+            <div class="date">03.07.2023 09:47:03</div>
+            <a class="customer ago5"
+               href="/user.info/userId=75490">79603771010</a>                <div class="was">был                :2 дн. 14 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68629">Доработки в 1С УНФ Fresh</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68629"
+                           title="Доработки в 1С УНФ Fresh"> 3</a></li>
+                    <li class="looks">156</li>
+                                                        </ul>
+                <p rel="68629"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68619" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">1000р/час</div>                                             </div>
+            <div class="date">03.07.2023 08:45:16</div>
+            <a class="customer ago3"
+               href="/user.info/userId=62876">Arthuroot</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68619">Из УТ11 скидки в Frontol6</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68619"
+                           title="Из УТ11 скидки в Frontol6"> 2</a></li>
+                    <li class="looks">141</li>
+                                                        </ul>
+                <p rel="68619"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68388" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">1380р/час</div>                                             </div>
+            <div class="date">02.07.2023 21:25:18</div>
+            <a class="customer ago5"
+               href="/user.info/userId=14736">Александр</a>                <div class="was">был                :3 дн. 1 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68388">Аналитик 1С на задачи по развитию системы на 1с</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68388"
+                           title="Аналитик 1С на задачи по развитию системы на 1с"> 5</a></li>
+                    <li class="looks">208</li>
+                                                        </ul>
+                <p rel="68388"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68624" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">2570р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">1930р/час</div>                                            </div>
+            <div class="date">02.07.2023 14:25:54</div>
+            <a class="customer ago2"
+               href="/user.info/userId=10090">Котлов Дмитрий Евгеньевич</a>                <div class="was">был                :4 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68624">Печатная форма для заказа покупателю в УТ 11</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68624"
+                           title="Печатная форма для заказа покупателю в УТ 11"> 16</a></li>
+                    <li class="looks">264</li>
+                                                        </ul>
+                <p rel="68624"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68623" class="tblock answertask">
+                                    
+            <div class="budget r-135">                                        <div class="all-about">4370р</div><img
+                            src="/i/or.png" class="or-about"/>
+                        <div
+                            class="all-about">2000р/час</div>                                            </div>
+            <div class="date">02.07.2023 10:31:33</div>
+            <a class="customer ago4"
+               href="/user.info/userId=75484">Руслан Владимирович</a>                <div class="was">был                :1 дн. 8 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68623">Перенос Номенклатуры из УТ 10.3 в УТ 11</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68623"
+                           title="Перенос Номенклатуры из УТ 10.3 в УТ 11"> 16</a></li>
+                    <li class="looks">246</li>
+                                                        </ul>
+                <p rel="68623"
+                 class="li-state tender"></p>
+                                </li>
+
+    
+        <li rel="68621" class="tblock answertask">
+                                    
+            <div class="budget r-135">                <p class="block usesrself"></p>                                            </div>
+            <div class="date">01.07.2023 11:38:42</div>
+            <a class="customer ago5"
+               href="/user.info/userId=25841">kodar-msk</a>                <div class="was">был                :5 дн. 3 ч. назад</div>
+            <h3><a class="inlink fs2"
+                    target="_blank"
+                    href="/vacancy/7271">Консультант 1С на удаленную работу</a>
+                               </h3>
+
+
+                            <div class="italic ml30 mb40 bold">
+                                            Вакансия для удаленной работы
+                                    </div>
+            <p rel="68621"
+                 class="li-state"></p>
+                                </li>
+
+    
+        <li rel="68617" class="tblock answertask">
+                            <div class="taskprof" title="Размещено в рамках проф-аккаунта заказчика. Комиссия сервиса с исполнителя не взимается."><a href="/prof.customer/" target="_blank">без комиссии!</a></div>
+                                    
+            <div class="budget r-135">                                        <div
+                            class="single-about about-hour">2000р/час</div>                                             </div>
+            <div class="date">30.06.2023 17:32:10</div>
+            <a class="customer ago3"
+               href="/user.info/userId=8143">Wesley</a>                <div class="was">был                :21 ч. назад</div>
+            <h3><a class="inlink fs2"
+                                       href="/task/68617">Реализовать взаимодействие между тремя идентичными 1С БП3.0</a>
+                               </h3>
+
+
+            
+                <ul class="li-bottom w100">
+                    <li><a class="offers"
+                           href="/offer/taskId=68617"
+                           title="Реализовать взаимодействие между тремя идентичными 1С БП3.0"> 4</a></li>
+                    <li class="looks">185</li>
+                                                        </ul>
+                <p rel="68617"
+                 class="li-state tender"></p>
+                                </li>
+
+    </ul>
+			</div>
+
+
+<a href="/"><img class="logo abs" src="/i/logo2013.png"/></a>
+
+<div class="social">
+</div>
+			<div class="pages cntr pd20"><span class="cl-descr mr10">Страницы:</span><span class="page" id="active-page">1</span><a class="page" href="/?filter=1&curr=2">2</a><a class="page" href="/?filter=1&curr=3">3</a><a class="page" href="/?filter=1&curr=4">4</a><a class="page" href="/?filter=1&curr=5">5</a><a class="page" href="/?filter=1&curr=6">6</a><a class="page" href="/?filter=1&curr=7">7</a><a class="page" href="/?filter=1&curr=8">8</a><a class="page" href="/?filter=1&curr=9">9</a><a class="page" href="/?filter=1&curr=10">10</a><a class="page" href="/?filter=1&curr=11">11</a><a class="page" href="/?filter=1&curr=12">12</a><a class="page" href="/?filter=1&curr=13">13</a><a class="page" href="/?filter=1&curr=14">14</a><a class="page" href="/?filter=1&curr=15">15</a><a class="page" href="/?filter=1&curr=16">16</a><a class="page" href="/?filter=1&curr=17">17</a><a class="page" href="/?filter=1&curr=18">18</a><a class="page" href="/?filter=1&curr=19">19</a><a class="page" href="/?filter=1&curr=20">20</a><a class="page rightarr" href="/?filter=1&curr=21">&raquo;</a></div>
+
+		
+		
+<div class="overseo mrg20 pd20">
+<div class="seomain">Удаленная работа в СНГ становится все обыденнее из года в год. Ежечасно фриланс (freelance) биржи интернета регистрируют все новые и новые заявки, как программистов, так и работодателей. На основе этой картины всё больше людей хотят работать удаленно, зарабатывать фрилансом и тем самым работодатели отдают своё предпочтение услугам не штатным сотрудникам, а удалённым специалистам. Почему работодатели останавливают свой выбор на фрилансерах? Конечно, потому, что IT услуги в основном требуется периодически и держать штатного специалиста довольно не выгодно. Сервис 1Clancer.ru имеет узкое направление фриланса - "услуги в сфере 1С" и разработан для тех, кто чувствует себя: самостоятельным, ответственным, образованным, уверенным в себе и своих знаниях, полагается только на себя, кто считает себя "независимым профессионалом" - все эти качества дают право называть себя "фрилансер". На нашем проекте каждый фрилансер найдет себе работу по 1С. Работодатель в свою очередь сможет найти себе человека для оказания услуги 1С программиста, понять как происходит обслуживание 1С, познать программирование 1С ну и самое главное понять как происходит 1С настройка. Также на нашем проекте будут вестись еженедельные курсы по 1С, своего рода курсы 1С программирования для новичков. Главной целью данного раздела будет: обучение 1С программированию.</div>
+<div class="seomain">Мы очень рады видеть Вас, на уже Нашем, общем ресурсе 1Clancer.ru. С большим удовольствием выслушаем ваши отзывы о проекте. Внимательно отнесемся к замечаниям и пожеланиям. Присылайте их нам или высказывайте их на Форуме. <br /><br /> Пусть ваш труд и терпение будут вознаграждены!</div>
+<div class="seomain" style="text-align: right;">С уважением, Команда <a href="/contacts/">1Clancer.ru</a></div></div> 
+</div>
+</div>
+
+<div class="desctlogo abs w100"><div class="wrap"><span class="pdl10">cервис удаленного проектирования</span>
+	<div class="bg-sets hide"><img onclick="javascript:setBg();" alt="Настройка фона" class="op06 pointer" src="/i/settings.png"></div>
+	<div class="flr"><input type="hidden" value="" name="on-phone"><input type="hidden" rel="m_countryval" name="m_country" value=""><input type="hidden" rel="placeval" name="m_place" value=""><span class="lblue op06 ml20 t2">Ваш регион:</span><span rel="m_place" class="op06 pseudo ml5" for="sel_loc" onclick="changeLoc(this);"><не определено></span><div rel="m_loc" id="sel_loc" class="popup loc"><input tabindex="1" name="m_countrydescr" class="country ac_input input1 mb10" autocomplete="off"><div id="m_coutryres" class="ac_results ac_loc abs hide"></div><input tabindex="2" disabled="disabled" name="m_placedescr" class="place block ac_input mb10 input1" autocomplete="off"><div id="m_placeres" class="ac_results abs hide ac_loc"></div></div>	</div>
+	<div id="auth" class="flr rsplit">
+<div id="uLogin" x-ulogin-params="display=buttons;fields=nickname,email;receiver=http%3A%2F%2F1clancer.ru%2Fscript%2Fxd_custom.html;redirect_uri=http%3A%2F%2F1clancer.ru%2Fsocial-auth%2F" class="fll ml10">
+    <span class="scl op06 vkontakte_bg" x-ulogin-button = "vkontakte" title="Войти с помощью vkontakte"></span>
+    <span class="scl op06 facebook_bg" x-ulogin-button = "facebook"  title="Войти с помощью facebook"></span>
+    <span class="scl op06 twitter_bg" x-ulogin-button = "twitter"  title="Войти с помощью twitter"></span>
+    <span class="scl op06 more_bg pclick" for="soc_popup" title="Все соцсети для авторизации"></span>
+    <div class="scltop popup hide" id="soc_popup">
+        <div class="sclhide op06 odnoklassniki_bg" x-ulogin-button = "odnoklassniki"  title="Войти с помощью odnoklassniki.ru">Одноклассники</div>
+        <div class="sclhide op06 yandex_bg" x-ulogin-button = "yandex" title="Войти с помощью yandex">Яндекс</div>
+        <div class="sclhide op06 mailru_bg" x-ulogin-button = "mailru"  title="Войти с помощью mail.ru">Mail.ru</div>
+        <div class="sclhide op06 google_bg" x-ulogin-button = "google" title="Войти с помощью google">Google</div>
+    </div>
+</div> 
+<!-- <a href="/regs/" class="fll white op06 a-top" id="regs">Регистрация</a> -->
+<div class="pseudo ml5 op06 fll pclick" for="regs_popup">Регистрация</div>
+<div id="regs_popup" class="popup cntr">
+<div class="popupheader">Регистрация</div>
+<form action="/regs/" method="post">
+<input type="text" name="userLogin" class="input1 mrg10 w90" placeholder="логин"><br/>
+<input type="text" name="userMail" class="input1 mrg10 w90" placeholder="email"><br/>
+<img src='/script/gif.php' alt='.'/><br/>
+<input type="text" name="secretCode" class="input1 mrg10 w90" maxlength="6" placeholder="код с картинки"><br/>
+<button id="okbutton" class="popupsubmit wd200 op06 mrg10" type="submit">&nbsp;Зарегистрироваться&nbsp;</button>
+<input type="hidden" value="1" name="regsFlag">
+</form>
+</div>
+<img id="enterimg" class="topsoc ml20 pclick"  for="private_popup" src="/i/enter.png"><div class="pseudo ml5 op06 fll pclick" for="private_popup">Вход</div><div id="private_popup" class="popup z100">
+	<div class="popupheader">Авторизация</div>
+	<form id="login" name="userAuth" method="post" action="/">
+  	<input type="text" name="authLogin" value="" class="input1 mrg10 block" placeholder="логин">
+	<input type="password" class="input1 mrg10 block" value="" name="authPass" placeholder="пароль">
+	<button id="okbutton" class="popupsubmit op06" type="submit">Войти</button>
+	<input type="hidden" name="authFlag" value="1">
+		<input type="hidden" name="create" value="1688930893">
+	<input type="hidden" name="ident" value="a87463564b82af6fbc78dee497d888db">
+	<input type="hidden" name="hash" value="426e7b65d60f374307da2f93914d0c5c">
+	<input class="checkboxmargin mt5" type="checkbox" onclick="delCookie(this)" name="savePass" >&nbsp;запомнить
+	</form>
+	<noindex><a class="popup" href="/reminder/">напомнить пароль</a></noindex>
+</div>
+</div>
+	<img title="Информационный поток" alt="i" class="showinfotok op06" src="/i/info.png" onclick="javascript:pressNewItem();">	<form name="frmSearch" method="post" action="/search/"><input name="src" title="Поиск по сайту" id="sitesearch" class="src brown op06" type="text" placeholder="поиск по сайту"><input type="image" src="/i/lupa.png" class="imgsrc op06"></form>
+</div></div>
+
+
+	
+
+<div class="footer">
+
+<noindex>
+<!-- WM --><span rel="nofollow" class="counter op06 linkrep" title="https://passport.webmoney.ru/asp/certview.asp?wmid=131699370273" target="_blank"><img src="https://megastock.ru/doc/88x31_merchant/grey_rus.gif" width="88" height="31" alt="" border="0"></span>
+<!-- LI --><span rel="nofollow" class="op06 linkrep" title="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?18.2" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"alt="" border="0" width="88" height="31"/></span>
+</noindex>
+<br/><a class="helpblack pdl20 footer op06 bold ml10" href="/help/">Помощь</a><a class="footer op06 ml10" href="/contacts/">Контакты</a> <a class="footer op06 ml10" href="/rss/">RSS</a><a class="footer op06 ml10" href="/confpolitic/">Политика конфиденциальности</a> <noindex><a rel="nofollow" class="footer op06 ml10" href="/puboferta/">Оферта</a></noindex><a class="brad5 advertbg bold pd10 footer op06 ml10" href="/advert/">Реклама на сайте</a>
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter77513 = new Ya.Metrika({id:77513, clickmap:true, trackLinks:true,type:1}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/77513?cnt-class=1" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+<div class="money wd120">Мы принимаем:</div>
+</div>
+<div id="event-signal">
+<ul>
+<li class="mess"><a href="/cpanel.messes/">новое сообщение</a></li>
+</ul>
+</div>
+<audio id="sound" preload="auto"><source src="/i/pk2.mp3"><source src="/i/pk.ogg"></audio>
+
+
+
+</body>
+</html>

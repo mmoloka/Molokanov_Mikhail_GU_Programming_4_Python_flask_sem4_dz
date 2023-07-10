@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html ng-app="render" ng-controller="RenderCtrl as render" lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title ng-bind="($title ? $title : i18n.global.Title)">Крупнейший в России ресурс по компьютерной графике и анимации</title>
+    <meta name="description" content="Самые свежие новости и события из мира компьютерной графики и анимации.">
+    <meta name="yandex-verification" content="5d83205f65099224" />
+    <meta name="yandex-verification" content="c1bdb1aa5999656c" />
+    <meta name="google-site-verification" content="RlWodvcgSqEG2IhzKqohcL6naHO5iwunZa9reFuFTOg" />
+    <meta name="google-site-verification" content="-t-pNqkeho3ARLXYG2Kx9s0tkM9HnnWydYLV3FY6TfY" />
+    <meta name="p:domain_verify" content="a6fadb24dd39e9122a2b1f0a272dd720" />
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-54PMF2W');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12T9QEZDH2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-12T9QEZDH2', {'cookie_domain': '.render.ru'});
+    </script>
+    <!-- End Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+            t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+        }(window, document,'script','https://connect.facebook.net/ru_RU/fbevents.js');
+        fbq('init', '263897241158329');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+        ym(25114673, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            trackHash:true
+        });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Rating@Mail.ru counter -->
+    <script type="text/javascript">
+        var _tmr = window._tmr || (window._tmr = []);
+        _tmr.push({id: "43010", type: "pageView", start: (new Date()).getTime()});
+        (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+            ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+            var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+            if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+        })(document, window, "topmailru-code");
+    </script>
+    <!-- //Rating@Mail.ru counter -->
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@renderRu" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="RENDER.RU" />
+    <meta property="og:title" content="Крупнейший в России ресурс по компьютерной графике и анимации" />
+    <meta property="og:description" content="Самые свежие новости и события из мира компьютерной графики и анимации." />
+    <meta property="og:image" content="https://render.ru/f/render/images/logo_up.png" />
+
+    <script type="text/javascript">
+        var AppParams = {
+            render: {
+                lang_domain: {
+                    '*': 'renderu.com',
+                    'ru': 'render.ru'
+                },
+                breadcrumbs: [],
+                share: {
+                    vk: {
+                        api_id: '6841456',
+                        group_id: '8938191',
+                        v: '5.131'
+                    },
+                    facebook: {
+                        api_id: '1698969840337248',
+                        page_id: '312936276073535',
+                        version: 'v11.0'
+                    }
+                },
+                oauth : {
+                    facebook: '1698969840337248',
+                    google: '684187944552-h8gbfioh06h4kvs9q760qrjiss1l66ai.apps.googleusercontent.com',
+                    vk: '5082788'
+                },
+                recaptcha: '6Ld4xWsUAAAAAHhrrWq6zVl5wd1S6HaneASDImvz'
+            },
+            core  : {
+                frontend  : '2.39.13',
+                api_url   : '/ru/',
+                lang      : 'ru',
+                storage   : 'https://st.render.ru'
+            }
+        };
+
+    </script>
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/f/css/mdi/css/materialdesignicons.min.css?v=4.4.95.1">
+    <script src="/f/render/libs.js?v=2.39.13"></script>
+    <script src="/f/js/packery.pkgd.min.js?v=2.1.2"></script>
+
+
+    <link rel="stylesheet" href="/f/js/redactor/redactor.css" type="text/css" media="all"/>
+    <script src="/f/js/redactor/redactor.js?v=10.2.6.6"></script>
+    <script src="/f/js/redactor/lang/ru.js"></script>
+    <script src="/f/js/redactor/plugins/video/video.js?v=0.3" async defer></script>
+    <script src="/f/js/redactor/plugins/fontcolor/fontcolor.js" async defer></script>
+    <script src="/f/js/redactor/plugins/fullscreen/fullscreen.js" async defer></script>
+    <script src="/f/js/rendermanager.js?v=0.2" async defer></script>
+
+    <script src="/f/render/index.js?v=2.39.13"></script>
+    <script src="/f/render/default/ru.render.templates.js?v=2.39.13"></script>
+    <link rel="stylesheet" href="/f/render/index.css?v=2.39.13">
+
+    <script type="text/javascript">!function(d){var t=d.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?160",t.onload=function(){VK.init({apiId: 4360114, onlyWidgets: true}),VK.Retargeting.Init("VK-RTRG-323430-8lNrA"),VK.Retargeting.Hit()},d.head.appendChild(t)}(document);</script>
+    <script type="text/javascript">(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id; js.src = "https://connect.facebook.net/ru_RU/sdk.js"; fjs.parentNode.insertBefore(js, fjs)}(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript">window.twttr = (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) {return t;}js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t;}(document, 'script', 'twitter-wjs'));</script>
+    <script src="https://apis.google.com/js/platform.js" async defer>
+        {lang: 'ru', parsetags: 'explicit'}
+    </script>
+    <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js" async defer></script>
+
+    <base href="/ru/">
+</head>
+
+<body class="b-page b-page__body" scrollchanger ui-view="body" autoscroll>
+<nav style="visibility:hidden">
+    <a href="section">Блоги</a>
+    <a href="news">Новости</a>
+    <a href="section/8">Уроки</a>
+    <a href="vacancy/search">Вакансии</a>
+    <a href="freelance/search">Сеть аутсорсинга. Фриланс объявления.</a>
+    <a href="gallery">ГАЛЕРЕЯ</a>
+    <a href="gallery/28">ГАЛЕРЕЯ 2D Арт</a>
+    <a href="gallery/1">ГАЛЕРЕЯ 3D Художественная</a>
+    <a href="gallery/2">ГАЛЕРЕЯ 3D Архитектура</a>
+    <a href="gallery/59">ГАЛЕРЕЯ Видео</a>
+</nav>
+
+<div style="visibility:hidden">
+    <a href="https://render.ru/ru/gallery/artwork/229974"><img src="https://st.render.ru/work/674644" alt="персонаж, 3д персонаж, 3d персонажи, грум, груминг, волосы, Длинные волосы" title="Medieval man"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231856"><img src="https://st.render.ru/work/686088" alt="transition, sci-fi, Digital 3D, Hard Surface, Rreal-time, Photostudio Lighting, ModularEnvironment, Concept Art" title="Transition Atrium"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231842"><img src="https://st.render.ru/work/686019" alt="спа, сауна, интерьер, дизайн, сталь" title="SАNITAS PER AQUA"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231836"><img src="https://st.render.ru/work/685977" alt="countryhouse" title="old house"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231818"><img src="https://st.render.ru/work/686104" alt="лес" title="Лесной Край"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231796"><img src="https://st.render.ru/work/685547" alt="красавица, платье" title="Команда мечты"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231794"><img src="https://st.render.ru/work/685526" alt="фанарт, Альхайтам, геншинимпакт, игра, Концепт-арт, Фэнтези" title="Альхайтам"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231744"><img src="https://st.render.ru/work/685302" alt="пропсы, Концепт-арт, Фэнтези, Рюкзак" title="Фэнтезийный рюкзак"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231741"><img src="https://st.render.ru/work/685280" alt="существо, Монстры, Персонажи, Концепт-арт" title="Водяной"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231738"><img src="https://st.render.ru/work/685276" alt="Концепт Арт, костюм, средневековье, персонаж" title="Средневековый костюм"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231737"><img src="https://st.render.ru/work/685269" alt="Concept Art, character, Fashion &amp; Costume Design, Fantasy" title="Эльф"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231735"><img src="https://st.render.ru/work/685263" alt="скульптинг, гибрид, человек, свинья, кентавры, кентавр" title="Свинтавр"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231711"><img src="https://st.render.ru/work/685164" alt="cat" title="Shurik. Summer 2023."/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231691"><img src="https://st.render.ru/work/685051" alt="Concept Art, Fantasy" title="Artstation Challenge: Back and Forth"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231684"><img src="https://st.render.ru/work/685016" alt="Экстерьер, улица" title="Delmonico&#039;s"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231682"><img src="https://st.render.ru/work/684989" alt="Монстры, инопланетянин, животное, зверь, реализм" title="Джаггернаут"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231676"><img src="https://st.render.ru/work/684945" alt="Game props, game art, PBR, texturing, telephone" title="Vintage phone"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231670"><img src="https://st.render.ru/work/684911" alt="электроника, РАДИОЭЛЕКТРОНИКА, магнитофон, телевизор, ретро, стерео, винтажная техника, Гаджеты, бытовая электроника, game asset" title="Hitachi K-50E"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231661"><img src="https://st.render.ru/work/684865" alt="3д окружение, сцена, офис, игровая модель, игровое окружение" title="Офис детектива"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231649"><img src="https://st.render.ru/work/685985" alt="xmen" title="Россомаха"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231640"><img src="https://st.render.ru/work/684751" alt="астронавт, экиперовка, солдат, защита, экзоскелет, автомат, киборг, робот" title="Ratnik R160"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231629"><img src="https://st.render.ru/work/684656" alt="Digital 2D, Concept Art, game art, fan art" title="Эльсвейр-Теплый вечер."/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231374"><img src="https://st.render.ru/work/684579" alt="вилла, дом с бассейном, Загородный дом, дизайн интерьера, визуализация интерьера, коттедж, дом у воды, двухэтажный дом" title="Country house"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231609"><img src="https://st.render.ru/work/684546" alt="concept-art" title="&quot;Don&#039;t let go&quot; concepts"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231608"><img src="https://st.render.ru/work/684543" alt="fan art" title="Cuno Disco Elysium"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231607"><img src="https://st.render.ru/work/684539" alt="little nightmares" title="Quiet time"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231606"><img src="https://st.render.ru/work/684537" alt="Environment sketches" title="Environment sketches"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231604"><img src="https://st.render.ru/work/684530" alt="test" title="Тестовое"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231601"><img src="https://st.render.ru/work/684509" alt="Фэнтези, иллюстрация, фанарт" title="Милисент"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231600"><img src="https://st.render.ru/work/684504" alt="Фэнтези, иллюстрация" title="Стальная баба"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231599"><img src="https://st.render.ru/work/684506" alt="иллюстрация, Фэнтези" title="Атака"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231597"><img src="https://st.render.ru/work/684496" alt="Фэнтези, иллюстрация" title="Проклятая душа"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231581"><img src="https://st.render.ru/work/684374" alt="muscle car, Dodge Challenger, SRT, Hellcat, Muscle Car Dodge Challenger SRT Hellcat" title="Muscle Car Dodge Challenger SRT Hellcat"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231580"><img src="https://st.render.ru/work/684367" alt="ford, mustang, GT, Ford Mustang GT, muscle car" title="Предметная визуализация Ford Mustang GT 500"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231550"><img src="https://st.render.ru/work/684191" alt="гостиная. интерьер, гостиная для музыканта композитора, интерьер" title="Гостиная в доме музыканта композитора"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231555"><img src="https://st.render.ru/work/684257" alt="база отдыха, дома, Экстерьер, теберда, день, ночь, лес, горы" title="База отдыха Теберда"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231536"><img src="https://st.render.ru/work/684098" alt="Illustration, night city" title="At the traffic light"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231535"><img src="https://st.render.ru/work/684091" alt="станция метро, поезда, метро нью йорка, сша" title="Станция метро в Нью Йорке"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231534"><img src="https://st.render.ru/work/684086" alt="Картун (Cartoon), knight human head people medieval fantasy fighter character steel armor swordsman weapon game low poly pbr rigged animation unity unreal rpg" title="Undine"/></a>
+    <a href="https://render.ru/ru/gallery/artwork/231533"><img src="https://st.render.ru/work/684083" alt="пустыня, скалы, горы, машина, Люди, каньон, здания, завод, пыль, ветер" title="post-apocalyptic world"/></a>
+</div>
+
+<div style="visibility:hidden">
+    <h1>Новости</h1>
+    <a href="https://render.ru/ru/news/post/24448">
+        <img src="https://st.render.ru/post/685950" title="Состоялся релиз The Grove 2.0 для Blender и Houdini"/>
+        <div>Состоялся релиз The Grove 2.0 для Blender и Houdini</div>
+        <div>The Grove 2.0  - новая версия программы для создания биологически правдоподобных моделей деревьев. Релиз превращает The Grove из плагина для Blender в отдельное приложение для Blender и Houdini.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24447">
+        <img src="https://st.render.ru/post/685946" title="Состоялся релиз Autograph 2023.6"/>
+        <div>Состоялся релиз Autograph 2023.6</div>
+        <div>Компания Left Angel выпустили Autorgaph 2023.6 - новую версию инструмента для создания контента нового поколения, композитинга и визуальных эффектов.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24445">
+        <img src="https://st.render.ru/post/685490" title="Приглашаем художников к участию в Рисунках на скорость (SpeedPaint)"/>
+        <div>Приглашаем художников к участию в Рисунках на скорость (SpeedPaint)</div>
+        <div>Приглашаем всех желающих поднять скилл или просто порисовать в приятной компании, в разделе форума &quot;Рисунки на скорость&quot;, где еженедельно даются три новые темы на выбор.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24444">
+        <img src="https://st.render.ru/post/685414" title="Intel выпустили Open Image Denoise 2"/>
+        <div>Intel выпустили Open Image Denoise 2</div>
+        <div>Intel выпустила Open Image Denoise 2 - новую версию  инструмента для устранения шума с открытым исходным кодом, интегрированного в различный CG софт — Blender, Cinema 4D, Houdini и другие.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24443">
+        <img src="https://st.render.ru/post/685265" title="Chaos выпустили Vantage 2.0"/>
+        <div>Chaos выпустили Vantage 2.0</div>
+        <div>Vantage 2.0 - крупное обновление средства визуализации трассировки лучей в реальном времени.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24442">
+        <img src="https://st.render.ru/post/685217" title="15 бесплатных кистей для ZBrush"/>
+        <div>15 бесплатных кистей для ZBrush</div>
+        <div>Концепт - художник Пабло Мунос Гомес представил новые пользовательские кисти ZBrush для свободного использования другими художниками.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24438">
+        <img src="https://st.render.ru/post/684702" title="RENDER.RU поддержит начинания CG художников и их проекты в разделе &quot;CG Up&quot;"/>
+        <div>RENDER.RU поддержит начинания CG художников и их проекты в разделе &quot;CG Up&quot;</div>
+        <div>Друзья, сейчас невероятно сложное время для всех нас, мы благодарны нашим читателям за поддержку и в свою очередь хотели бы поддержать художников у которых есть свои интересные проекты и они хотели бы</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24436">
+        <img src="https://st.render.ru/post/684631" title="Unity Muse - новый генеративный сервис искусственного интеллекта от Unity"/>
+        <div>Unity Muse - новый генеративный сервис искусственного интеллекта от Unity</div>
+        <div>В блоге Unity пишут, что ИИ сервис позволяет создавать практически всё в редакторе Unity, используя естественный ввод (текстовые подсказки и наброски). Видео с демонстрацией в новости.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24434">
+        <img src="https://st.render.ru/post/684315" title="Skybox AI 0.5 от Blockade Labs"/>
+        <div>Skybox AI 0.5 от Blockade Labs</div>
+        <div>Skybox AI 0.5 - новая версия браузерного инструмента генеративного искусственного интеллекта для создания скайбоксов на основе текстовых подсказок или грубых набросков.</div>
+    </a>
+    <a href="https://render.ru/ru/news/post/24433">
+        <img src="https://st.render.ru/post/684273" title="Состоялся релиз Blender 3.6"/>
+        <div>Состоялся релиз Blender 3.6</div>
+        <div>Blender Foundation выпустил Blender 3.6 - новую версию 3D ПО с открытым исходным кодом.</div>
+    </a>
+</div>
+
+<div style="visibility:hidden">
+    <a href="https://render.ru/ru/webvideo/post/24453">
+        <img src="https://st.render.ru/post/686832" title="Трейлер &quot;Small Soldiers - War for the Nekron&quot;"/>
+        <div>Трейлер &quot;Small Soldiers - War for the Nekron&quot;</div>
+        <div>Немного с запозданием, но кто не видел удовольствие получит. Является следующим проектом студии Comadran Studios, в разработке использовали Unreal Engine 5.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24452">
+        <img src="https://st.render.ru/post/686772" title="Diablo Immortal — синематик нового класса персонажей"/>
+        <div>Diablo Immortal — синематик нового класса персонажей</div>
+        <div>Великолепный синематик нового класса персонажей для мобильной игры &quot;Diablo Immortal&quot;. В трейлере представлен класс — Рыцарь Крови.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24439">
+        <img src="https://st.render.ru/post/684829" title="Дюна 2 — Второй официальный трейлер"/>
+        <div>Дюна 2 — Второй официальный трейлер</div>
+        <div>Актерский состав «Дюна 2» был значительно расширен за счет оскороносных звезд фильмов от Warner Bros. Pictures и Legendary Pictures. Фильм выйдет 3 ноября 2023 года.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24391">
+        <img src="https://st.render.ru/post/681484" title="Опубликован сюжетный трейлер игры Starfield"/>
+        <div>Опубликован сюжетный трейлер игры Starfield</div>
+        <div>В нём демонстрируются элементы геймплея, бои и космические перелеты, игрокам предстоит отправиться в путешествие по галактике, отыскать артефакты и «разгадать тайны вселенной». Игра выйдет 6 сентября.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24389">
+        <img src="https://st.render.ru/post/681171" title="Трейлер третьего сезона «Ведьмака» – последнего с участием Кавилла"/>
+        <div>Трейлер третьего сезона «Ведьмака» – последнего с участием Кавилла</div>
+        <div>На Summer Game Fest 2023 показали второй трейлер «Ведьмака». Первая часть третьего сезона выйдет 29 июня, вторая — 27 июля. Этот сезон станет последним для Генри Кавилла, его заменит Лиам Хемсворт.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24370">
+        <img src="https://st.render.ru/post/680401" title="Короткометражка &quot;Tehura&quot;"/>
+        <div>Короткометражка &quot;Tehura&quot;</div>
+        <div>Таитянская танцовщица пытается найти свое предназначение танцуя перед туристами.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24369">
+        <img src="https://st.render.ru/post/680400" title="CalArts Film 2023. Короткометражка &quot;Resilence&quot;"/>
+        <div>CalArts Film 2023. Короткометражка &quot;Resilence&quot;</div>
+        <div>Короткометражка от подающего надежды молодого режиссера Yunie Choi.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24368">
+        <img src="https://st.render.ru/post/680399" title="Трейлер мультфильма &quot;THE LOVERS&quot; (18+)"/>
+        <div>Трейлер мультфильма &quot;THE LOVERS&quot; (18+)</div>
+        <div>STUDIO HEARTBREAK, на Kickstarter, объявила о сборе средств на выпуск мультфильма &quot;THE LOVERS&quot;.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24343">
+        <img src="https://st.render.ru/post/678290" title="Warhammer Skull 2023. Трейлер игры &quot;Warhammer 40 000: Rogue Trader&quot;"/>
+        <div>Warhammer Skull 2023. Трейлер игры &quot;Warhammer 40 000: Rogue Trader&quot;</div>
+        <div>Студия Owlcat Games продолжает знакомить нас с &quot;Warhammer 40 000: Rogue Trader&quot;.</div>
+    </a>
+    <a href="https://render.ru/ru/webvideo/post/24342">
+        <img src="https://st.render.ru/post/678289" title="Warhammer Skull 2023. Трейлер игры &quot;Warhammer 40 000: Space Marine 2&quot;"/>
+        <div>Warhammer Skull 2023. Трейлер игры &quot;Warhammer 40 000: Space Marine 2&quot;</div>
+        <div>Студия Saber представила геймплейный тизер долгожданной игры &quot;Warhammer 40,000: Space Marine 2&quot;.</div>
+    </a>
+</div>
+
+<div style="visibility:hidden">
+    <a href="https://render.ru/ru/articles/post/24118">
+        <img src="https://st.render.ru/post/668331" title="Making Of &quot;Слизеринка - &quot;Даймонд&quot;&quot;"/>
+        <div>Making Of &quot;Слизеринка - &quot;Даймонд&quot;&quot;</div>
+        <div>Меня зовут Александр! Сейчас я расскажу как создавалась 
+“Слизеринка-Даймонд”. В данной работе практически не использовался скульпт, в основном только полигональное моделирование в Zbrush.</div>
+    </a>
+    <a href="https://render.ru/ru/articles/post/22189">
+        <img src="https://st.render.ru/post/559596" title="Качаем скиллы по воскресеньям: Смотреть широко"/>
+        <div>Качаем скиллы по воскресеньям: Смотреть широко</div>
+        <div>«Смотреть широко» это метод планирования того, где и как смотреть на свой рисунок, чтобы усилить контроль и снизить количество ошибок при работе над ним.</div>
+    </a>
+    <a href="https://render.ru/ru/emelnikov/post/24441">
+        <img src="https://st.render.ru/post/685188" title="История про апгрейд железа i13900KF"/>
+        <div>История про апгрейд железа i13900KF</div>
+        <div>Наконец-то появилось время на небольшой апгрейд железа. Возможно мой скромный опыт кому-то пригодится. =)</div>
+    </a>
+    <a href="https://render.ru/ru/BODU9/post/24435">
+        <img src="https://st.render.ru/post/684398" title="МАСШТАБ И МАСШТАБНОСТЬ В ИЗО"/>
+        <div>МАСШТАБ И МАСШТАБНОСТЬ В ИЗО</div>
+        <div>Масштабность — соразмерность объектов, или форм, и элементов данных форм по отношению к человеку, другим объектам или формам, а также к окружающему пространству.</div>
+    </a>
+    <a href="https://render.ru/ru/InfusionGamesStudio/post/24432">
+        <img src="https://st.render.ru/post/684254" title="Cyber Wars получила награду &quot;Лучшая игра&quot; по выбору главного спонсора на WN Conference Istanbul"/>
+        <div>Cyber Wars получила награду &quot;Лучшая игра&quot; по выбору главного спонсора на WN Conference Istanbul</div>
+        <div>Мы рады сообщить, что Cyber Wars, мобильный проект, разработанный Infusion Games, победил в номинации &quot;Лучшая игра&quot; по версии генерального спонсора Just Moby на WN Conference Istanbul!</div>
+    </a>
+    <a href="https://render.ru/ru/Blender_Blog/post/24306">
+        <img src="https://st.render.ru/post/683135" title="Обзор Blender 3.6 LTS"/>
+        <div>Обзор Blender 3.6 LTS</div>
+        <div>Приветствую всех, кто решил сюда заглянуть!​ Сегодня у нас на повестке симуляционные ноды, новый UV паковщик, немного производительности и еще всякие приколы.</div>
+    </a>
+    <a href="https://render.ru/ru/HDS/post/24428">
+        <img src="https://st.render.ru/post/683946" title="Создание персонажа в Zbrush"/>
+        <div>Создание персонажа в Zbrush</div>
+        <div>Заглядываем за кулисы 3D-моделирования с помощью поэтапной работы нашего куратора по 3D-направлению Романа Ливерсона.
+
+1 этап: Создание базового скульпта в Zbrush</div>
+    </a>
+    <a href="https://render.ru/ru/dimson3d/post/24418">
+        <img src="https://st.render.ru/post/683562" title="Курс по рендеру в Blender"/>
+        <div>Курс по рендеру в Blender</div>
+        <div>Я рад представить вашему вниманию анонс курса «Визуализация в Blender: Базовый» знакомящим вас с инструментами визуализации и процессами подготовки моделей САПР для визуализации в пакете Blender.</div>
+    </a>
+    <a href="https://render.ru/ru/vue/post/24427">
+        <img src="https://st.render.ru/post/683886" title="Советы и рекомендации по моделированию в 3ds max. Выпуск 01"/>
+        <div>Советы и рекомендации по моделированию в 3ds max. Выпуск 01</div>
+        <div>В выпуске советы для оптимизации арх. моделирования.  Для чего нужен Clay режим во вьюпорте? QuickSlice — быстро добавляем нужную геометрию, Bridge формируем оконные/дверные проемы и многое другое.</div>
+    </a>
+    <a href="https://render.ru/ru/a.kozlov/post/24417">
+        <img src="https://st.render.ru/post/683277" title="MetaHuman Animator урок"/>
+        <div>MetaHuman Animator урок</div>
+        <div>Учимся делать лицевую анимацию в Unreal Engine 5 и Meta Human Animator.</div>
+    </a>
+</div>
+
+<div style="visibility:hidden">
+    <a href="https://render.ru/ru/articles/post/24361">
+        <img src="https://st.render.ru/post/682479" title="Рендер донаты, отчет одинадцатого месяца"/>
+        <div>Рендер донаты, отчет одинадцатого месяца</div>
+        <div>В ежемесячном посте мы освещаем ситуацию в российском CG сегменте, говорим спасибо всем пользователям, кто поддержал нас (11 человек в июне), к сожалению новый номер журнала RENDER MAGAZINE не вышел.</div>
+    </a>
+    <a href="https://render.ru/ru/articles/post/24097">
+        <img src="https://st.render.ru/post/667508" title="Making Of &quot;Golden Fish&quot;"/>
+        <div>Making Of &quot;Golden Fish&quot;</div>
+        <div>Подробно рассказываю о создании этой работы в ZBRUSH, файл сцены с моделью также доступен в статье.</div>
+    </a>
+    <a href="https://render.ru/ru/articles/post/23708">
+        <img src="https://st.render.ru/post/647844" title="Making Of &quot;Червяк Джим&quot;"/>
+        <div>Making Of &quot;Червяк Джим&quot;</div>
+        <div>Всем привет! Меня зовут Григорий Красноперов, он же GrinNT. В данной статье я расскажу вам о создании своей работы &quot;Червяк Джим&quot;.</div>
+    </a>
+    <a href="https://render.ru/ru/articles/post/23366">
+        <img src="https://st.render.ru/post/667286" title="Making Of &quot;Japanese Girl&quot;"/>
+        <div>Making Of &quot;Japanese Girl&quot;</div>
+        <div>Всем привет! Меня зовут Алена Гарнатко. Хочу рассказать о процессе создания работы “japanese girl”. Эта работа делалась одновременно очень быстро и очень долго. Сейчас расскажу почему.</div>
+    </a>
+    <a href="https://render.ru/ru/articles/post/23913">
+        <img src="https://st.render.ru/post/657851" title="Интервью с Жанной Травкиной — креативным продюсером Mondlicht Studios"/>
+        <div>Интервью с Жанной Травкиной — креативным продюсером Mondlicht Studios</div>
+        <div>В этом интервью мы поговорим о задачах которые лежат на плечах креативного продюсера, какими навыками нужно обладать и где их получить, а также обсудим проекты студии и роль продюсера в их реализации.</div>
+    </a>
+    <a href="https://render.ru/ru/Acer/post/23799">
+        <img src="https://st.render.ru/post/650862" title="История развития компьютерной графики и 3D-моделирования в хайлайтах"/>
+        <div>История развития компьютерной графики и 3D-моделирования в хайлайтах</div>
+        <div>Вспоминаем достижения последних пятидесяти лет: примерно столько прошло с первых попыток создать элементарную трехмерную графику. Как это было..</div>
+    </a>
+</div>
+
+<div style="visibility:hidden">
+    <a href="https://render.ru/ru/magazine/post/24381">
+        <img src="https://st.render.ru/post/680891" title="Июнь 2023"/>
+        <div>Июнь 2023</div>
+        <div>Девятый номер при поддержке комьюнити: Making Of «Жили-были», Making Of по 3D работе «Прозерпина. Диджитал-репродукция картины», также обзор multi-GPU системы &quot;DigitalRazor RenderRack Pro&quot;.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/24172">
+        <img src="https://st.render.ru/post/670243" title="Апрель 2023"/>
+        <div>Апрель 2023</div>
+        <div>Восьмой номер при поддержке комьюнити: статья &quot;Создание анимации трансформеров в Blender, Making Of &quot;Слизеринка - &quot;Даймонд&quot;&quot; и &quot;Golden Fish&quot;, статья «Нейросеть как новый инструмент креативности&quot;.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23944">
+        <img src="https://st.render.ru/post/659528" title="Февраль 2023"/>
+        <div>Февраль 2023</div>
+        <div>Седьмой номер при поддержке комьюнити: статья &quot;Что происходит с мировым IT рынком? ChatGPT уничтожит Гугл?&quot;, интервью с креативным продюсером Mondlicht Studios, Making Of «Audi R8 v10», и др.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23835">
+        <img src="https://st.render.ru/post/652682" title="Январь 2023"/>
+        <div>Январь 2023</div>
+        <div>Первый номер 2023 года при спонсорстве комьюнити ресурса: статья «Нейросети — когда прогресс тащит тебя за ухо в будущее», Making Of «Червяк Джим», статья из рубрики CGUp «Вавилон-6 от ТО Посредник».</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23722">
+        <img src="https://st.render.ru/post/648498" title="Декабрь 2022"/>
+        <div>Декабрь 2022</div>
+        <div>Пятый номер при спонсорстве комьюнити ресурса: статья &quot;Нейросети — конец эпохи художников?&quot;, два Making Of материала, статья из рубрики CGUp, &quot;Roads of Destiny - игра про чародея&quot; и многое другое.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23582">
+        <img src="https://st.render.ru/post/642197" title="Ноябрь 2022"/>
+        <div>Ноябрь 2022</div>
+        <div>Встречайте 4-ый номер при спонсорстве комьюнити ресурса, в этом выпуске: статьи из рубрики CG Up, статья «Slavania — в мире славянских сказок», а также Making Of «Dragon Knight» и многое другое.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23434">
+        <img src="https://st.render.ru/post/634233" title="Октябрь 2022"/>
+        <div>Октябрь 2022</div>
+        <div>Читайте в 3-ем выпуске при спонсорстве комьюнити ресурса:  статьи из рубрики CG UP, интервью основательницей школы CG LAB Линой Сидоровой, Making Of «Japanese Girl» и многое другое.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23330">
+        <img src="https://st.render.ru/post/627679" title="Сентябрь 2022"/>
+        <div>Сентябрь 2022</div>
+        <div>Читайте во 2-ом выпуске при спонсорстве комьюнити ресурса:  статьи из рубрики CG UP, интервью с создателем короткометражки “Обратный отсчет”, Кто и как создает телевизионные заставки и многое другое.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23205">
+        <img src="https://st.render.ru/post/619023" title="Август 2022"/>
+        <div>Август 2022</div>
+        <div>Читайте в первом выпуске при спонсорстве комьюнити render.ru:  статья «Рендер донаты, отчет первого месяца», статьи из рубрики CG Up, а также Making Of «Barbarian girl» от 3d художницы Lisa K.</div>
+    </a>
+    <a href="https://render.ru/ru/magazine/post/23087">
+        <img src="https://st.render.ru/post/611269" title="Июль 2022"/>
+        <div>Июль 2022</div>
+        <div>В этом выпуске: интервью с создателем короткометражки «Операция Марс», «Как создавался Слёт аниматоров», интервью с VFX продюсером Айратом Исламовым, Making of «Samurai Nanako» и многое другое.</div>
+    </a>
+</div>
+<div itemscope itemtype="http://schema.org/Organization" style="visibility:hidden" >
+    <div itemprop="name">RENDER.RU</div>
+    <a itemprop="url" href="https://render.ru/">https://render.ru/</a>
+    <ul>
+        <li><a itemprop="sameAS" href="https://t.me/render_ru" target="_blank">telegram</a></li>
+<!--        <li><a itemprop="sameAS" href="https://www.facebook.com/Render.ru/" target="_blank">facebook</a></li>
+        <li><a itemprop="sameAS" href="https://twitter.com/renderRu" target="_blank">twitter</a></li>
+-->        <li><a itemprop="sameAS" href="https://vk.com/render_ru" target="_blank">VK</a></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <base href="/">
+    <title>Insolvo &#x2013; Smart freelancing platform</title>
+        <meta name="description" content="Insolvo is one of the world&#x2019;s leading freelancing platforms. We help you find a freelancer to take your business to the next level. Hire a freelancer today."/>
+        <meta name="keywords" content="freelance market, freelance marketplace, remote work, freelancing, personal assistant, remote assistant, search for freelancer, find freelancer, remote work, remote job, work from home"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="preload" as="font" type="font/woff2" href="./fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="./fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-700.woff2" crossorigin>
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <link rel="manifest" href="/manifest.json">
+    <meta property="fb:app_id" content="867825456625470">
+    <!-- Open Graph data -->
+    <meta property="og:url" content="http://insolvo.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Insolvo – Smart freelancing platform">
+    <meta property="og:image" content="https://insolvo.com/images/pic-link-preview.png">
+    <meta property="og:description" content="Quickly find a freelancer for practically any remote work you have.">
+    <!-- Schema.org data for G+ -->
+    <meta itemprop="name" content="Insolvo – Smart freelancing platform">
+    <meta itemprop="url" content="http://insolvo.com/">
+    <meta itemprop="image" content="https://insolvo.com/images/pic-link-preview.png">
+    <meta itemprop="description" content="Quickly find a freelancer for practically any remote work you have.">
+    <meta name="apple-itunes-app" content="app-id=1621675706">
+    <link rel="canonical" href="https://insolvo.com" />
+    <style>
+        @font-face {
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Sans'), local('PTSans-Regular'),
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'PT Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: local('PT Sans Bold'), local('PTSans-Bold'),
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('fonts/pt-sans-v11-cyrillic-ext_latin-ext_latin_cyrillic-700.svg#PTSans') format('svg'); /* Legacy iOS */
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            src: url('fonts/Inter-Light.ttf') format('truetype');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            src: url('fonts/Inter-SemiBold.ttf') format('truetype');
+            font-display: swap;
+        }
+        .loading-container { font-family: "PT Sans"; white-space: nowrap; background: #325E70; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; position: fixed; z-index: 100000; }
+        .loading-container img { position: absolute; top: 50%; left: 50%; margin-top: -35px; margin-left: -140px; max-width: 280px; height: 70px; }
+        .loading-container p { position: absolute; top: 50%; left: 50%; margin-top: 65px; margin-left: -140px; width: 280px; height: 70px; font-size: 26px; font-weight: 400; color:#fff; }
+        .loading-container.animated { -webkit-animation-duration: 1s;animation-duration: 1s; -webkit-animation-fill-mode: both;animation-fill-mode: both; -webkit-animation-name: loaderFadeOut; animation-name: loaderFadeOut; }
+        @-webkit-keyframes loaderFadeOut {
+            0% {opacity: 1;}
+            99% {opacity: 0; z-index: 100000;}
+            100% {opacity: 0; z-index:-100000}
+         }
+         @keyframes loaderFadeOut {
+            0% {opacity: 1;}
+            99% {opacity: 0; z-index: 100000;}
+            100% {opacity: 0; z-index:-100000}
+         }
+    </style>
+</head>
+
+<body>
+<div class="loading-container" id="loader">
+    <img src="/img/pic-logo.svg">
+    <p id="loaderText">Loading...</p>
+</div>
+<app-root></app-root>
+<script>
+    window._wzLoaderTimerId = setInterval(function() {
+        if (document.getElementsByTagName("app-root")[0].innerHTML === '') return;
+        document.getElementById("loader").classList.add("animated");
+        clearInterval(window._wzLoaderTimerId);
+        delete window._wzLoaderTimerId;
+    }, 50);
+</script>
+<script src="runtime.35806b04696febce44e5.js" defer></script><script src="polyfills-es5.3c71f674105e484a8cb1.js" nomodule defer></script><script src="polyfills.d2cf987aadefac136a72.js" defer></script><script src="vendor.601b0f6b97fbf25ed5a7.js" defer></script><script src="main.6f477b0a9ba54a98308f.js" defer></script><!--scripts will placed there-->
+
+</body>
+</html>

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title> Подбор актеров онлайн - поиск актеров и артистов на сервисе Dilavo</title>
+    <meta property="og:title" content=" Подбор актеров онлайн - поиск актеров и артистов на сервисе Dilavo" />
+        <meta name="description" content="Подберите актера для съемок в кино или рекламе онлайн на бесплатном сервисе Dilavo.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+    <meta name="apple-itunes-app" content="app-id=1079972872">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/theme/img/favicon.png" />         
+
+    <link rel="stylesheet" href="/theme/dist/dilavo.min.css?v=6.2">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic-ext"> 
+
+    <script src="/theme/dist/dilavo.min.js?v=6.2"></script>    
+                     <link rel="canonical" href="https://dilavo.ru/castings/">
+         </head>
+<body>
+    
+    <div id="rega_box"><span class="close" title="Закрыть" onclick="$.fancybox.close();"></span><div class="rega_auth_box status_rega"><div class="title">Регистрация</div>                <div class="line">Войти с помощью:</div><div class="auth_social"><a rel="nofollow" title="Войти с помощью FaceBook" href="https://www.facebook.com/dialog/oauth?client_id=594080620749236&redirect_uri=https://dilavo.ru/index.php?regaFB=1&scope=email" class="fb"></a><a rel="nofollow" title="Войти с помощью ВКонтакте" href="https://oauth.vk.com/authorize?client_id=5224768&scope=offline,email,friends&redirect_uri=https://dilavo.ru/index.php?regaVK=1&response_type=code&v=5.2" class="vk"></a></div><p>или</p><form method="post" id="frm_auth_rega"><input type="hidden" name="type" id="rega_auth_type" value="rega" /><input type="email" required  autocomplete="off" value="" name="email" placeholder="example@mayweb.com" maxlength="255"><input type="password" autocomplete="off" value="" name="pass" placeholder="пароль 6+ символов" maxlength="255"><div id="checkbox_rega"><label><input type="checkbox" value="1" name="confirm" >Ознакомлен(а) с условиями</label> <a href="/terms_of_use/" target="_blank">пользовательского соглашения</a></div><div id="auth_rega_error"></div><input type="submit" value="Зарегистрироваться!"></form><div id="rega_auth_answer"></div><div class="links"><a href="javascript://" class="go_enter">уже есть аккаунт</a><a href="javascript://" class="go_rega">нет аккаунта</a><a href="javascript://" class="go_recovery">не помню пароль</a></div></div></div><nav class="navbar fixed-top dilavo-top"><div class="mw-dilavo "><div class="container-fluid"><div class="row"><div class="col-12"><div class="flex-block"><div class="logo-box"><a class="navbar-brand" href="/"><img src="/theme/img/logo_middle-min.png" alt="Dilavo — бесплатный помощник для подбора актёров" /></a></div><div class="menu"><button class="hamburger hamburger--squeeze d-md-none" type="button" id="hamburger-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><div class="list" id="top-menu-box"><div class="row"><div class="col-md-4 col-xl-4 col-12 order-md-2"><div class="links"><a href="javascript://" class="auth" id="go_form_auth">Войти</a><a href="javascript://" class="rega d-md-none d-lg-inline-block" id="go_form_rega">Регистрация</a></div></div><div class="col-md-8 col-xl-8 col-12 order-md-1"><div class="menu-page"><a href="/castings/" >Кастинги</a>                                                                                                                                                <a href="https://t.me/dilavo_bot" target="_blank">Создать кастинг</a>                                                </div></div></div></div></div></div></div></div></div></nav>    
+
+    <div class="header pb-5">
+        <div class="container-fluid mw-dilavo">
+            <div class="row justify-content-center align-items-center">                
+                <div class="order-lg-1 col-12 col-lg-7">
+                    <div class="header-text1">УМНЫЙ <b>БОТ</b><br />НОВОГО ФОРМАТА</div>
+                    <h1 class="header-text2">БЫСТРЫЙ ПОИСК<br />АКТЕРОВ И МОДЕЛЕЙ</h1>
+                </div>
+                <div class="order-lg-0 col-lg-4 text-center mb-3 mb-lg-0">
+                    <img src="/theme/img/homepage-new.png" alt="Умный бот нового формата дял АКТЕРОВ И МОДЕЛЕЙ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="v-line"></div>
+    <div class="container-fluid mw-dilavo">
+                <div class="dilavo-offers">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-8 col-xl-7 mb-3">
+            <h2 class="text-center">Экономьте драгоценное время и деньги
+                на процессе кастинга и трудоустройства</h2>
+        </div>
+    </div>
+    <div class="v-line"></div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-8 col-xl-7 mb-3 text-center">
+            <h2>Что умеет Dilavo — БОТ</h2>
+        </div>
+    </div>
+    <div class="home-box mb-5">
+        <div class="home-box__title">Я Заказчик</div>
+        <div class="home-box__descr mb-3">режиссёр; продюсер; кастинг-директор; продакшн, фрилансер, модельное,
+            актёрское и рекламное агентство,
+            владелец бренда и т.д.</div>
+
+        <div class="home-box__orange mb-4">
+            <div class="row align-items-center">
+                <div class="col-auto home-box__sneg p-1  d-none d-md-block">
+                    <img src="/theme/img/sneg.svg" alt="" width="40" height="40" />
+                </div>
+                <div class="col">
+                    <div class="mb-1">Telegram-бот (dilavo_bot)</div>
+                    БЕСПЛАТНЫЙ помощник для подбора актёров и моделей по заданным параметрам, опыту и вашему бюджету.
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-6 pr-lg-4">
+                <ul>
+                    <li>Быстрый доступ к крупнейшей базе актёров и моделей</li>
+                    <li>Размещайте кастинги и получайте оперативные отклики</li>
+                    <li>Все отклики структурированно приходят в один бот</li>
+                    <li>Вся информация об исполнителе в одном сообщении (инфо + фото + видео)</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 pl-lg-4">
+                <ul>
+                <li>Прямая связь между заказчиком и исполнителем через Telegram</li>
+                <li>Рейтинг исполнителей и реальные отзывы о них</li>
+                <li>
+                    <div class="mb-2">Мгновенное создание презентаций:</div>
+                    <div><i>✓ &ensp;Удобный кастинг-лист в Excel или PDF</i></div>
+                    <div><i>✓ &ensp;Фото и видеовизитки на ваш Яндекс Диск</i></div>
+                </li>
+            </div>
+        </div>
+        <div class="home-box__linkbox">
+            <a href="https://t.me/dilavo_bot" target="_blank" class="home-box__link">Присоединяйтесь к Telegram-боту</a>
+        </div>
+    </div>
+
+    <div class="home-box mb-5">
+        <div class="home-box__title">Я Исполнитель</div>
+        <div class="home-box__descr mb-3">актёр, модель, актёр массовых сцен и т.д.</div>
+
+        <div class="home-box__orange mb-4">
+            <div class="row align-items-center">
+                <div class="col-auto home-box__sneg p-1 d-none d-md-block">
+                    <img src="/theme/img/sneg.svg" alt="" width="40" height="40" />
+                </div>
+                <div class="col">
+                    <div class="mb-1">Telegram-бот (DilavoJobBot)</div>                    
+                    <div class="mb-1">ПОИСК РАБОТЫ / КАСТИНГОВ ПО ВСЕМУ МИРУ</div>
+                     начинающие/ любители/ профессионалы
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-lg-6 pr-lg-4 mb-3 mb-lg-0">
+                <ul>
+                    <li>Все актуальные кастинги в одном боте</li>
+                    <li>Мгновенное уведомление о новых кастингах по вашим параметрам</li>
+                    <li>Оперативная подача заявок</li>
+                    <li>Прямая связь между заказчиком и исполнителем через Telegram</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 pl-lg-4">
+                <ul>
+                <li>Получение гонорара напрямую от заказчика (без участия Сервиса)</li>
+                <li>Рейтинг заказчиков и реальные отзывы о них </li>
+                <li>Не придется отключать уведомления - мы не занимаемся спамом</li>
+            </div>
+        </div>
+        <div class="home-box__tariff mb-2">Тарифы</div>
+        <div class="mb-lg-5 mb-4">            
+            <div class="row mb-4">
+                <div class="col-lg-6 pr-lg-4 mb-3 mb-lg-0">
+                    <div class="home-box__tariff_title">PRO &mdash; 99₽/мес</div>
+                    <ul>
+                        <li>Подписка на кастинги</li>
+                        <li>Фильтр проектов по направлениям, полу и возрасту</li>
+                        <li>Участие во всех интересующих вас кастингах</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 pl-lg-4">
+                    <div class="home-box__tariff_title">LIGHT &mdash; БЕСПЛАТНО</div>
+                    <ul>
+                        <li>Участие в кастингах по разовому приглашению от заказчиков</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="home-box__linkbox">
+            <a href="https://t.me/DilavoJobBot" target="_blank" class="home-box__link">Присоединяйтесь к Telegram-боту</a>
+        </div>
+    </div>
+</div>        <div class="v-line"></div>
+            
+    <div class="castings">
+    <h2>Кастинги</h2>    
+
+
+        <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',495);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Фотосъемка</span> <span class="bot-direction">Модельное направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/495/" class="font-weight-bold">Кастинг
+                            срочная фотосъемка для бренда одежды</a></div>
+                    Новый бренд одежды
+
+Утверждение онлайн
+Съемка 11 июля! 
+
+Девушка, 18-25 лет. Размер одежды 42-44.
+Спортивная, дерзкая. 
+
+Девушка, 18-25 лет. Размер одежды 42-44.
+Милая,...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',495);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                                                        <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">18 - 25 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">5 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>08.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',492);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Фотосъемка</span> <span class="bot-direction">Модельное направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/492/" class="font-weight-bold">Кастинг
+                            фотосъёмка бренда офисной одежды</a></div>
+                    Утверждение онлайн
+Съемка 19 июля
+
+1.Девушка, 20-30 лет
+С короткой стрижкой
+
+2. Девушка, 20-30 лет
+С длинными волосами
+
+Размер одежды 42-44
+
+Гонорар 2500 р. в час...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',492);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                                                        <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">20 - 30 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">2 500  ₽ за час</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>06.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',491);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Фотосъемка</span> <span class="bot-direction">Модельное направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/491/" class="font-weight-bold">Кастинг
+                            фотосъёмка каталога</a></div>
+                    Девочки и мальчики 150-165 см рост. 
+
+Съемка 7 июля (или ближайшую неделю)
+Гонорар 2000 руб/час (-20% агентской комиссии)
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',491);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">13 - 16 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">1 600  ₽ за час</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>06.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',489);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/489/" class="font-weight-bold">Кастинг
+                            видеореклама доставки</a></div>
+                    Коллбэк 14 июля
+Примерка 17 июля
+Съемка 18 июля
+
+1. Женщина, 60-80 лет
+2. Мужчина, 60-80 лет
+Активная, современная пара. Ухоженные, энергичные. 
+
+Права 3 года ТВ и...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',489);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">60 - 80 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">150 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>05.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',488);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/488/" class="font-weight-bold">Кастинг
+                            видеореклама доставки</a></div>
+                    Коллбэк 14 июля
+Примерка 17 июля
+Съемка 18 июля
+
+1. Женщина, 35-45 лет. Мама, работающая, деловая. 
+
+2. Мужчина, 35-45 лет. Офисный сотрудник. 
+
+Права 3 года ТВ и...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',488);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">35 - 45 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">150 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>05.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',487);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/487/" class="font-weight-bold">Кастинг
+                            видеореклама доставки</a></div>
+                    Коллбэк 14 июля
+Примерка 17 июля
+Съемка 18 июля
+
+Реклама службы доставки
+
+1. Девушка, 20-33 года. Сотрудник на удаленке. 
+
+2. Мужчина, 20-33 года. Курьер. 
+
+Права 3...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',487);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">20 - 33 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">150 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>05.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',486);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/486/" class="font-weight-bold">Кастинг
+                            рекламный ролик "аптека"</a></div>
+                    Женщина 30-38 лет
+Яркая внешность (веснушки, рыжие волосы, кудри и т.д.)
+Съемка 17 июля
+Гонорар 10.000 руб (-20% агентской комиссии)
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',486);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                                                        <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">30 - 38 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">8 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>04.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',485);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Кино</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/485/" class="font-weight-bold">Кастинг
+                            комедийный фильм. режиссёр владимир котт</a></div>
+                    Обязательные условия:
+1. Юноша 14-18 лет, хулиган
+2. Девочка пацанка 13-17 лет
+3. Девочка 9-12 лет, тоже хулиганистая 
+Дата съёмки: июль-август
+Гонорар: за смену...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',485);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">9 - 18 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">15 000  ₽ за день</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>04.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',483);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Кино</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/483/" class="font-weight-bold">Кастинг
+                            не забытое прошлое -2. продолжение.</a></div>
+                    Проходит 2 года. Алина и Антон женаты, воспитывают Аню и мечтают купить дом у моря. Уфимский со своими поддельниками отбывает срок наказания, Яна с сыном...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',483);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">23 - 45 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">50 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>04.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',481);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Съемка каталога</span> <span class="bot-direction">Модельное направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/481/" class="font-weight-bold">Кастинг
+                            каталожная съемка бренда пижам</a></div>
+                    Утверждение онлайн
+Дата съемки: 15 июля
+
+Девушка, размер 42-44
+
+1. Девушка 18-28 лет, блондинка с длинными волосами
+
+2. Девушка 18-28 лет, брюнетка с длинными...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',481);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                                                        <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">18 - 28 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">2 000  ₽ за час</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>04.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',477);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/477/" class="font-weight-bold">Кастинг
+                            реклама жилищного комплекса</a></div>
+                    Семья: мама-папа 25-30 лет, их родители 50+- лет. Типажи "из жизни", разные. Права - отчуждение.. Гонорар 230000-20%. Примерка 10 июля, съемка 12 июля
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',477);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">47 - 55 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">230 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>01.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',476);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/476/" class="font-weight-bold">Кастинг
+                            реклама жилищного комплекса</a></div>
+                    Семья: мама-папа 25-30 лет, их родители 50+- лет. Типажи "из жизни", разные. Права - отчуждение.. Гонорар 230000-20%. Примерка 10 июля, съемка 12 июля
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',476);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">25 - 30 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">230 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>01.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',472);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Съемка каталога</span> <span class="bot-direction">Модельное направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/472/" class="font-weight-bold">Кастинг
+                            фотосъемка для бренда обуви</a></div>
+                    Утверждение онлайн
+Дата работы: 11 июля
+
+Фотосъемка яркая, сюжетная. Задача - передать настроение, атмосферу. 
+
+Девушка, 19-28 пластичная, с хорошей...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',472);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                                                        <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">19 - 28 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">3 000  ₽ за час</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>30.06.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',471);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/471/" class="font-weight-bold">Кастинг
+                            видеореклама кондитерской продукции</a></div>
+                    Коллбэк 12 июля
+Примерка 13 июля
+Съемка 14 июля
+
+Бабушка и дедушка. 
+
+1. Женщина 45-60 лет. Ухоженная, активная. 
+
+2. Мужчина 45-60 лет. В хорошей форме, активный....
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',471);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">45 - 60 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">110 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>30.06.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',470);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/470/" class="font-weight-bold">Кастинг
+                            видеореклама кондитерской продукции</a></div>
+                    Коллбэк 12 июля
+Примерка 13 июля
+Съемка 14 июля
+
+1. Девушка 28-40 лет, мама. Домохозяйка, мягкие черты лица. 
+
+2. Мужчина 28-40 лет, папа. Без лысины. 
+
+Права ТВ и...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',470);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                            <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">28 - 40 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">110 000  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>30.06.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',464);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Кино</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/464/" class="font-weight-bold">Кастинг
+                            ''такая любовь’’ роль главной героини</a></div>
+                    Артхаус, драма 
+
+Аня-18 лет, дет.домовская, социопатка (оторва, харизматичная, сексуальная, жесткая, беспринципная, умеющая манипулировать людьми)...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',464);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                                                        <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">18 - 20 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">100 000  ₽ за день</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>28.06.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',458);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Кино</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/458/" class="font-weight-bold">Кастинг
+                            «сибирь»</a></div>
+                    АЗИАТСКИЙ ТИП ВНЕШНОСТИ 
+
+В полнометражную картину ищем:
+•Юноша
+Азиатского типа внешности ( по сюжету якут) 
+•Возраст: 33-38
+•Своеобразный ,интересный...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',458);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                                                    </div>
+                        <div class="item-age">33 - 38 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">15 000  ₽ за день</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>28.06.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item ">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',121);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Реклама</span> <span class="bot-direction">Актёрское направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/121/" class="font-weight-bold">Кастинг
+                            кастинг оператора связи</a></div>
+                    Кастинг оператора связи. 
+
+✅ПАРЕНЬ С НАСТОЯЩИМИ ДРЕДАМИ! 
+✅Парень «тиктокер» 
+
+callback 7 марта 
+Утверждение 10 марта 
+Съемка 12, 13 Марта (по одному дню у...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',121);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                                                    </div>
+                        <div class="item-age">18 - 38 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">49 500  ₽ за проект</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>26.02.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item  item-end">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',484);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Фотосъемка</span> <span class="bot-direction">Модельное направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/484/" class="font-weight-bold">Кастинг
+                            каталог рубашек</a></div>
+                    Мальчик 116-158 см
+Темные волосы
+Занятость 1 час
+Гонорар 1500 руб/час (-20% агентской комиссии)
+
+Съемка 5-9 июня (один из дней уточняется)
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',484);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                            <span class="ico-man" title="Мужчина"></span>                                                    </div>
+                        <div class="item-age">4 - 15 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">1 200  ₽ за час</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>04.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="item  item-end">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 px-2  col-md-6 item-brd pointer order-sm-2 mb-3"
+                onclick="link('castingsb',482);">
+                <div class="item-title item-title__bot">
+                    <span class="mb-1">Фотосъемка</span> <span class="bot-direction">Модельное направление</span>
+                </div>
+                <div class="item-descr">
+                    <div><a href="/castings/infob/482/" class="font-weight-bold">Кастинг
+                            съемка купальников для фигурного катания</a></div>
+                    Девочка 116-124 см.
+ВАЖНО! Занимается или занималась фигурным катанием, есть свои фигурные коньки (желательно профессиональные)
+7 или 8 июля
+2000 руб/час...
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 pointer order-sm-3 mb-sm-3" onclick="link('castingsb',482);">
+                <div class="row">
+                    <div class="col-12 col-md-6 item-brd">
+                        <div class="item-title d-none d-sm-block">Требования</div>
+                        <div class="ico-casting">
+                                                        <span class="ico-woman"
+                                title="Женщина"></span>                        </div>
+                        <div class="item-age">4 - 7 лет</div>
+                                    </div>
+                <div class="col-12 col-md-6 item-brd">
+                    <div class="item-title  d-none d-sm-block">Гонорар</div>
+                    <div class="item-price">1 600  ₽ за час</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-2 col-sm-2 col-md-2 order-sm-1 d-none d-sm-block">
+            <div class="item-customer mt-4">
+                <div class="item-ico"><img src="/theme/img/logo_bot.png" alt="" /></div>
+                                <div>04.07.2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>    
+        <div class="row justify-content-center mb_30">
+            <div class="col-12 col-lg-4 text-center"><a href="/castings/" class="btn-def">Все кастинги</a></div>
+        </div>
+    </div>
+    <footer><div class="container-fluid  mw-dilavo "><div class="row mb_30"><div class="col-12 col-md-4 order-md-1"><div class="logo"><a href="/"><img src="/theme/img/logo_middle_gray.png" alt="Dilavo" /></a></div>&copy; 2023 Все права защищены</div><div class="col-12 col-md-4 order-md-3"><p class="title font-weight-bold">О проекте</p><ul class="ft-menu">
+    <li><a  href="/about/" >О нас</a></li>
+    <li><a  href="/become_performer/" >Как стать исполнителем?</a></li>
+    <li><a  href="/become_customer/" >Как стать заказчиком?</a></li>
+    <li><a  href="/reviews/" >Отзывы</a></li>
+    <li><a  href="/feedback/" >Обратная связь</a></li>
+    <li><a  href="/terms_of_use/" >Пользовательское соглашение</a></li>
+</ul></div><div class="col-12 col-md-4  order-md-2"><ul class="ft-menu ft-menu-contact"><li class="font-weight-bold">Оставайтесь с нами на связи!</li>                    <li><a href="mailto:info@dilavo.ru">info@dilavo.ru</a><li><li>Москва, ул. Дубининская, 68 с3</li></ul></div></div></div></footer>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(36510725, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/36510725" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

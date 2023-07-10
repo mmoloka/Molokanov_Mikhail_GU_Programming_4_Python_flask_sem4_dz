@@ -1,0 +1,3708 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru" id="app">
+<head ng-controller="HeadController as head">
+    <title ng-bind="head.pageTitle">Ремонт квартир от бригад, частных мастеров, фирм. Строительные тендеры по ремонту на Ремонтник.ру.</title>
+
+<meta name="description" content="Ремонт квартир и строительство домов от частных бригад и фирм, строительные тендеры, форум.">
+<meta name="keywords" content="ремонт квартир, строительные тендеры">
+
+    <meta name="robots" content="index, follow">
+
+    
+        
+
+    
+
+    
+
+
+<script async src="https://cdn.topmind.io/static/tracker.min.js"></script>
+<script>
+    window.$tmt = window.$tmt || function () {($tmt.q = $tmt.q || []).push(arguments)};
+    
+    $tmt('init', 4, '79c30e98', {initApiCall: true});
+</script>
+
+
+    
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+
+<meta name="google-site-verification" content="s-miwNvHZYNEjDaWx8u_sTAvoorMlCDvlaBc03RZrtU">
+<meta name='yandex-verification' content='7c50517971817e00'>
+<meta name="mailru-verification" content="22c15e64a7bb10a7" />
+
+<link rel="icon" href="/favicon.ico">
+<link href="/favicon.ico" rel="shortcut icon">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
+<style type="text/css">
+    svg {
+        display: none;
+    }
+</style>
+<link rel="stylesheet" href="/static/css/redesign.css?12ab21">
+
+    
+<script>
+    document.documentElement.classList && document.documentElement.classList.add('js');
+    var rem = {
+        appBaseUrl: '/static/js/app.min/',
+        sentryDsn: 'https://a5fff6d9e1854c7aa846fee95b933660@sentry3.biggo.pro/5',
+        yaMapsApiKey: '2400c48c-18f1-4009-a1a5-47ae74981c18',
+        assetsVersion: '12ab21',
+        messengerId: '',
+        timeOffset: new Date('2023-07-09T22:21:20.707258+03:00') - new Date,
+        serverTimezoneOffset: (10800 + new Date().getTimezoneOffset() * 60) * 1000,
+        mobileApp: {
+            icon: '/static/images/app-icons/128.png',
+            title: 'Ремонтник.ру',
+            apple: 'https://apps.apple.com/ru/app/id1297193431',
+            google: 'https://play.google.com/store/apps/details?id=ru.remontnik.app.customer'
+        },
+        require: (function (list) {
+            return function (deps, callback) {
+                if (deps) {
+                    if ('require' in window) {
+                        require(deps, callback);
+                    } else {
+                        callback
+                            ? (list.additional = list.additional || []).push([deps, callback])
+                            : Array.prototype.push.apply(list, deps);
+                    }
+                } else {
+                    setTimeout(function () {
+                        list = null;
+                    });
+                    return list;
+                }
+            };
+        })([]),
+        
+        urls: {
+            assets: '/static/',
+            remessageServer: 'https://remessage.remontnik.ru/remessage',
+            home: '/',
+            catalog: '/catalog/',
+            orders: '/boards/',
+            myOrders: '/boards/my/',
+            addOrder: '/boards/add/',
+            socialAuth: {
+                facebook: '/social_auth/login/facebook/',
+                vkontakte: '/social_auth/login/vk-oauth2/'
+            },
+            calls: '/calls/',
+            messages: '/messages/',
+            refilling: '/billing/deposit/',
+            subscription: '/billing/deposit/subscription',
+            registration: '/registration/',
+            verification: '/services/document_confirmation/',
+            changeUserType: '/api/v1/profile/profile_type_change/',
+            b2bClientsFE: 'https://b2b-front-clients.runtime.remontnik.ru/',
+            b2bWorkersFE: 'https://b2b-front-workers.runtime.remontnik.ru/',
+        }
+    };
+</script>
+<!--[if IE]>
+<script>
+    delete rem.sentryDsn;
+</script>
+<![endif]-->
+<script>rem.require(['Application/HeadController'])</script>
+
+
+    
+
+    <meta name="apple-itunes-app" content="app-id=1297193431">
+    <meta name="google-play-app" content="app-id=ru.remontnik.app.customer">
+</head>
+<body vocab="https://schema.org/">
+    
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(1617295, "init", {
+        id:1617295,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+        trackHash:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/1617295" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+    <svg style="display: none" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+    <symbol id="logo" viewBox="0 0 200 200">
+        <path fill-rule="evenodd" d="M10.256,127.197c0,0-4.169,0.309-6.054-0.996
+            c-1.812-1.253-3.124-4.713,0.193-8.032C9.397,113.157,91.336,9.986,93.949,6.144c3.481-5.113,7.592-4.881,11.073,0.003
+            c1.021,1.43,17.989,22.528,36.843,45.89c-0.058,0.031-0.058-7.751-0.058-9.065c0-2.112,0.859-6.696,6.155-6.693l13.423,0.009
+            c3.869,0,5.517,3.478,5.517,7.598c-0.006,1.485,0.034,39.16,0,39.123c14.765,18.206,26.843,32.999,28.005,34.163
+            c6.712,6.709-0.721,10.44-3.044,10.434l-9.374-0.021c-3.723-0.009-7.057,1.415-7.057,6.302v47.094
+            c0,5.352-35.761,17.155-75.252,17.017c-39.615-0.141-75.863-9.722-75.848-14.786c0.012-5.345-0.015-41.865,0-48.359
+            c0.012-6.504-2.051-7.528-6.216-7.638C11.958,127.054,10.256,127.197,10.256,127.197z M87.964,97.136c0,0-0.685-4.532,3.915-4.905
+            c4.603-0.37,16.342-1.012,21.926,2.304s9.407,8.142,9.407,14.756c0,6.614-1.158,11.247-5.477,15.104
+            c-3.918,3.499-8.695,4.56-16.064,4.496c-7.054-0.058-13.707-1.372-13.707-5.321V97.136z M65.189,77.881c0,0-0.095-5.009,7.576-6.039
+            c7.674-1.03,31.565-2.894,45.511,0.813c13.952,3.707,24.392,13.943,26.58,26.914c2.408,14.267,0.254,30.162-10.636,40.483
+            c-8.625,8.179-19.361,10.547-30.933,10.327c-11.287-0.214-15.361-5.242-15.361,2.039v17.02c0,2.647-0.474,3.686-3.6,4.716
+            c-1.137,0.468-3.793,0.969-7.583,0.96c-3.79-0.012-7.769-0.535-7.864-0.724c-3.029-0.293-3.692-2.185-3.692-4.642V77.881z"></path>
+    </symbol>
+    <symbol id="vkontakte" viewBox="0 0 100 100">
+        <path d="M94.242,66.929c-2.873-3.446-6.254-6.387-9.453-9.509
+            c-2.886-2.816-3.069-4.449-0.748-7.698c2.532-3.546,5.255-6.956,7.809-10.486c2.385-3.299,4.824-6.589,6.078-10.539
+            c0.796-2.513,0.092-3.623-2.485-4.063c-0.444-0.077-0.903-0.081-1.355-0.081l-15.289-0.018c-1.883-0.028-2.924,0.793-3.59,2.462
+            c-0.9,2.256-1.826,4.51-2.898,6.687c-2.429,4.936-5.143,9.707-8.949,13.747c-0.839,0.891-1.767,2.017-3.169,1.553
+            c-1.754-0.64-2.27-3.53-2.242-4.507L57.936,26.83c-0.34-2.521-0.899-3.645-3.402-4.135l-15.882,0.003
+            c-2.12,0-3.183,0.819-4.315,2.145c-0.653,0.766-0.85,1.263,0.492,1.517c2.636,0.5,4.121,2.206,4.515,4.849
+            c0.632,4.223,0.588,8.463,0.224,12.703c-0.107,1.238-0.32,2.473-0.811,3.629c-0.768,1.817-2.008,2.187-3.637,1.069
+            c-1.475-1.012-2.511-2.44-3.525-3.874c-3.809-5.382-6.848-11.186-9.326-17.285c-0.716-1.762-1.951-2.83-3.818-2.859
+            c-4.587-0.073-9.175-0.085-13.762,0.004c-2.76,0.052-3.583,1.392-2.459,3.894c4.996,11.113,10.557,21.918,17.816,31.76
+            c3.727,5.051,8.006,9.51,13.534,12.67c6.265,3.582,13.009,4.66,20.112,4.327c3.326-0.156,4.325-1.021,4.479-4.336
+            c0.104-2.267,0.361-4.523,1.48-6.56c1.098-2,2.761-2.381,4.678-1.136c0.959,0.623,1.766,1.415,2.53,2.252
+            c1.872,2.047,3.677,4.158,5.62,6.136c2.437,2.481,5.324,3.946,8.954,3.646l14.054,0.002c2.264-0.148,3.438-2.923,2.138-5.451
+            C96.712,70.031,95.514,68.454,94.242,66.929z"></path>
+    </symbol>
+    <symbol id="fb_flat" viewBox="0 0 100 100">
+        <path d="M73.099,15.973l-9.058,0.004c-7.102,0-8.477,3.375-8.477,8.328v10.921h16.938l-0.006,17.106H55.564v43.895H37.897V52.332
+            h-14.77V35.226h14.77V22.612C37.897,7.972,46.84,0,59.9,0L73.1,0.021L73.099,15.973L73.099,15.973z"></path>
+    </symbol>
+    <symbol id="call" viewBox="0 0 23 23">
+        <path d="M16.5 11h-5.8l2.6-2.6c.2-.2.2-.5 0-.7s-.5-.2-.7 0l-3.5 3.5s-.1.1-.1.2v.3c0 .1.1.1.1.2l3.5 3.5c.1.1.2.1.4.1s.3 0 .4-.1c.2-.2.2-.5 0-.7L10.7 12h5.8c.3 0 .5-.2.5-.5s-.2-.5-.5-.5z"></path>
+        <path d="M20.5 2H8.9c0-.9-.7-1.6-1.6-1.8C6.7.1 6 0 5.4 0c-.5 0-.9 0-1.4.1-.3 0-.7.2-1 .2l-.1.1c-.6.5-1 1.2-1.3 1.8C1 3.5.6 4.8.4 6.2.1 7.8 0 9.4 0 11.1v.9c0 1.6.1 3.3.4 4.9.2 1.4.6 2.7 1.2 3.9.3.7.7 1.3 1.3 1.8l.1.1c.3.1.7.2 1 .2.5.1.9.1 1.4.1.7 0 1.3-.1 2-.2.8-.2 1.5-.9 1.6-1.8h11.6c1.4 0 2.5-1.1 2.5-2.5v-14C23 3.1 21.9 2 20.5 2zM7.8 21.4c-.1.2-.4.4-.6.4-.7.1-1.2.2-1.8.2-.4 0-.8 0-1.2-.1-.2 0-.4-.1-.6-.1h-.1c-.4-.3-.7-.8-1-1.5-.5-1-.8-2.1-1.1-3.6-.3-1.4-.4-2.8-.4-4.8v-.5-.3c0-1.9.1-3.4.4-4.7.3-1.6.6-2.7 1.1-3.7.3-.6.6-1.1 1-1.5h.1c.2 0 .4-.1.6-.1C4.6 1 5 1 5.4 1c.6 0 1.1.1 1.7.2.2 0 .5.2.6.4.2.2.2.4.2.6-.2 1-.4 2.1-.6 3.1l-.2.8c-.1.3-.2.6-.8.8-.5.2-.9.3-1.3.4-.6.1-.9.5-1 1.1-.1 1-.2 2-.2 3.1s0 2.1.2 3.1c.1.6.4 1 1 1.1.4.1.9.2 1.3.4.6.2.7.5.8.8l.2.8c.2 1 .4 2.1.6 3.1 0 .2 0 .4-.1.6zM22 18.5c0 .8-.7 1.5-1.5 1.5H8.7c0 .2.1.4.1.6-.3-1.3-.5-2.6-.8-3.9-.2-.8-.7-1.3-1.4-1.6-.4-.1-.9-.3-1.4-.4-.1 0-.2-.1-.2-.2-.1-1-.2-2-.1-3 0-1 0-2 .1-3 0-.1.1-.2.2-.2.5-.2.9-.3 1.4-.4.8-.3 1.3-.8 1.4-1.6.2-1.1.5-2.2.7-3.3h11.8c.8 0 1.5.7 1.5 1.5v14z"></path>
+    </symbol>
+    <symbol id="message" viewBox="0 2 22 19">
+        <path d="M4.7629 16.0924L4.88285 15.743L4.5842 15.5257C2.66505 14.1291 1.5 12.1579 1.5 10C1.5 5.95463 5.64608 2.5 11 2.5C16.3539 2.5 20.5 5.95463 20.5 10C20.5 14.0454 16.3539 17.5 11 17.5C10.1437 17.5 9.31976 17.4134 8.5372 17.2416L8.3313 17.1964L8.15519 17.3123C7.19552 17.9437 5.22371 19.0807 3.12437 19.409C3.2934 19.1591 3.46206 18.8849 3.62485 18.598C4.05332 17.8431 4.46673 16.9549 4.7629 16.0924Z" fill="none"/>
+    </symbol>
+    <symbol id="pro-icon" viewBox="0 0 21 15">
+        <path fill="currentColor" fill-rule="evenodd" d="M1.37 3.77c-.89.23-.88.8-.87.94v7.3c0 .52.39 3.26 3.9 2.56l11.71-2.32c4.17-.66 4.38-3.57 4.38-5.49V3.8c0-2.26-2.08-3.46-4.06-3.02L1.37 3.77zm2.07 8.15V6.54c0-.22.06-.28.21-.33l2.25-.44c.35-.04.8.04 1.07.17.17.08.26.15.37.27.2.21.27.61.27.77v.33c-.07 1.18-.51 1.8-1.82 2.14l-1.28.22v1.92c0 .13-.05.18-.22.22l-.7.17c-.1.02-.15.02-.15-.06zm1.12-4.94V8.8l1.02-.22c.67-.24.9-.46.96-1.04v-.44c-.1-.36-.3-.42-.86-.33l-1.12.22zm4.01-1.54v5.38c0 .1.04.13.16.11l.7-.1c.1-.08.15-.14.2-.28V8.57l1.08-.22.9 1.76c.12.17.2.2.38.17l.64-.11c.2-.05.22-.12.11-.33l-1.07-1.87c.35-.18.52-.35.8-.71.21-.46.26-.68.27-1.05l-.05-.55c-.1-.34-.2-.5-.48-.71-.46-.23-.78-.28-1.45-.17l-1.98.39c-.16.04-.21.1-.21.27zm5.4-.77c-.3.46-.53 1.05-.53 1.54V8.3c0 .1.01.17.05.27a1.38 1.38 0 00.64.83c.4.21.63.27 1.07.27.3-.02.46-.04.75-.1.53-.18.78-.34 1.18-.67.33-.35.46-.56.58-.93.12-.38.16-.58.16-.93V5.06a1.55 1.55 0 00-.16-.55 1.46 1.46 0 00-.53-.55 1.95 1.95 0 00-1.12-.27c-.35.02-.54.06-.86.16-.54.19-.81.36-1.23.82zm.75 3.8c-.17-.24-.21-.35-.21-.5V6.2c.03-.38.08-.57.26-.88.16-.28.27-.4.54-.55.24-.1.4-.13.75-.16.16.02.26.05.42.16.18.17.25.3.32.55v1.7a1.9 1.9 0 01-.26 1c-.1.2-.21.31-.48.49-.22.15-.37.21-.75.22-.22-.01-.34-.06-.6-.28z" clip-rule="evenodd"/>
+        <path fill="currentColor" d="M9.7 7.64v-1.7l1.12-.22c.54-.08.74.09.85.44v.33c-.1.58-.33.74-.96.99l-1.02.16z"/>
+    </symbol>
+    <symbol id="refund" viewBox="0 0 42 42" fill="none">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6.86 6.86l5.58-.42m-5.58.42l1.42-5.65M6.86 6.86A20 20 0 111 20.94"/>
+        <path fill="currentColor" d="M16.3 31v-3.3h-2.32v-2.38h2.33v-2.3h-2.33v-2.97h2.33v-9.04h5.96c2.52 0 4.37.51 5.54 1.54 1.2 1 1.8 2.44 1.8 4.31a6.3 6.3 0 01-.79 3.14 5.4 5.4 0 01-2.5 2.2c-1.11.55-2.59.82-4.41.82h-2.02v2.3h4.42v2.38H19.9V31H16.3zm5.21-10.95c1.37 0 2.45-.23 3.25-.7.8-.46 1.2-1.26 1.2-2.38 0-1-.32-1.75-.97-2.24-.64-.5-1.62-.75-2.94-.75h-2.16v6.07h1.62z"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M6.94 20.94a14 14 0 1128 0 14 14 0 01-28 0zM10.7 8.65a16 16 0 103.22-2.09 1 1 0 01-.4 1.88l-2.82.21z" clip-rule="evenodd"/>
+    </symbol>
+    <symbol id="refund-declined" viewBox="0 0 42 42" fill="none">
+        <path stroke="currentColor" stroke-width="4" d="M13.87 13.87l14.15 14.15m-14.15 0l14.15-14.15"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6.86 6.86l5.58-.42m-5.58.42l1.42-5.65M6.86 6.86A20 20 0 111 20.94"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M6.94 20.94a14 14 0 1128 0 14 14 0 01-28 0zM10.7 8.65a16 16 0 103.22-2.09 1 1 0 01-.4 1.88l-2.82.21z" clip-rule="evenodd"/>
+    </symbol>
+    <symbol id="refund-finished" viewBox="0 0 42 42" fill="none">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6.86 6.86l5.58-.42m-5.58.42l1.42-5.65M6.86 6.86A20 20 0 111 20.94"/>
+        <path stroke="currentColor" stroke-width="4" d="M10.44 20.18l7.78 7.77 17.22-17"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M20.94 6.94a14 14 0 1013.22 9.37l1.55-1.53A16 16 0 1110.7 8.65l2.82-.2a1 1 0 00.4-1.88 15.95 15.95 0 0118.4 3.13l-1.42 1.4a13.96 13.96 0 00-9.96-4.16z" clip-rule="evenodd"/>
+    </symbol>
+    <symbol id="refund-pending" viewBox="0 0 42 42" fill="none">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6.86 6.86l5.58-.42m-5.58.42l1.42-5.65M6.86 6.86A20 20 0 111 20.94"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M6.94 20.94a14 14 0 0127.75-2.67l-1.45-1.45a1 1 0 00-1.42 1.42l3.41 3.4 1.05 1.05.58-1.36 2.04-4.77a1 1 0 10-1.83-.79l-.59 1.36A16 16 0 0013.91 6.56a1 1 0 01-.39 1.88l-2.83.21a16 16 0 0014.4 27.74 1 1 0 00-.52-1.92A14.02 14.02 0 016.94 20.94zm15-12.27a1 1 0 10-2 0v11.86l-6.53 6.52a1 1 0 001.42 1.42l6.82-6.82.29-.3V8.67zM36.4 25.08a1 1 0 00-1.93-.51 13.9 13.9 0 01-1.4 3.37 1 1 0 001.73 1c.7-1.2 1.23-2.5 1.6-3.86zm-4.15 7.17a1 1 0 00-1.41-1.41c-.86.86-1.84 1.61-2.9 2.23a1 1 0 001 1.73c1.22-.7 2.33-1.56 3.31-2.55z" clip-rule="evenodd"/>
+    </symbol>
+</svg>
+
+
+    
+
+
+<div class="position-switch">
+    
+    
+    <script>rem.require([
+        'analytics/Catalog/ContractorInvitation.analytics',
+        'components/Promotions/PromoPopup/PromoPopup'
+    ])</script>
+    <rtk-promo-popup></rtk-promo-popup>
+    <header class="site-header  absolute transparent">
+        <div class="container">
+            <a href="/" target="_self" class="logo-block titled" title="Ремонтник.ру">
+                <span class="logo">
+                    <svg class="icon">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                    <span class="hidden-lg">Ремонтник.ру</span>
+                </span>
+                <span class="title hidden-sm">Ремонтник.ру</span>
+            </a>
+
+            
+            <div class="nav pusher right">
+                <nav class="nav-inner hidden-sm">
+                    
+<a href="/boards/" target="_self"
+   >
+    <span>Заказы</span>
+</a>
+
+<a href="/catalog/" target="_self"
+   >
+    <span>Мастера и бригады</span>
+</a>
+
+<a href="/portfolio/" target="_self"
+   >
+    <span>Фото работ</span>
+</a>
+
+
+                    
+                    
+<a href="/promo/" target="_self"
+   >
+    <span>Для заказчиков</span>
+</a>
+
+<a href="/pages/masteram" target="_self"
+   >
+    <span>Для мастеров</span>
+</a>
+
+<a href="/auth/login/" target="_self"
+   >
+    <span>Войти</span>
+</a>
+
+
+                    
+                </nav>
+                <div class="nav-inner hidden-lg">
+                    
+                    <nav>
+                        
+<a href="/boards/add/" target="_self"
+   >
+    <span>Добавить заказ</span>
+</a>
+
+<a href="/boards/" target="_self"
+   >
+    <span>Заказы</span>
+</a>
+
+<a href="/catalog/" target="_self"
+   >
+    <span>Мастера и бригады</span>
+</a>
+
+<a href="/portfolio/" target="_self"
+   >
+    <span>Фото работ</span>
+</a>
+
+
+                    </nav>
+                    <nav>
+                        
+<a href="/promo/" target="_self"
+   >
+    <span>Для заказчиков</span>
+</a>
+
+<a href="/pages/masteram" target="_self"
+   >
+    <span>Для мастеров</span>
+</a>
+
+
+                    </nav>
+                    <nav>
+                        
+                        
+<a href="/pages/about" target="_self"
+   >
+    <span>О проекте</span>
+</a>
+
+<a href="/pages/contacts" target="_self"
+   >
+    <span>Поддержка</span>
+</a>
+
+<a href="/auth/login/" target="_self"
+   >
+    <span>Войти</span>
+</a>
+
+
+                        
+                    </nav>
+                </div>
+            </div>
+
+            
+
+            <div class="menu-toggle hidden-lg">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+            </div>
+
+            <script async src="/static/js/app.min/mobile-menu.js?12ab21"></script>
+            
+        </div>
+    </header>
+</div>
+
+
+
+    
+
+    
+    
+
+
+
+
+    
+
+
+
+
+    
+
+    <div class="content-wrapper">
+    
+<script>rem.require([
+    'common/remCaEvent.directive',
+    'common/remDisposableButton.directive',
+    'common/remTruncate.directive',
+    'components/Profile/ConfirmedIcon/ConfirmedIcon',
+    'Application/UserRegionController',
+    'HomePage/remRegionalUrl.directive',
+    'HomePage/remReviewCarousel.directive'
+])</script>
+<div class="page-index" ng-controller="UserRegionController as userRegion">
+    <div rem-ca-log="zakazchik" ca-init="посетил главную" ca-common-data="{}">
+        
+
+
+
+<script>rem.require([
+    'components/Catalog/SimpleOrder/SimpleOrder',
+])</script>
+<div class="wide-block blue index-heading-block">
+    <div class="container">
+        <div class="add-order-block">
+            <div class="h1-like centered">Поможем найти мастера для любого ремонта</div>
+            <p class="teaser hidden-xs">
+                <span class="box">Мастеров онлайн:&nbsp; <span class="highlighted">127</span></span>
+                <span class="box">Заказов в неделю:&nbsp; <span class="highlighted">758</span></span>
+                <span class="box">Предложений в сутки:&nbsp; <span class="highlighted">173</span></span>
+            </p>
+        </div>
+        <rtk-simple-order ca-events="{
+            title: 'кликнул в поле заголовка на главной',
+            create: 'нажал добавить заказ на главной'
+        }">
+            <form method="post" action="/boards/add/">
+                <input type='hidden' name='csrfmiddlewaretoken' value='Up9kIRZZs5PaXo0VOmV3K2DKL85PVcSltWajQ1H5MbzcAy80NpFM0TDCT3hy8mGD' />
+                <div>
+                    <rtk-service-autocomplete>
+                        <rtk-generic-autocomplete>
+                            <input type="text" name="title"
+                                   placeholder="Что требуется сделать?">
+                        </rtk-generic-autocomplete>
+                    </rtk-service-autocomplete>
+                    <button type="submit" class="btn btn-orange">Найти мастера</button>
+                </div>
+            </form>
+        </rtk-simple-order>
+        <div class="plasterer hidden-sm"></div>
+    </div>
+</div>
+
+    </div>
+
+    <div class="wide-block advantages-block">
+        <div class="container">
+            <div class="infographic">
+                <a class="add" href="/boards/add/" target="_self">
+                    <div>
+                        <div class="title">Добавьте заказ</div>
+                        Никаких лишних звонков&nbsp;&mdash; мы&nbsp;никому не&nbsp;показываем ваш номер
+                    </div>
+                </a>
+                <div class="compare">
+                    <div>
+                        <div class="title">Сравните предложения</div>
+                        Изучите отзывы об&nbsp;исполнителях, сравните их&nbsp;условия и&nbsp;цены на&nbsp;вашу работу
+                    </div>
+                </div>
+                <div class="agree">
+                    <div>
+                        <div class="title">Договоритесь напрямую</div>
+                        Связывайтесь с&nbsp;кандидатами и&nbsp;обсуждайте детали заказа по&nbsp;телефону или в&nbsp;чате
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="wide-block grey carousel-block">
+        <div class="container">
+            <div class="h2-like text-center">Последние отзывы о выполненных работах</div>
+        </div>
+        <div class="carousel-block__slider" ng-cloak
+             rem-review-carousel=".owl-carousel"
+             carousel-items="{0: 1, 581: 2, 771: 3}"
+             carousel-loop="true"
+             carousel-margin="14"
+             carousel-prev-button=".prev-btn"
+             carousel-next-button=".next-btn">
+            <div class="carousel-block__customnav">
+                <div class="prev-btn"></div><div class="next-btn"></div>
+            </div>
+            <div class="container">
+                <div class="owl-carousel">
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/368638/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/368638/">
+                                        <img src="/media/profile_picture_original/6c6e664e64979080a8562e870a25e4d6.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="false"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/368638/">Шульгин Владимир Викторович</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                9
+                                                отзывов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/368638/reviews/">
+                                    Договорились с Владимиром о изготовлении металлоконструкции под обшивку сэндвич панелями. что хотеться сказать...Очень профессиональная бригада,выполнили работу с самый кратчайший срок,и с отличным качеством! Все сварные швы достойны похвалы! Конструкция выполнена четко по уровню,без нареканий! Владимир с бригадой не только выполнил качественно работу,но и сам не беспокоя лишний раз покупал расходный материал,несмотря на то что ближайший строительный магазин находился за 20 км от места строительства!все чеки с кассовыми были предоставлены! После работы оставили чистоту и порядок! Спасибо Владимир за проделанную работу! Все было быстро,спокойно,качественно и недорого! Побольше бы таких настоящих строителей! Хороших Вам работ! Уважаемые заказчики,очень рекомендую!
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 23 часа назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/170696/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/170696/">
+                                        <img src="/media/profile_picture_original/c88542db33940c61581a27c1aa4546f4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="true"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/170696/">Воробьев Александр Евгеньевич</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                291
+                                                отзыв
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/170696/reviews/">
+                                    Аккуратный исполнительный,человек слова,рекомендую !!!
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 1 день назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/475416/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/475416/">
+                                        <img src="/media/profile_picture_original/fe0efb1afd2ab92771f1445a8ed9421d.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="false"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/475416/">Нажмиддинов Сирожиддин Исломвеч</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                4
+                                                отзыва
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/475416/reviews/">
+                                    В целом по работе могу рекомендовать. В работе проявил себя чистоплотно, аккуратно подходил к ряду задач. Достаточно быстро и много работал, трудолюбив. Рекомендую!
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 2 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header">
+                            <a href="/catalog/master/409670/reviews/">
+                                <span>
+                                    
+                                    Нейтральный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/409670/">
+                                        <img src="/media/profile_picture_original/2d4e469c000c969cceae4ef9c4f8b4bf.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="false"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/409670/">Магамедов Аслан</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                2
+                                                отзыва
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/409670/reviews/">
+                                    Не рекомендую ни в коем случае связываться с этим работником!! По чекам так и не смог отчитаться, всю неделю обещал. На этой неделе взял аванс и пропал!
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 2 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/478029/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/478029/">
+                                        <img src="/media/profile_picture_original/a6aa804523f121e13cfb1efc0e3451d3.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="false"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/478029/">Маткаримов Омонбой Дурумович</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                1
+                                                отзыв
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/478029/reviews/">
+                                    Рекомендую!!!👍👍👍мастер универсал.
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 2 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/393090/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/393090/">
+                                        <img src="/media/profile_picture_original/93dacbdee5ff2cb083adc28037df0822.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="false"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/393090/">Кубасов Сергей Павлович</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                40
+                                                отзывов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/393090/reviews/">
+                                    Сергеем были выполнены работы по разводке сантехники и электрике, все прошло в намеченные сроки, доделать  до финала (закрепить трубы и поставить розетки)договорились после оштукатуривания стен. Мастер уважительно относится к клиенту, старается выбрать более экономный вариант выполнения работ, советуется по всем вопросам,пунктуален и вежлив, мастеру доверяешь. Спасибо за работу.
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 3 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/167153/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/167153/">
+                                        <img src="/media/profile_picture_original/b9647f8532f14c4ec86a73eb61f1a4bc.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="true"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/167153/">Онищенко Марина Анатольевна</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                127
+                                                отзывов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/167153/reviews/">
+                                    Марина Анатольевна один из лучших мастеров, с которым я работала за время ремонта. Настоящий профессионал своего дела. Тактичная и приятна в общении. Быстро ответила на заказ, приехала сразу же на следующий день и приступила к работе. Работы были выполнены быстро и качественно. Она смогла спасти стены, которые мы с мужем покрасили плохо. От результата мы остались в восторге.
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 3 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/134514/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/134514/">
+                                        <img src="/media/profile_picture_original/c29bc6ce4ed8c443f452f812ff30c6ad.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="true"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/134514/">Мухин Валерий Павлович</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                162
+                                                отзыва
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/134514/reviews/">
+                                    Благодарен Валерию и его команде за проделанную работу!
+Всё чётко: быстро, качественно, по делу, каждое действие согласовывал.
+За два дня провели полный демонтаж двух комнат и холла, вывезли мусор, навели чистоту.
+Огромное спасибо!
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 3 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/15303/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/15303/">
+                                        <img src="/media/profile_picture_original/ed9a7824a49654d6bdccbc1553bf37ad.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="true"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/15303/">Еске Виктор Анатольевич</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                30
+                                                отзывов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/15303/reviews/">
+                                    Очень понравился исполнитель. Прекрасно выполнена работа, много сделано дополнительно, причем совершенно спокойно человек отзывается на просьбы.  Подняли две веранды,  закрепили стены, помог постелись линолеум, подтянули замки на двери, Кроме основной работы повесили кухонные полки, повесили светильник.
+Дал ценные консультации по дальнейшему ремонту дома в целом( так как видит какое состояние дома).
+Спасибо ему большое. Обязательно буду еще обращаться и рекомендую всем.
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 3 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-block_item">
+                        <div class="carousel-block__item-header positive">
+                            <a href="/catalog/master/218657/reviews/">
+                                <span>
+                                    
+                                    Положительный отзыв
+                                    
+                                </span>
+                            </a>
+                        </div>
+                        <div class="carousel-block__item-body">
+                            <div class="carousel-block__contractor">
+                                <div class="carousel-block__avatar">
+                                    <a href="/catalog/master/218657/">
+                                        <img src="/media/profile_picture_original/c92a53ba01274101c7cd3ce9eb2e5bd1.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-block__user-info">
+                                    <div class="t-row">
+                                        <div class="t-cell">
+                                            <div class="name">
+                                                <rtk-confirmed-icon is-confirmed="false"
+                                                                    content-type="confirmed"><!--
+                                                 --><a href="/catalog/master/218657/">Казарян Артур Фрунзович</a><!--
+                                             --></rtk-confirmed-icon>
+                                            </div>
+                                            <div class="reviews-count">
+                                                18
+                                                отзывов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-block__details" rem-truncate>
+                                <a href="/catalog/master/218657/reviews/">
+                                    Работа выполнена на отлично. Артур мастер своего дела. Рекомендую.
+                                </a>
+                            </div>
+                            <div class="carousel-block__date">
+                                
+                                Добавлен 3 дня назад
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="explanation-reviews">
+                Все отзывы проверены службой <span class="nowrap">контроля качества.</span>
+                <span class="recommendations-link nowrap">
+                    <a href="/pages/recommendations">Рекомендации по&nbsp;работе с&nbsp;мастерами.</a>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    
+
+
+<script>rem.require([
+    'common/remCollect.directive',
+    'components/Orders/LatestOrders/LatestOrders',
+    'Promotions/remProOrder.directive'
+])</script>
+<section class="wide-block latest-orders">
+    <rtk-latest-orders orders="orders"
+                       excluded="loadedOrderIds"
+                       settings="{
+                           initiate: false,
+                           pageSize: 5,
+                           similarity: {
+                               order: null,
+                               mode: 1
+                           }
+                       }">
+        <div class="container">
+            
+            <div class="h2-like text-center">Последние заказы</div>
+            
+            <script>rem.require([
+                'common/date.filters',
+                'common/remTimeInterval.directive',
+                'components/UI/Popup/Popup'
+            ])</script>
+            <div class="latest-orders-list">
+                <div rem-collect from=".order-block" where="{id: '@data-id|number'}"
+                     on-ready="loadedOrderIds = ($data|map:'id')">
+                    
+                    
+                    
+                    
+
+
+
+
+
+<div class="order-block" data-id="1176432">
+    <div class="header">
+        <span class="info budget">
+            
+            50 000&nbsp;₽
+            
+        </span>
+        <div class="title">
+            <a target="_self" href="/boards/ustanovit-septik-1176432">Установить септик</a>
+        </div>
+    </div>
+    <div class="order-badges">
+        
+        
+    </div>
+    <div class="details">
+        <a class="as-text" target="_self" href="/boards/ustanovit-septik-1176432">
+            Кроме септика нужен монтаж унитаза, подвод воды и слива к унитазу. Отдельно установка водогрея, подвод воды к смесителю на кухне и в душевую
+        </a>
+        
+    </div>
+    <div class="footer">
+        <div class="location">Калужская область, Боровский район, сельское поселение Ворсино, садоводческое некоммерческое товарищество Ворсино-2</div>
+        
+        <div class="created"
+             rem-time-interval="'2023-07-09T19:17:51+03:00Z'" postfix="' назад'"
+             ng-attr-title="{[{ '2023-07-09T19:17:51+03:00Z'|date:'d MMMM yyyy г. в H:mm' }]}">
+            5 минут назад
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+                    
+                    
+
+
+
+
+
+<div class="order-block" data-id="1176439">
+    <div class="header">
+        <span class="info budget">
+            
+            100 000&nbsp;₽
+            
+        </span>
+        <div class="title">
+            <a target="_self" href="/boards/montazh-ventiliruemogo-fasada-kompozitnye-paneli-1176439">Монтаж вентилируемого фасада (композитные панели)</a>
+        </div>
+    </div>
+    <div class="order-badges">
+        
+        
+            <rtk-popup class="order-badge fast-call" window-title="Быстрые звонки" window-size="narrow" no-button="true">
+                <popup-control><span></span>Можно позвонить</popup-control>
+                <popup-content>Заказчик готов принимать входящие звонки. Перейдите на&nbsp;страницу заказа и&nbsp;нажмите на&nbsp;кнопку &laquo;Позвонить заказчику&raquo;.</popup-content>
+            </rtk-popup>
+        
+    </div>
+    <div class="details">
+        <a class="as-text" target="_self" href="/boards/montazh-ventiliruemogo-fasada-kompozitnye-paneli-1176439">
+            Монтаж вентилируемого фасада
+Кассеты из алюминиевых композитных панелей
+Монтаж со строительных лесов
+Объем 3000 кв.м., частично с утепление
+Оплата 2 раза в месяц.
+Оформлени...
+        </a>
+        
+    </div>
+    <div class="footer">
+        <div class="location">Мурманская область</div>
+        
+        <div class="created"
+             rem-time-interval="'2023-07-09T19:14:33+03:00Z'" postfix="' назад'"
+             ng-attr-title="{[{ '2023-07-09T19:14:33+03:00Z'|date:'d MMMM yyyy г. в H:mm' }]}">
+            8 минут назад
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+                    
+                    
+
+
+
+
+
+<div class="order-block" data-id="1176438">
+    <div class="header">
+        <span class="info budget">
+            
+            10 000&nbsp;₽
+            
+        </span>
+        <div class="title">
+            <a target="_self" href="/boards/sdelat-shkaf-na-zakaz-1176438">Сделать шкаф на заказ</a>
+        </div>
+    </div>
+    <div class="order-badges">
+        
+        
+            <rtk-popup class="order-badge fast-call" window-title="Быстрые звонки" window-size="narrow" no-button="true">
+                <popup-control><span></span>Можно позвонить</popup-control>
+                <popup-content>Заказчик готов принимать входящие звонки. Перейдите на&nbsp;страницу заказа и&nbsp;нажмите на&nbsp;кнопку &laquo;Позвонить заказчику&raquo;.</popup-content>
+            </rtk-popup>
+        
+    </div>
+    <div class="details">
+        <a class="as-text" target="_self" href="/boards/sdelat-shkaf-na-zakaz-1176438">
+            Шкаф из ДСП белого цвета с распашными дверями,
+        </a>
+        
+    </div>
+    <div class="footer">
+        <div class="location">Москва, улица Академика Варги, 2</div>
+        
+        <div class="created"
+             rem-time-interval="'2023-07-09T19:12:53+03:00Z'" postfix="' назад'"
+             ng-attr-title="{[{ '2023-07-09T19:12:53+03:00Z'|date:'d MMMM yyyy г. в H:mm' }]}">
+            10 минут назад
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+                    
+                    
+
+
+
+
+
+<div class="order-block" data-id="1176464">
+    <div class="header">
+        <span class="info budget">
+            
+            50 000&nbsp;₽
+            
+        </span>
+        <div class="title">
+            <a target="_self" href="/boards/obustroistvo-dvukh-sanuzlov-na-dache-1176464">Обустройство двух санузлов на даче</a>
+        </div>
+    </div>
+    <div class="order-badges">
+        
+        
+    </div>
+    <div class="details">
+        <a class="as-text" target="_self" href="/boards/obustroistvo-dvukh-sanuzlov-na-dache-1176464">
+            Септик установлен, подводка к комнате, где будет санузел сделана, разводка частично сделана.  Требуется доделать разводку воды, установить накопительный бак, фильтр, водонагрева...
+        </a>
+        
+        <div>5 фото</div>
+        
+    </div>
+    <div class="footer">
+        <div class="location">Рузский городской округ, Московская область, садоводческое некоммерческое товарищество Надежда</div>
+        
+        <div class="created"
+             rem-time-interval="'2023-07-09T19:12:38+03:00Z'" postfix="' назад'"
+             ng-attr-title="{[{ '2023-07-09T19:12:38+03:00Z'|date:'d MMMM yyyy г. в H:mm' }]}">
+            10 минут назад
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+                    
+                    
+
+
+
+
+
+<div class="order-block" data-id="1176463">
+    <div class="header">
+        <span class="info budget">
+            
+            2 000&nbsp;₽
+            
+        </span>
+        <div class="title">
+            <a target="_self" href="/boards/trebuetsia-zamena-akkumuliatora-iphone-8-1176463">Требуется замена аккумулятора iphone 8.</a>
+        </div>
+    </div>
+    <div class="order-badges">
+        
+        <rtk-popup class="order-badge free-order" window-title="Бесплатный заказ" window-size="narrow" no-button="true">
+            <popup-control><span></span>Бесплатный заказ</popup-control>
+            <popup-content>Связаться с&nbsp;заказчиком по&nbsp;этому заказу можно бесплатно&nbsp;&mdash; 0&nbsp;Р</popup-content>
+        </rtk-popup>
+        
+        
+            <rtk-popup class="order-badge fast-call" window-title="Быстрые звонки" window-size="narrow" no-button="true">
+                <popup-control><span></span>Можно позвонить</popup-control>
+                <popup-content>Заказчик готов принимать входящие звонки. Перейдите на&nbsp;страницу заказа и&nbsp;нажмите на&nbsp;кнопку &laquo;Позвонить заказчику&raquo;.</popup-content>
+            </rtk-popup>
+        
+    </div>
+    <div class="details">
+        <a class="as-text" target="_self" href="/boards/trebuetsia-zamena-akkumuliatora-iphone-8-1176463">
+            Замена аккумулятора
+        </a>
+        
+    </div>
+    <div class="footer">
+        <div class="location">Рязанская область, Сасово</div>
+        
+        <div class="created"
+             rem-time-interval="'2023-07-09T19:11:09+03:00Z'" postfix="' назад'"
+             ng-attr-title="{[{ '2023-07-09T19:11:09+03:00Z'|date:'d MMMM yyyy г. в H:mm' }]}">
+            12 минут назад
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+                    
+                    
+                    
+
+
+<div class="order-block ng-animated" ng-cloak
+     
+     ng-repeat="order in orders">
+    <div class="header">
+        <span class="info budget" ng-if="!order.offerInfo"
+              rem-budget-data="{[{ order.budgetCategoryId }]}" mode="max-cost"></span>
+        
+        <div class="title">
+            <a target="_self" ng-href="{[{ order.url }]}">{[{ order.title }]}</a>
+        </div>
+    </div>
+    <div class="order-badges">
+        
+        <rtk-popup class="order-badge free-order"
+                   ng-if="order.isPublished && order.isFree"
+                   window-title="Бесплатный заказ" window-size="narrow" no-button="true">
+            <popup-control><span></span>Бесплатный заказ</popup-control>
+            <popup-content>Связаться с&nbsp;заказчиком по&nbsp;этому заказу можно бесплатно&nbsp;&mdash; 0&nbsp;Р</popup-content>
+        </rtk-popup>
+        <rtk-popup class="order-badge fast-call"
+                   ng-if="order.isPublished && order.fastCallsAllowed"
+                   window-title="Быстрые звонки" window-size="narrow" no-button="true">
+            <popup-control><span></span>Можно позвонить</popup-control>
+            <popup-content>Заказчик готов принимать входящие звонки. Перейдите на&nbsp;страницу заказа и&nbsp;нажмите на&nbsp;кнопку &laquo;Позвонить заказчику&raquo;.</popup-content>
+        </rtk-popup>
+    </div>
+    <div class="details">
+        <a class="as-text" target="_self" ng-href="{[{ order.url }]}">
+            {[{ (order.details|limitTo:180) + (order.details.length > 180 ? '...' : '') }]}
+        </a>
+        <div ng-if="order.imagesCount">{[{ order.imagesCount }]} фото</div>
+    </div>
+    <div class="footer">
+        <div class="location">{[{ order.address }]}</div>
+        
+        <div class="created"
+             rem-time-interval="order.bumpedAt" postfix="' назад'"
+             ng-attr-title="{[{ order.bumpedAt|date:'d MMMM yyyy г. в H:mm' }]}">{[{ order.bumpedAt|date:'d MMMM yyyy г. в H:mm' }]}</div>
+        
+    </div>
+</div>
+
+
+
+                </div>
+                <div class="buttons" ng-if="true || orders.hasNext">
+                    <span class="pseudo-link"
+                          ng-cloak
+                          ng-show="orders.hasNext"
+                          ng-class="orders.isLoading && 'loading'"
+                          ng-click="orders.next()">Показать еще</span>
+                    
+                    
+                    
+                    <a target="_self" href="/boards/">Всего заказов</a> 500 000
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </rtk-latest-orders>
+</section>
+
+
+
+    <div class="wide-block grey information-block">
+        <div class="container">
+            <div class="h2-like">Более 300 тысяч заказчиков уже нашли мастера на&nbsp;Ремонтнике</div>
+            <a href="/boards/add/" class="btn btn-orange sm"
+               rem-disposable-button="add-order">Добавить заказ</a>
+            <div class="text">
+                Это бесплатно и&nbsp;ни&nbsp;к&nbsp;чему не&nbsp;обязывает<span class="hidden-lg hidden-md">.</span>
+                <div>
+                    В&nbsp;среднем, на&nbsp;каждый заказ поступает 5-7 предложений<span class="hidden-lg hidden-md">.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wide-block categories-block">
+        <div class="container columns-block">
+            <div class="h2-like text-center">Какие виды работ можно заказать на Ремонтнике?</div>
+            <div uib-accordion close-others="false" ng-cloak>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Комплексные работы</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_domov_kottedzhej/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Строительство домов и коттеджей</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_kvartiry/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт квартир</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_kuhni/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт кухни</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/kladka_pechej_i_kaminov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Кладка печей и каминов</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_vannoj/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт ванной комнаты</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_ofisa_nezhilyh_pomeschenii/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт офисов и нежилых помещений</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_tualeta/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт туалета</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_ban_i_saun/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Строительство бань и саун</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_bassejnov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Строительство бассейнов</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_garazhej/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Строительство гаражей</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Строительно-монтажные работы</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/osteklenie_okna_balkony/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Остекление окон, балконов</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/dveri/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Двери</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/krovelnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Кровельные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/almaznaya_rezka_i_sverlenie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Алмазная резка и сверление</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/betonnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Бетонные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/burenie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Бурение</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_dorog/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Дорожное строительство</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_zaborov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Заборы и ограждения</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/zemljanye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Земляные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/izoljacionnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Изоляционные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/uslugi_kamenschikov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Кладочные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/hudozhestvennaja_kovka_i_lite/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ковка и литье</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/izgotovlenie_lestnic/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Лестницы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/markizy_i_navesy/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Маркизы и навесы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/izgotovlenie_i_montazh_metallokonstrukcij/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Металлоконструкции</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/rolstavni_rollety_sekcionnye_vorota/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Рольставни и секционные ворота</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/svarochnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Сварочные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/slesarnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Слесарные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/snos-i-demontazh/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Снос и демонтаж</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_srubov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Срубы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stoljarnye_i_plotnickie_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Столярные и плотницкие работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/fasadnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Фасадные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_fundamenta/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Фундамент</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Отделочные работы</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/shtukaturno_maljarnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Штукатурно-малярные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/obojnye-raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Обойные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/plitochnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Плиточные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/gipsokartonnye-raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Гипсокартонные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/izgotovlenie_i_montazh_lepniny/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Лепнина</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/mozaichnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Мозаичные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/napolnye_pokrytiya/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Напольные покрытия</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/montazh_potolkov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Потолки</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/ustrojstvo_promyshlennyh_polov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Промышленные полы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/hudozhestvennaja_rospis_sten/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Роспись стен</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/montazh_stenovyh_panelej/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Стеновые панели</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/ustrojstvo_polov_stjazhka_vyravnivanie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Стяжка пола</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Инженерные системы</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/vodosnabzhenie-i-kanalizatsiia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Водоснабжение и канализация</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/elektromontazhnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Электромонтажные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/santehnicheskie_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Сантехнические работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/alternativnye_istochniki_energii/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Альтернативные источники энергии</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/gazifikacija/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Газификация</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/kondicionirovanie_i_ventilyaciya/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Кондиционирование и вентиляция</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/lifty_i_eskalatory/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Лифты и эскалаторы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/otoplenie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Отопление</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/ohrannye_sistemy_i_kontrol_dostupa/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Охранные системы и контроль доступа</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/montazh_sistem_pozharnoj_bezopasnosti/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Пожарные сигнализации</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/montazh_sistem_videonabljudenija_i_ohrany/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Системы видеонаблюдения</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/sistemy_pozharotusheniya/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Системы пожаротушения</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/ustanovka_antenn_podkljuchenie_telefona_interneta/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Слаботочные системы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/montazh_teplogo_pola/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Теплый пол</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/montazh_truboprovodov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Трубопроводы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/sistemy_umnyj_dom/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Умный дом</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Мелкие бытовые услуги</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/master_na_chas/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Мастер на час</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/podkljuchenie_bytovoj_tehniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Установка бытовой техники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/ustanovka_i_zamena_zamkov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Установка и вскрытие замков</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/klining_uborka_pomeschenij/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Уборка помещений, клининг</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/chehly_i_pokryvala/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Чехлы и покрывала</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/restavracija_vann_emalirovka_vkladyshi/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Эмалировка ванн</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Ремонт бытовой техники</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_stiralnoi_mashiny_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт стиральной машины</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_kholodilnika_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт холодильника</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_konditsionera_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт кондиционера</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_pylesosa_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт пылесоса</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_posudomoechnoi_mashiny_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт посудомоечной машины</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_kofemashiny_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт кофемашины</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_shveinoi_mashiny_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт швейной машины</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_gazovoi_kolonki_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт газовой колонки</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_gazovoi_plity_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт газовой плиты</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_dukhovogo_shkafa_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт духового шкафа</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_prochei_bytovoi_tekhniki_cat/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт прочей бытовой техники</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Ремонт строительного инструмента</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_elektroinstrumenta/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт электроинструмента</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_benzoinstrumenta/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт бензоинструмента</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Ремонт снегоуборочной и садовой техники</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_sadovoi_tekhniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт садовой техники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_snegouborochnoi_tekhniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт снегоуборочной техники</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Благоустройство территорий</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/landshaftnyj_dizajn/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ландшафтный дизайн</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/naruzhnoe_osveschenie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Уличное освещение</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/ozelenenie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Озеленение</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/iskusstvennye_vodoemy_i_prudy/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Искусственные водоемы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/izgotovlenie_sadovoj_skulptury/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Малые архитектурные формы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_fontanov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Фонтаны</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Проектирование и дизайн</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/dizajn_interera/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Дизайн интерьера</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/inzhenernoe_proektirovanie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Инженерное проектирование</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/geodezicheskie_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Геодезические работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/geologicheskie_izyskaniya/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Геологические изыскания</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/mezhevanie_i_kadastr/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Межевание и кадастр</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/proektirovanie_zhilyh_domov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Проектирование зданий</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/smetnye_raboty/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Сметные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/pereplanirovka_i_soglasovanie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Согласование перепланировок</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/tehnicheskij_nadzor/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Технический надзор</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Обслуживание объектов</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/vyvoz_musora_i_snega/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Вывоз мусора</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/uslugi_perevozki_dostavki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Услуги перевозки, доставки</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/uborka_territorij/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Уборка территорий</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/arenda_oborudovanija/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Аренда оборудования</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/arenda_stroitelnoj_tehniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Аренда строительной техники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/vysotnye_raboty_promyshlennyj_alpinizm/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Высотные работы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/obsluzhivanie_septikov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Обслуживание септиков</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Интерьер</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/izgotovlenie_i_sborka_mebeli/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Мебель</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/poshiv_shtor_i_tekstilnyj_dizajn/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Шторы и карнизы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/stroitelstvo_sten_i_peregorodok/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Офисные перегородки</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/dekorirovanie_intererov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Декорирование интерьеров</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/zhaljuzi/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Жалюзи</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/fitodizajn/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Фитодизайн</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Ремонт автомобиля</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_dvigatelia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт двигателя</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/skhod_razval/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Сход-развал</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/shinomontazh/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Шиномонтаж</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/diagnostika_i_remont_avtomobilia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Диагностика и ремонт автомобиля</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/avtozvuk/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Автозвук</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/avtosvarka/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Автосварка</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/avtosignalizatsiia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Автосигнализация</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/avtostekla/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Автостекла</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/konditsionery_i_otoplenie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Кондиционеры и отопление</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/kuzovnoi_remont/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Кузовной ремонт</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/moika_i_ukhod_za_avto/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Мойка и уход за авто</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/parktroniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Парктроники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/peretiazhka_salona/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Перетяжка салона</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/pokraska/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Покраска</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_akpp/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт АКПП</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_vykhlopnoi_sistemy/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт выхлопной системы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_mkpp/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт МКПП</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_mototekhniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт мототехники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_podveski/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт подвески</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_rulevogo_upravleniia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт рулевого управления</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_toplivnoi_sistemy/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт топливной системы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_tormoznoi_sistemy/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт тормозной системы</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/tekhpomoshch_na_doroge/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Техпомощь на дороге</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/tonirovka_i_avtovinil/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Тонировка и автовинил</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/transmissiia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Трансмиссия</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/tiuning_i_dopoborudovanie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Тюнинг и допоборудование</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/shumoizoliatsiia_avtomobilia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Шумоизоляция автомобиля</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/elektrooborudovanie/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Электрооборудование</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Ремонт электроники</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_telefonov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт телефонов</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_televizorov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт телевизоров</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_kompiuterov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт компьютеров</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_drugoi_elektroniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт другой электроники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_igrovykh_pristavok/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт игровых приставок</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_noutbukov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт ноутбуков</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_orgtekhniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт оргтехники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_planshetov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт планшетов</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_printerov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт принтеров</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_proektorov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт проекторов</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_sistemy_okhlazhdeniia/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт системы охлаждения</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_sputnikovogo_tv/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт спутникового ТВ</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_tv_pristavok/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт ТВ-приставок</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_umnykh_chasov/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт умных часов</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_foto_i_video_tekhniki/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт фото и видео техники</a>
+                        </li>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/remont_elektronnykh_knig/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Ремонт электронных книг</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div uib-accordion-group class="columned-list">
+                    <div class="h3-like" uib-accordion-heading>Вакансии</div>
+                    <ul>
+                        
+                        <li>
+                            
+                                
+                            
+                            <a href="/moskva/vakansiya/" class="subcat-link"
+                               rem-regional-url
+                               region="userRegion.current">Вакансии</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="wide-block grey geo-cover-block">
+        <div class="container columns-block">
+            <div class="h2-like text-center">Найдите исполнителя работ в&nbsp;своем городе</div>
+            <div ng-cloak>
+                <script>rem.require([
+                    'components/Catalog/DetectRegion/DetectRegion',
+                    'components/Forms/RegionAutocomplete/RegionAutocomplete'
+                ])</script>
+                <rtk-detect-region></rtk-detect-region>
+                <rtk-region-autocomplete class="iconed" placeholder="Найти город (начните вводить название)"
+                                         on-select="userRegion.choose($region)"></rtk-region-autocomplete>
+                
+<uib-accordion close-others="false">
+    
+    <div uib-accordion-group class="columned-list" is-open="true">
+        <div class="h3-like" uib-accordion-heading>Часто выбираемые регионы</div>
+        
+<ul>
+    
+    
+        
+    
+    <li>
+        <a href="/moskva/">Москва</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/moskovskaya_oblast/">Московская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/sankt-peterburg/">Санкт-Петербург</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/leningradskaya_oblast/">Ленинградская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/ekaterinburg/">Екатеринбург</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/sverdlovskaya_oblast/">Свердловская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/krasnodar/">Краснодар</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/krasnodarskiy_kray/">Краснодарский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/vladimirskaya_oblast/">Владимирская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kaluzhskaya_oblast/">Калужская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/nizhegorodskaya_oblast/">Нижегородская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/novosibirskaya_oblast/">Новосибирская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/rostovskaya_oblast/">Ростовская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/samarskaya_oblast/">Самарская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tverskaya_oblast/">Тверская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tulskaya_oblast/">Тульская обл.</a>
+    </li>
+    
+</ul>
+
+    </div>
+    
+    <div uib-accordion-group class="columned-list">
+        <div class="h3-like" uib-accordion-heading>Регионы РФ</div>
+        
+<ul>
+    
+    
+        
+    
+    <li>
+        <a href="/adygeya/">Адыгея</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/altay/">Алтай</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/altayskiy_kray/">Алтайский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/amurskaya_oblast/">Амурская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/arhangelskaya_oblast/">Архангельская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/astrahanskaya_oblast/">Астраханская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/bashkortostan/">Башкортостан</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/belgorodskaya_oblast/">Белгородская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/bryanskaya_oblast/">Брянская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/buryatiya/">Бурятия</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/vladimirskaya_oblast/">Владимирская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/volgogradskaya_oblast/">Волгоградская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/vologodskaya_oblast/">Вологодская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/voronezhskaya_oblast/">Воронежская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/dagestan/">Дагестан</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/evreyskaya_ao/">Еврейская автономная обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/zabaykalskiy_kray/">Забайкальский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/ivanovskaya_oblast/">Ивановская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/ingushetiya/">Ингушетия</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/irkutskaya_oblast/">Иркутская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kabardino-balkariya/">Кабардино-Балкарская Республика</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kaliningradskaya_oblast/">Калининградская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kalmykiya/">Калмыкия</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kaluzhskaya_oblast/">Калужская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kamchatskiy_kray/">Камчатский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/karachaevo-cherkesiya/">Карачаево-Черкесская Республика</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kareliya/">Карелия</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kemerovskaya_oblast/">Кемеровская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kirovskaya_oblast/">Кировская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/komi/">Коми</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kostromskaya_oblast/">Костромская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/krasnodarskiy_kray/">Краснодарский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/krasnoyarskiy_kray/">Красноярский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/krym/">Крым</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kurganskaya_oblast/">Курганская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/kurskaya_oblast/">Курская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/leningradskaya_oblast/">Ленинградская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/lipeckaya_oblast/">Липецкая обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/magadanskaya_oblast/">Магаданская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/mariy_el/">Марий Эл</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/mordoviya/">Мордовия</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/moskva/">Москва</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/moskovskaya_oblast/">Московская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/murmanskaya_oblast/">Мурманская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/neneckiy_ao/">Ненецкий автономный округ</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/nizhegorodskaya_oblast/">Нижегородская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/novgorodskaya_oblast/">Новгородская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/novosibirskaya_oblast/">Новосибирская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/omskaya_oblast/">Омская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/orenburgskaya_oblast/">Оренбургская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/orlovskaya_oblast/">Орловская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/penzenskaya_oblast/">Пензенская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/permskiy_kray/">Пермский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/primorskiy_kray/">Приморский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/pskovskaya_oblast/">Псковская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/rostovskaya_oblast/">Ростовская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/ryazanskaya_oblast/">Рязанская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/samarskaya_oblast/">Самарская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/sankt-peterburg/">Санкт-Петербург</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/saratovskaya_oblast/">Саратовская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/sahalinskaya_oblast/">Сахалинская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/saha_yakutiya/">Саха (Якутия)</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/sverdlovskaya_oblast/">Свердловская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/sevastopol/">Севастополь</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/severnaya_osetiya/">Северная Осетия — Алания</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/smolenskaya_oblast/">Смоленская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/stavropolskiy_kray/">Ставропольский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tambovskaya_oblast/">Тамбовская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tatarstan/">Татарстан</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tverskaya_oblast/">Тверская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tomskaya_oblast/">Томская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tulskaya_oblast/">Тульская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tyva/">Тыва</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/tyumenskaya_oblast/">Тюменская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/udmurtiya/">Удмуртская Республика</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/ulyanovskaya_oblast/">Ульяновская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/habarovskiy_kray/">Хабаровский край</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/hakasiya/">Хакасия</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/hanty-mansiyskiy_ao/">Ханты-Мансийский автономный округ — Югра</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/chelyabinskaya_oblast/">Челябинская обл.</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/chechnya/">Чеченская Республика</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/chuvashiya/">Чувашская Республика</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/chukotskiy_ao/">Чукотский автономный округ</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/yamalo-neneckiy_ao/">Ямало-Ненецкий автономный округ</a>
+    </li>
+    
+    
+        
+    
+    <li>
+        <a href="/yaroslavskaya_oblast/">Ярославская обл.</a>
+    </li>
+    
+</ul>
+
+    </div>
+</uib-accordion>
+
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    
+</div>
+
+    </div>
+
+    
+    
+<script>rem.require(['common/remCaEvent.directive'])</script>
+<footer class="site-footer">
+    <div class="container">
+        <div class="columns">
+            <div class="about">
+                <a target="_self" href="/" class="logo">
+                    <svg class="icon">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                    <span>Ремонтник.ру</span>
+                </a>
+                <div class="counters">
+                    <p>130&nbsp;000 мастеров</p>
+                    <p>17&nbsp;000 заказов в&nbsp;месяц</p>
+                </div>
+                <div class="social">
+                    <a href="https://vk.com/remontnik_ru" target="_blank"
+                       class="branded-link vk" title="Группа vk.com"></a>
+                </div>
+            </div>
+            <div class="nav">
+                <p class="title">Заказчику</p>
+                <ul>
+                    <li><a href="/boards/add/" target="_self">Добавить заказ</a></li>
+                    <li><a href="/catalog/" target="_self">Мастера и&nbsp;бригады</a></li>
+                    <li><a href="/promo" target="_self">Как это работает?</a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <p class="title">Мастеру</p>
+                <ul>
+                    <li><a href="/registration/" target="_self">Начать работу</a></li>
+                    <li><a href="/boards/" target="_self">Заказы</a></li>
+                    <li><a href="/pages/masteram" target="_self">Условия и&nbsp;цены</a></li>
+                </ul>
+            </div>
+            <div class="nav last-odd">
+                <p class="title">Компания</p>
+                <ul>
+                    <li><a href="/pages/about" target="_self">О&nbsp;проекте</a></li>
+                    <li><a href="/pages/contacts" target="_self">Поддержка</a></li>
+                    <li><a href="/forum/" target="_self">Сообщество</a></li>
+                </ul>
+            </div>
+            <div class="apps">
+                <p class="title">Мобильные приложения</p>
+                <div class="options">
+                    <div>
+                        <p>для заказчика</p>
+                        <div class="app-links">
+                            <a href="https://apps.apple.com/ru/app/id1297193431" target="_blank"
+                               rem-ca-event="мобильные приложения:Кликнул на appstore customer"
+                               class="branded-link apple" title="iOS-приложение для заказчиков"></a>
+                            <a href="https://play.google.com/store/apps/details?id=ru.remontnik.app.customer" target="_blank"
+                               rem-ca-event="мобильные приложения:Кликнул на google play customer"
+                               class="branded-link android" title="Android-приложение для заказчиков"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <p>для мастера</p>
+                        <div class="app-links">
+                            <a href="https://apps.apple.com/ru/app/id1137901780" target="_blank"
+                               rem-ca-event="мобильные приложения:Кликнул на appstore universal"
+                               class="branded-link apple" title="Универсальное приложение для iOS"></a>
+                            <a href="https://play.google.com/store/apps/details?id=ru.remontnik.app" target="_blank"
+                               rem-ca-event="мобильные приложения:Кликнул на google play universal"
+                               class="branded-link android" title="Универсальное приложение для Android"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">
+            2006&ndash;2023&nbsp;ООО &laquo;Ремонтник.ру&raquo; <a href="/legal_docs/" target="_self" class="nowrap">Правовые документы</a>
+        </p>
+    </div>
+</footer>
+
+    
+
+    
+<script>var requirejs = { waitSeconds: 0 }</script>
+<script src="/static/js/app.min/vendor/require.js?12ab21"
+        data-main="/static/js/app.min/main_redesign.js?12ab21"></script>
+
+
+    
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'NJPdG3Ehr8hSe7Fxf';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+    
+
+    
+    
+<div id="outdated"></div>
+<script src="/static/outdated-browser/outdatedbrowser/outdatedbrowser.min.js"></script>
+<script>
+    outdatedBrowser({
+        lowerThan: 'IE11',
+        languagePath: '/static/outdated-browser/outdatedbrowser/lang/ru.html'
+    });
+</script>
+
+
+    
+    <script>rem.require(['components/UI/CookiesNotice/CookiesNotice'])</script>
+    <rtk-cookies-notice></rtk-cookies-notice>
+    
+</body>
+</html>

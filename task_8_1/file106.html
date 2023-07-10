@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru">
+<head>
+	<title>Workspace — объединяем клиентов и агентства</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="workspace, тендерная площадка" />
+<meta name="description" content="Workspace помогает заказчикам digital-услуг выбрать оптимального исполнителя, а агентствам найти своего клиента." />
+<style>.loader {
+		padding: 50vh 0 0 50vw;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 9999;
+		background: #fff;
+		width: 100%;
+		height: 100%;
+		transform: translateZ(0) scale(1);
+		backface-visibility: hidden
+	}
+
+	.loader_box {
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		position: relative;
+		width: 4.5vw;
+		height: 4.5vw	}
+
+	.loader_box-circle {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0
+	}
+
+	.loader_box-circle:before {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		width: 15%;
+		height: 15%;
+		background-color: #00bff3;
+		border-radius: 100%;
+		-webkit-animation: sk-fading-circle-delay 1.2s infinite ease-in-out both;
+		animation: sk-fading-circle-delay 1.2s infinite ease-in-out both
+	}
+
+	.loader_box-circle-2 {
+		-webkit-transform: rotate(30deg);
+		transform: rotate(30deg)
+	}
+
+	.loader_box-circle-3 {
+		-webkit-transform: rotate(60deg);
+		transform: rotate(60deg)
+	}
+
+	.loader_box-circle-4 {
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg)
+	}
+
+	.loader_box-circle-5 {
+		-webkit-transform: rotate(120deg);
+		transform: rotate(120deg)
+	}
+
+	.loader_box-circle-6 {
+		-webkit-transform: rotate(150deg);
+		transform: rotate(150deg)
+	}
+
+	.loader_box-circle-7 {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+
+	.loader_box-circle-8 {
+		-webkit-transform: rotate(210deg);
+		transform: rotate(210deg)
+	}
+
+	.loader_box-circle-9 {
+		-webkit-transform: rotate(240deg);
+		transform: rotate(240deg)
+	}
+
+	.loader_box-circle-10 {
+		-webkit-transform: rotate(270deg);
+		transform: rotate(270deg)
+	}
+
+	.loader_box-circle-11 {
+		-webkit-transform: rotate(300deg);
+		transform: rotate(300deg)
+	}
+
+	.loader_box-circle-12 {
+		-webkit-transform: rotate(330deg);
+		transform: rotate(330deg)
+	}
+
+	.loader_box-circle-2:before {
+		-webkit-animation-delay: -1.1s;
+		animation-delay: -1.1s
+	}
+
+	.loader_box-circle-3:before {
+		-webkit-animation-delay: -1s;
+		animation-delay: -1s
+	}
+
+	.loader_box-circle-4:before {
+		-webkit-animation-delay: -0.9s;
+		animation-delay: -0.9s
+	}
+
+	.loader_box-circle-5:before {
+		-webkit-animation-delay: -0.8s;
+		animation-delay: -0.8s
+	}
+
+	.loader_box-circle-6:before {
+		-webkit-animation-delay: -0.7s;
+		animation-delay: -0.7s
+	}
+
+	.loader_box-circle-7:before {
+		-webkit-animation-delay: -0.6s;
+		animation-delay: -0.6s
+	}
+
+	.loader_box-circle-8:before {
+		-webkit-animation-delay: -0.5s;
+		animation-delay: -0.5s
+	}
+
+	.loader_box-circle-9:before {
+		-webkit-animation-delay: -0.4s;
+		animation-delay: -0.4s
+	}
+
+	.loader_box-circle-10:before {
+		-webkit-animation-delay: -0.3s;
+		animation-delay: -0.3s
+	}
+
+	.loader_box-circle-11:before {
+		-webkit-animation-delay: -0.2s;
+		animation-delay: -0.2s
+	}
+
+	.loader_box-circle-12:before {
+		-webkit-animation-delay: -0.1s;
+		animation-delay: -0.1s
+	}
+
+	@-webkit-keyframes sk-fading-circle-delay {
+		0%, 39%, 100% {
+			opacity: 0
+		}
+		40% {
+			opacity: 1
+		}
+	}
+
+	@keyframes sk-fading-circle-delay {
+		0%, 39%, 100% {
+			opacity: 0
+		}
+		40% {
+			opacity: 1
+		}
+	}
+
+	</style><meta name="robots" content="index, follow" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="https://workspace.ru/" />
+<meta name="copyright" content="Workspace.ru" />
+<meta name="referrer" content="unsafe-url" />
+<meta name="yandex-verification" content="aabd9f42c0e98915" />
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-regularit-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-blackit-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-black-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-extrabld-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-light-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/proximanova-regularit-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/local/templates/tender_v2/ws_build/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=62944ef2efdeb">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=62944ef2efdeb">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=62944ef2efdeb">
+<link rel="manifest" href="/favicon/site.webmanifest?v=62944ef2efdeb">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=62944ef2efdeb" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico?v=62944ef2efdeb">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png?v=62944ef2efdeb">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml?v=62944ef2efdeb">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:url" content="https://workspace.ru/" />
+<meta property="og:image" content="https://workspace.ru/local/templates/tender_v2/ws_build/images/opengraph/workspace.png" />
+<meta property="og:site_name" content="WORKSPACE" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@WORKSPACE_ru" />
+<meta name="twitter:image" content="https://workspace.ru/local/templates/tender_v2/ws_build/images/opengraph/workspace.png" />
+<link rel="canonical" href="https://workspace.ru/"/>
+<link rel="image_src" href="https://workspace.ru/local/templates/tender_v2/ws_build/images/opengraph/workspace.png" />
+<meta property="og:title" content="Workspace — объединяем клиентов и агентства" />
+<meta name="twitter:title" content="Workspace — объединяем клиентов и агентства" />
+<meta property="og:description" content="Workspace помогает заказчикам digital-услуг выбрать оптимального исполнителя, а агентствам найти своего клиента." />
+<meta name="twitter:description" content="Workspace помогает заказчикам digital-услуг выбрать оптимального исполнителя, а агентствам найти своего клиента." />
+
+
+
+	</head>
+<body class="">
+<div id='fb-root'></div>
+
+
+	<div class="loader js-loader" data-page-loader>
+		<div class="loader_box">
+			<div class="loader_box-circle loader_box-circle-1"></div>
+			<div class="loader_box-circle loader_box-circle-2"></div>
+			<div class="loader_box-circle loader_box-circle-3"></div>
+			<div class="loader_box-circle loader_box-circle-4"></div>
+			<div class="loader_box-circle loader_box-circle-5"></div>
+			<div class="loader_box-circle loader_box-circle-6"></div>
+			<div class="loader_box-circle loader_box-circle-7"></div>
+			<div class="loader_box-circle loader_box-circle-8"></div>
+			<div class="loader_box-circle loader_box-circle-9"></div>
+			<div class="loader_box-circle loader_box-circle-10"></div>
+			<div class="loader_box-circle loader_box-circle-11"></div>
+			<div class="loader_box-circle loader_box-circle-12"></div>
+		</div>
+	</div>
+
+<div class="grid ">
+	
+
+<div data-view="Home">
+	<header class='header main-new__header-wrap' data-main-header>
+		<div class="main-new__header page-inner__container">
+			<img class='main-new__logo' src='/local/templates/tender_v2/ws_build/images/logo_new.svg' alt='Workspace.ru'>
+			<ul class="main-new__menu nowrap u-ml-auto u-mr-auto">
+				<li class="main-new__menu-item"><a href="/b2b/" class="c-link _blue-d-type1 u-fw-600 u-trs-fast">Тендерная площадка</a></li>
+				<li class="main-new__menu-item"><a href="/contractors/" class="c-link _blue-d-type1 u-fw-600 u-trs-fast">Digital-агентства</a></li>
+				<li class="main-new__menu-item"><a href="/people/" class="c-link _blue-d-type1 u-fw-600 u-trs-fast">Специалисты</a></li>
+				<li class="main-new__menu-item"><a href="/media/" class="c-link _blue-d-type1 u-fw-600 u-trs-fast">Медиа</a></li>
+				<li class="main-new__menu-item">
+					<a href="/awards/" target="_blank" class="c-link _blue-d-type1 u-fw-600 u-trs-fast">Премия</a>
+					<span class="header__menu-item-badge _blink u-mb-2"></span>
+				</li>
+			</ul>
+			<div class='u-ml-auto d-flex align-items-center'>
+					<a class="button button--gray1 _radius-lg _sm u-radius-right-0 u-my-auto" href="/login/?backurl=%2F" data-login-popup-show="/login/login.php?ajax=Y">Войти</a>
+	<a class="button button--gray1 _radius-lg _sm u-ml-0 u-radius-left-0 u-my-auto" href="/login/registration.php?backurl=%2F">Зарегистрироваться</a>
+
+	<div class="modal" aria-hidden="true" data-modal-popup data-login-popup>
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__dialog" role="dialog" aria-modal="true">
+				<button type="button" class="modal__btn-close" data-modal-popup-close><span class="u-sr-only">Закрыть</span></button>
+				<div class="modal__inner" data-login-popup-body data-modal-popup-body>
+					<div class="cssload-zenith"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+			</div>
+		</div>
+	</header>
+	<section class="main-new__main">
+		<h1 class="main-new__title">Объединяем<br /> клиентов и агентства <br />в сфере digital</h1>
+		<div class='main-new__toggler d-flex'>
+			<button type='button' class='toggler-button _left _active u-btn-reset' data-main-tabs-switch='1'>Заказчику</button>
+			<button type='button' class='toggler-button u-btn-reset' data-main-tabs-switch='2'>Исполнителю</button>
+		</div>
+		<div class='t-a-c'>
+			<p class='main-new__subtitle _active' data-main-tabs-block='1'>
+				Опубликуйте заказ и получайте предложения от профессиональных агентств <br>
+				с реальными ценами и сроками. Или выберите подрядчика вручную из обширного каталога.
+			</p>
+
+			<div class='main-new__category-cards _active' data-main-tabs-block='1'>
+				<a href='/create/' data-main-analytics='main_create_order' class='main-page-category-card'>
+					<span class='main-page-category-card__title'>
+						<span>Опубликовать<br> заказ</span>
+						<svg class="main-page-category-card__icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#hammers2"></use>
+						</svg>
+					</span>
+					Проведите конкурс среди агентств <br> и выберите лучшее предложение!
+				</a>
+				<a href='/contractors/' data-main-analytics='main_select_agency' class='main-page-category-card'>
+					<span class='main-page-category-card__title'>
+						<span>Подобрать агентство <br> вручную</span>
+						<svg class="main-page-category-card__icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#search2"></use>
+						</svg>
+					</span>
+					Выберите подрядчика из каталога.<br> В базе более 17 000 агентств.
+				</a>
+			</div>
+		</div>
+		<div class='t-a-c'>
+			<p class='main-new__subtitle' data-main-tabs-block='2'>
+				Откликайтесь на тендеры, общайтесь с клиентами и договаривайтесь о сотрудничестве. <br>
+				Нецелевые лиды можно продать другим агентствам через нашу Биржу лидов.
+			</p>
+
+			<div class='main-new__category-cards' data-main-tabs-block='2'>
+				<a href='/tenders/' data-main-analytics='main_view_tenders' class='main-page-category-card'>
+				<span class='main-page-category-card__title'>
+					<span>Посмотреть <br> тендеры</span>
+					<svg class="main-page-category-card__icon c-svg-icon">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#eye2"></use>
+					</svg>
+				</span>
+					Выбирайте интересные тендеры <br>и откликайтесь на них.
+				</a>
+				<a href='/personal/club/' data-main-analytics='main_sell_leads' class='main-page-category-card'>
+					<span class='main-page-category-card__title'>
+						<span>Продать <br> лиды</span>
+						<svg class="main-page-category-card__icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#diamond"></use>
+						</svg>
+					</span>
+					Продавайте нецелевые заявки <br> проверенным агентствам.
+				</a>
+			</div>
+		</div>
+
+		<div class='main-new__people-wrapper'>
+						<button class='u-btn-reset' type='button' data-main-tabs-switch='2'>
+				<span class='main-new__man' data-main-tabs-block='2'>
+					<svg class="main-new__man-placeholder">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#right1-placeholder"></use>
+					</svg>
+					<img class='main-new__man-img' src='/local/templates/tender_v2/ws_build/images/main/mainpage-left1.png'
+						 srcset='/local/templates/tender_v2/ws_build/images/main/mainpage-right1@2x.png' alt='Заказчик'>
+				</span>
+			</button>
+
+			<button class='_active u-btn-reset' type='button' data-main-tabs-switch='1'>
+				<span class='main-new__woman _active' data-main-tabs-block='1'>
+					<svg class="main-new__woman-placeholder">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#left1-placeholder"></use>
+					</svg>
+					<img class='main-new__woman-img' src='/local/templates/tender_v2/ws_build/images/main/mainpage-right1.png'
+						 srcset='/local/templates/tender_v2/ws_build/images/main/mainpage-left1@2x.png' alt='Исполнитель'>
+				</span>
+			</button>
+		</div>
+	</section>
+
+	<section class='main-new__section _blue-d main-new__tabs-content _active' data-main-tabs-block='1'>
+		<div class='page-inner__container page-inner__container--mainpage'>
+			<h2 class="main-new__section-title _white u-mb-0">17 902 диджитал-агентства</h2>
+			<p class='main-new__section-subtitle'>Готовы приступить к работе</p>
+
+			<div class='main-new-list _two-cols _5rows'>
+									<a href='/web-development/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_1"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Разработка сайтов</span>
+							<span class='main-new-list__item-subtitle'>16 685 агентств</span>
+						</span>
+					</a>
+									<a href='/mobile/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_3"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Мобильные приложения</span>
+							<span class='main-new-list__item-subtitle'>2 025 агентств</span>
+						</span>
+					</a>
+									<a href='/seo/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_4"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Поисковая оптимизация</span>
+							<span class='main-new-list__item-subtitle'>4 565 агентств</span>
+						</span>
+					</a>
+									<a href='/marketing/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_9"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Маркетинг</span>
+							<span class='main-new-list__item-subtitle'>1 426 агентств</span>
+						</span>
+					</a>
+									<a href='/ppc/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_2"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Реклама</span>
+							<span class='main-new-list__item-subtitle'>3 345 агентств</span>
+						</span>
+					</a>
+									<a href='/smm/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_8"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>SMM и PR</span>
+							<span class='main-new-list__item-subtitle'>1 665 агентств</span>
+						</span>
+					</a>
+									<a href='/identity/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_10"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Дизайн и брендинг</span>
+							<span class='main-new-list__item-subtitle'>841 агентство</span>
+						</span>
+					</a>
+									<a href='/copywriting/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_11"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Контент</span>
+							<span class='main-new-list__item-subtitle'>1 140 агентств</span>
+						</span>
+					</a>
+									<a href='/crm/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_12"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>CRM, 1C, ПО, чат-боты, администрирование</span>
+							<span class='main-new-list__item-subtitle'>525 агентств</span>
+						</span>
+					</a>
+									<a href='/gamedev/' class='main-new-list__item _small _arrow-right'>
+						<svg class="main-new-list__item-icon c-svg-icon">
+							<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#_13"></use>
+						</svg>
+						<span>
+							<span class='main-new-list__item-title'>Игры</span>
+							<span class='main-new-list__item-subtitle'>112 агентств</span>
+						</span>
+					</a>
+							</div>
+		</div>
+	</section>
+
+	<section class="main-new__section _blue-d main-new__tabs-content" data-main-tabs-block='2'>
+		<div class="page-inner__container page-inner__container--mainpage t-a-c">
+			<h2 class="main-new__section-title _white u-mb-0">Свежие тендеры и лиды</h2>
+			<p class='main-new__section-subtitle'>Актуальные проекты ждут исполнителей</p>
+
+			
+<div class="main-new-list">
+			<a href='/tenders//' class='main-new-list__item'>
+			<svg class="main-new-list__item-icon c-svg-icon">
+				<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#"></use>
+			</svg>
+			<div>
+				<span class='main-new-list__item-category'>SEO под ключ</span>
+				<span class='main-new-list__item-title'>SEO под ключ для консалтинговой компании (отели)</span>
+				<div class='d-flex'>
+					<span class='main-new-list__item-date'>07 июл 2023</span>
+					<span class='main-new-list__item-date'>Прием заявок: <span class='u-color-white'>до 11 июля</span></span>
+				</div>
+			</div>
+			<div class='main-new-list__item-price-col'>
+				<div class='main-new-list__item-status'>Идет прием заявок</div>
+				<div class='main-new-list__item-price'>до&nbsp;100 000&nbsp;<span class="rub"></span></div>
+			</div>
+		</a>
+			<a href='/tenders//' class='main-new-list__item'>
+			<svg class="main-new-list__item-icon c-svg-icon">
+				<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#"></use>
+			</svg>
+			<div>
+				<span class='main-new-list__item-category'>Приложение под ключ </span>
+				<span class='main-new-list__item-title'>Приложение для членов клуба сети фитнес клубов</span>
+				<div class='d-flex'>
+					<span class='main-new-list__item-date'>07 июл 2023</span>
+					<span class='main-new-list__item-date'>Прием заявок: <span class='u-color-white'>до 14 июля</span></span>
+				</div>
+			</div>
+			<div class='main-new-list__item-price-col'>
+				<div class='main-new-list__item-status'>Идет прием заявок</div>
+				<div class='main-new-list__item-price'>до&nbsp;250 000&nbsp;<span class="rub"></span></div>
+			</div>
+		</a>
+			<a href='/tenders//' class='main-new-list__item'>
+			<svg class="main-new-list__item-icon c-svg-icon">
+				<use xlink:href="/local/templates/tender_v2/ws_build/images/main-page-types-sprite.svg#"></use>
+			</svg>
+			<div>
+				<span class='main-new-list__item-category'>Таргетированная реклама</span>
+				<span class='main-new-list__item-title'>Таргетированная реклама B2B в Instagram и Facebook для производителя элайнеров</span>
+				<div class='d-flex'>
+					<span class='main-new-list__item-date'>07 июл 2023</span>
+					<span class='main-new-list__item-date'>Прием заявок: <span class='u-color-white'>до 14 июля</span></span>
+				</div>
+			</div>
+			<div class='main-new-list__item-price-col'>
+				<div class='main-new-list__item-status'>Идет прием заявок</div>
+				<div class='main-new-list__item-price'>100 000&nbsp;—&nbsp;300 000&nbsp;<span class="rub"></span></div>
+			</div>
+		</a>
+	</div>
+			<a class='button button--outline _gray3 _lg _radius-lg u-mt-50 text-uppercase u-trs-fast' href="/tenders/">
+				Показать все
+				<svg class="c-svg-icon _xxsm u-ml-7">
+					<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#triangle-right"></use>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	
+<section class='main-new__section main-new__tabs-content _active' data-main-tabs-block='1'>
+	<div class='page-inner__container page-inner__container--mainpage t-a-c'>
+		<h2 class='main-new__section-title u-mb-0'>Лучшие кейсы</h2>
+		<p class='main-new__section-subtitle'>Кейсы номинантов премии Workspace Digital Awards</p>
+
+		<div class='main-new__cases-list u-ta-left'>
+			
+<article class='journal-list__item journal-card u-pos-rel'>
+			<div class='awards__ribbon-box'>
+			<a href='/cases/uraltrubprom-rost-zayavok-v-2-raza-v-b2b-segmente/' class='awards__ribbon-link' ></a>
+			<a href='/awards/' class='awards__ribbon' data-tooltip-link='WORKSPACE<br>DIGITAL<br>AWARDS <span>/ 23' target='_blank'>
+				<span class='awards__ribbon-text'>НОМИНАНТ WDA</span>
+			</a>
+		</div>
+		<a href='/cases/uraltrubprom-rost-zayavok-v-2-raza-v-b2b-segmente/' class='journal-card__img-wrap '  >
+					<img class='journal-card__img _fixed-h'  src="/upload/resize_cache/executor_cases/daf/4fvh1i1xk0jj88g9u9svw9rhcdzc4w8j/390_260_2619711fa078991f0a23d032687646b21/Uraltrubprom-_-Case-Cover.png"  srcset="/upload/resize_cache/executor_cases/daf/4fvh1i1xk0jj88g9u9svw9rhcdzc4w8j/780_520_2619711fa078991f0a23d032687646b21/Uraltrubprom-_-Case-Cover.png 2x"  alt='Уралтрубпром: рост заявок в 2 раза в B2B-сегменте'>
+			</a>
+
+	<div class='journal-card__content'>
+		<p class='journal-card__row'>
+							<a href='/cases/seo/' class='journal-card__col journal-card__tag'>#Поисковая оптимизация</a>
+						<span class='journal-card__col journal-card__date' data-public-date='2022-12-15T08:49:34+00:00'></span>
+		</p>
+
+		<h4 class='journal-card__title'><a class='journal-card__title-link' href='/cases/uraltrubprom-rost-zayavok-v-2-raza-v-b2b-segmente/' >Уралтрубпром: рост заявок в 2 раза в B2B-сегменте</a></h4>
+
+					<div class='journal-card__row u-pos-rel' style='z-index: 2'>
+
+									<a href='/contractors/jetstyle/' class='journal-card__col journal-card__author'>
+				
+						<div class='journal-card__author-img-wrap'>
+							<img  src="/upload/resize_cache/executor_logo/f59/n049s6q0rwfoyg3ppfzx1obtvjaxdi57/30_30_1619711fa078991f0a23d032687646b21/Frame-1-_2_.png"  srcset="/upload/resize_cache/executor_logo/f59/n049s6q0rwfoyg3ppfzx1obtvjaxdi57/60_60_1619711fa078991f0a23d032687646b21/Frame-1-_2_.png 2x"  alt='JetStyle' class='journal-card__author-img'>
+						</div>
+						<span><span class='journal-card__author-name'>JetStyle</span></span>
+
+									</a>
+				
+				<div class='journal-card__col journal-card__counter'>
+					<span>3138</span>&nbsp;<svg class='c-svg-icon _eye _sm _top'>
+						<use xlink:href='/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#eye2'></use>
+					</svg>
+				</div>
+
+									<div class='journal-card__col journal-card__likeds' data-likes-box='uraltrubprom-rost-zayavok-v-2-raza-v-b2b-segmente'>
+						
+						<div class='user-like'>
+							<div class='user-like__box   _fill' data-login-popup-show="/login/login.php?ajax=Y" data-change-title="Войдите, чтобы оценить кейс" data-change-title-mods="_small" data-modal-popup-show-btn="auth-login" >
+								<svg class='c-svg-icon _sm _top user-like__ico'>
+									<use xlink:href='/local/templates/tender_v2/ws_build/images/header-sprite.svg?v=3#thumbs-up'></use>
+								</svg>
+
+								<span class='user-like__counter ' data-likes-counter-wrap>
+									<span data-likes-counter>7</span>
+								</span>
+							</div>
+
+							<div class='user-like-list hide' data-likes-list-wrap>
+																	
+<div class="cases-detail-likes__popup">
+			<div class="d-flex align-items-center u-mb-30 nowrap">
+			<div class="u-mr-30">
+															<span class="u-fw-700">7 людям</span>
+						нравится этот кейс												</div>
+		</div>
+	
+	<div class="cases-detail-likes__scroll-wrap modal-tooltip__sticked-right">
+		<ul class="cases-detail-likes__grid reset-list cases-detail-likes__grid--column-5" data-liked-users-list="">
+								<li>
+						<a class="c-link _black" href="/id/katerina-logvinova/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Катерина Логвинова"
+								 src="/upload/resize_cache/main/82a/vwr0qsbx8s12pb76yerrx1l0ogm5f6w4/100_100_2619711fa078991f0a23d032687646b21/Katerina-Logvinova.PNG"  srcset="/upload/resize_cache/main/82a/vwr0qsbx8s12pb76yerrx1l0ogm5f6w4/200_200_2619711fa078991f0a23d032687646b21/Katerina-Logvinova.PNG 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Катерина Логвинова							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/roman-klevcov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Роман Клевцов"
+								 src="/upload/resize_cache/main/6fa/100_100_2619711fa078991f0a23d032687646b21/7db995a59b6ba4b214acef65643830b3.jpg"  srcset="/upload/resize_cache/main/6fa/200_200_2619711fa078991f0a23d032687646b21/7db995a59b6ba4b214acef65643830b3.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Роман Клевцов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/maksim-linksirov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Максим Линксиров"
+								 src="/upload/resize_cache/main/947/dtwkdpzu5w02h4u1cxmj5vr7qdg1zir2/100_100_2619711fa078991f0a23d032687646b21/Picsart_22_12_27_21_40_33_056.jpg"  srcset="/upload/resize_cache/main/947/dtwkdpzu5w02h4u1cxmj5vr7qdg1zir2/200_200_2619711fa078991f0a23d032687646b21/Picsart_22_12_27_21_40_33_056.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Максим Линксиров							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/lera-mihaylova/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Лера Михайлова"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Лера Михайлова							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/anastasiya-temchenko/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Анастасия Темченко"
+								 src="/upload/resize_cache/main/f9f/zvtmyir4jcwrr8oce8tvuurdoakmpdls/100_100_2619711fa078991f0a23d032687646b21/avito_1667314633253_shot.jpg"  srcset="/upload/resize_cache/main/f9f/zvtmyir4jcwrr8oce8tvuurdoakmpdls/200_200_2619711fa078991f0a23d032687646b21/avito_1667314633253_shot.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Анастасия Темченко							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/vera-mazur/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Вера Мазур"
+								 src="/upload/resize_cache/main/9b8/rmez23cxcafe40s56gr0igrobma0lig9/100_100_2619711fa078991f0a23d032687646b21/1FGHSDGUWGFD.jpg"  srcset="/upload/resize_cache/main/9b8/rmez23cxcafe40s56gr0igrobma0lig9/200_200_2619711fa078991f0a23d032687646b21/1FGHSDGUWGFD.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Вера Мазур							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/vasiliy-prudnikov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Василий Прудников"
+								 src="/upload/resize_cache/main/591/jdbrr8f83czqxdb75jcd2u7i31zhtpsj/100_100_2619711fa078991f0a23d032687646b21/IMG_20200513_103202.jpg"  srcset="/upload/resize_cache/main/591/jdbrr8f83czqxdb75jcd2u7i31zhtpsj/200_200_2619711fa078991f0a23d032687646b21/IMG_20200513_103202.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Василий Прудников							</span>
+						</a>
+					</li>
+							</ul>
+	</div>
+
+			<div class="d-flex align-items-center justify-content-center u-mt-30 nowrap">
+			<div>
+				<span class="cases-detail-likes__see-more u-fw-700" data-liked-users-see-more="">
+					еще 2				</span>
+			</div>
+		</div>
+	</div>															</div>
+						</div>
+					</div>
+							</div>
+			</div>
+</article>
+<article class='journal-list__item journal-card u-pos-rel'>
+			<div class='awards__ribbon-box'>
+			<a href='/cases/let-s-chill-prilozhenie-dlya-domosedov/' class='awards__ribbon-link' ></a>
+			<a href='/awards/' class='awards__ribbon' data-tooltip-link='WORKSPACE<br>DIGITAL<br>AWARDS <span>/ 23' target='_blank'>
+				<span class='awards__ribbon-text'>НОМИНАНТ WDA</span>
+			</a>
+		</div>
+		<a href='/cases/let-s-chill-prilozhenie-dlya-domosedov/' class='journal-card__img-wrap '  >
+					<img class='journal-card__img _fixed-h'  src="/upload/resize_cache/executor_cases/48e/7u06xqb8lysm8pp243xem76jx49swl00/390_260_2619711fa078991f0a23d032687646b21/10.png"  srcset="/upload/resize_cache/executor_cases/48e/7u06xqb8lysm8pp243xem76jx49swl00/780_520_2619711fa078991f0a23d032687646b21/10.png 2x"  alt='Let's Chill. Приложение для домоседов'>
+			</a>
+
+	<div class='journal-card__content'>
+		<p class='journal-card__row'>
+							<a href='/cases/mobile/' class='journal-card__col journal-card__tag'>#Мобильные приложения</a>
+						<span class='journal-card__col journal-card__date' data-public-date='2022-11-25T09:30:00+00:00'></span>
+		</p>
+
+		<h4 class='journal-card__title'><a class='journal-card__title-link' href='/cases/let-s-chill-prilozhenie-dlya-domosedov/' >Let's Chill. Приложение для домоседов</a></h4>
+
+					<div class='journal-card__row u-pos-rel' style='z-index: 2'>
+
+									<a href='/contractors/pyrobyte/' class='journal-card__col journal-card__author'>
+				
+						<div class='journal-card__author-img-wrap'>
+							<img  src="/upload/resize_cache/executor_logo/dc4/30_30_1619711fa078991f0a23d032687646b21/photo_2021_01_20-10.56.01-_1_.jpeg"  srcset="/upload/resize_cache/executor_logo/dc4/60_60_1619711fa078991f0a23d032687646b21/photo_2021_01_20-10.56.01-_1_.jpeg 2x"  alt='Pyrobyte' class='journal-card__author-img'>
+						</div>
+						<span><span class='journal-card__author-name'>Pyrobyte</span></span>
+
+									</a>
+				
+				<div class='journal-card__col journal-card__counter'>
+					<span>679</span>&nbsp;<svg class='c-svg-icon _eye _sm _top'>
+						<use xlink:href='/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#eye2'></use>
+					</svg>
+				</div>
+
+									<div class='journal-card__col journal-card__likeds' data-likes-box='let-s-chill-prilozhenie-dlya-domosedov'>
+						
+						<div class='user-like'>
+							<div class='user-like__box   _fill' data-login-popup-show="/login/login.php?ajax=Y" data-change-title="Войдите, чтобы оценить кейс" data-change-title-mods="_small" data-modal-popup-show-btn="auth-login" >
+								<svg class='c-svg-icon _sm _top user-like__ico'>
+									<use xlink:href='/local/templates/tender_v2/ws_build/images/header-sprite.svg?v=3#thumbs-up'></use>
+								</svg>
+
+								<span class='user-like__counter ' data-likes-counter-wrap>
+									<span data-likes-counter>52</span>
+								</span>
+							</div>
+
+							<div class='user-like-list hide' data-likes-list-wrap>
+																	
+<div class="cases-detail-likes__popup">
+			<div class="d-flex align-items-center u-mb-30 nowrap">
+			<div class="u-mr-30">
+															<span class="u-fw-700">52 людям</span>
+						нравится этот кейс												</div>
+		</div>
+	
+	<div class="cases-detail-likes__scroll-wrap modal-tooltip__sticked-right">
+		<ul class="cases-detail-likes__grid reset-list cases-detail-likes__grid--column-5" data-liked-users-list="">
+								<li>
+						<a class="c-link _black" href="/id/olga-chernyh/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Ольга Черных"
+								 src="/upload/resize_cache/main/ba1/b4khfxptogo7ci0xuaw3tjpziiu45vwf/100_100_2619711fa078991f0a23d032687646b21/b604002e_4c55_48eb_95ae_9a6c730d0068.jpg"  srcset="/upload/resize_cache/main/ba1/b4khfxptogo7ci0xuaw3tjpziiu45vwf/200_200_2619711fa078991f0a23d032687646b21/b604002e_4c55_48eb_95ae_9a6c730d0068.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Ольга Черных							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aleksey-ryabov-3/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Алексей Рябов"
+								 src="/upload/resize_cache/main/d7d/p513qhh5e6f8j8sbw6z9k0eec5851tbd/100_100_2619711fa078991f0a23d032687646b21/IMG_5137.jpg"  srcset="/upload/resize_cache/main/d7d/p513qhh5e6f8j8sbw6z9k0eec5851tbd/200_200_2619711fa078991f0a23d032687646b21/IMG_5137.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Алексей Рябов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/ivan-sapronov-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Иван Сапронов"
+								 src="/upload/resize_cache/main/e75/0lpmgc4kg9zznpxcgn928horqw6hp3ul/100_100_2619711fa078991f0a23d032687646b21/IMG_20191008_121444.jpg"  srcset="/upload/resize_cache/main/e75/0lpmgc4kg9zznpxcgn928horqw6hp3ul/200_200_2619711fa078991f0a23d032687646b21/IMG_20191008_121444.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Иван Сапронов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/katerina-logvinova/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Катерина Логвинова"
+								 src="/upload/resize_cache/main/82a/vwr0qsbx8s12pb76yerrx1l0ogm5f6w4/100_100_2619711fa078991f0a23d032687646b21/Katerina-Logvinova.PNG"  srcset="/upload/resize_cache/main/82a/vwr0qsbx8s12pb76yerrx1l0ogm5f6w4/200_200_2619711fa078991f0a23d032687646b21/Katerina-Logvinova.PNG 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Катерина Логвинова							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/kris-dayer/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Kris Dayer"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Kris Dayer							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/sergey-popov-8/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Сергей Попов"
+								 src="/upload/resize_cache/main/dd4/3b765mvkbkq7r61i7u69bmhe33g2on7p/100_100_2619711fa078991f0a23d032687646b21/L-_-AnudiALA.jpg"  srcset="/upload/resize_cache/main/dd4/3b765mvkbkq7r61i7u69bmhe33g2on7p/200_200_2619711fa078991f0a23d032687646b21/L-_-AnudiALA.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Сергей Попов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/darya-teplovodskaya/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Дарья Тепловодская"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Дарья Тепловодская							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/administrator-administrator/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Григорий Николаев"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Григорий Николаев							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/xadicha-sharipova-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Xadicha Sharipova"
+								 src="/upload/resize_cache/main/fd6/ilmx07bwomk06qy49u2ptfugsn8x21yi/100_100_2619711fa078991f0a23d032687646b21/CE6157C0_3183_4E12_8D88_D42A2A327C69.png"  srcset="/upload/resize_cache/main/fd6/ilmx07bwomk06qy49u2ptfugsn8x21yi/200_200_2619711fa078991f0a23d032687646b21/CE6157C0_3183_4E12_8D88_D42A2A327C69.png 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Xadicha Sharipova							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/sad-rain-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Валерий Воронцов"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Валерий Воронцов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/etlhagnxjbaaorhz-etlhagnxjbaaorhz/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Павел Ермолов"
+								 src="/upload/resize_cache/main/fc5/0sair6mj483kq5kuylm13m1bp0njtjg9/100_100_2619711fa078991f0a23d032687646b21/XW_cvRsQ3vg.jpg"  srcset="/upload/resize_cache/main/fc5/0sair6mj483kq5kuylm13m1bp0njtjg9/200_200_2619711fa078991f0a23d032687646b21/XW_cvRsQ3vg.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Павел Ермолов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/anatoliy-zaycev-3/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Анатолий Зайцев"
+								 src="/upload/resize_cache/main/308/vecqm3ebizbtmqnz87tq4pi5pe4nt9hi/100_100_2619711fa078991f0a23d032687646b21/9a25e39d537d086f942117fc1e87b416.jpg"  srcset="/upload/resize_cache/main/308/vecqm3ebizbtmqnz87tq4pi5pe4nt9hi/200_200_2619711fa078991f0a23d032687646b21/9a25e39d537d086f942117fc1e87b416.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Анатолий Зайцев							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/cjwvtcbsommqjqla-cjwvtcbsommqjqla/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Мария Коршун"
+								 src="/upload/resize_cache/main/670/wa2yo7b01yyia1c91b6pu24ao1ihk0o7/100_100_2619711fa078991f0a23d032687646b21/6E251DB9_66A5_4F00_AD81_8FB168CD4287.jpeg"  srcset="/upload/resize_cache/main/670/wa2yo7b01yyia1c91b6pu24ao1ihk0o7/200_200_2619711fa078991f0a23d032687646b21/6E251DB9_66A5_4F00_AD81_8FB168CD4287.jpeg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Мария Коршун							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/motaz-morad-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="aziz hawaya"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								aziz hawaya							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/spike-topchik-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="spike topchik"
+								 src="/upload/resize_cache/main/c9f/uiziy0m8pyzhetm5qxbfbytkqbdpvg3v/100_100_2619711fa078991f0a23d032687646b21/57e1710d88de0a212a1cc4847750c759.jpg"  srcset="/upload/resize_cache/main/c9f/uiziy0m8pyzhetm5qxbfbytkqbdpvg3v/200_200_2619711fa078991f0a23d032687646b21/57e1710d88de0a212a1cc4847750c759.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								spike topchik							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/tuan-nguyen-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Tuan Nguyen"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Tuan Nguyen							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/ivan-ermakov-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Иван Ермаков"
+								 src="/upload/resize_cache/main/325/a4c2w6xs5s1q5ou22k3769ai0lp0wllr/100_100_2619711fa078991f0a23d032687646b21/ava.jpg"  srcset="/upload/resize_cache/main/325/a4c2w6xs5s1q5ou22k3769ai0lp0wllr/200_200_2619711fa078991f0a23d032687646b21/ava.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Иван Ермаков							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/anton-lisickiy-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Антон Лисицкий"
+								 src="/upload/resize_cache/main/9c5/100_100_2619711fa078991f0a23d032687646b21/photo_2021_01_19_16_53_09-1.png"  srcset="/upload/resize_cache/main/9c5/200_200_2619711fa078991f0a23d032687646b21/photo_2021_01_19_16_53_09-1.png 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Антон Лисицкий							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/mohamed-nagila-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Mohamed Nagila"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Mohamed Nagila							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/dmitriy-prohorov-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Дмитрий Прохоров"
+								 src="/upload/resize_cache/main/aca/h8ylkp6u95ytb5lwb8g7ww9781o9e8or/100_100_2619711fa078991f0a23d032687646b21/images.jpg"  srcset="/upload/resize_cache/main/aca/h8ylkp6u95ytb5lwb8g7ww9781o9e8or/200_200_2619711fa078991f0a23d032687646b21/images.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Дмитрий Прохоров							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/artem-lebedev-3/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Артём Лебедев"
+								 src="/upload/resize_cache/main/666/2dmi5de9cmlp1df9t834kvxss274bi0d/100_100_2619711fa078991f0a23d032687646b21/yn1.png"  srcset="/upload/resize_cache/main/666/2dmi5de9cmlp1df9t834kvxss274bi0d/200_200_2619711fa078991f0a23d032687646b21/yn1.png 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Артём Лебедев							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/anton-barbulya-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Антон Барбуля"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Антон Барбуля							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/evgeniy-lovkiy-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Евгений Ловкий"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Евгений Ловкий							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aleksey-febenchukov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Алексей Фебенчуков"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Алексей Фебенчуков							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/konstantin-sidorov-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Константин Сидоров"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Константин Сидоров							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aleksey-gubchenko-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Алексей Губченко"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Алексей Губченко							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/vladimir-vernigora/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Владимир Вернигора"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Владимир Вернигора							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/anastasiya-soboleva-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Анастасия Соболева"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Анастасия Соболева							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/yuriy-vi/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Юрий Ви"
+								 src="/upload/resize_cache/main/425/xkjomubszlkk3geykvpakaog1hjcbvc1/100_100_2619711fa078991f0a23d032687646b21/avatar-_13_.jpg"  srcset="/upload/resize_cache/main/425/xkjomubszlkk3geykvpakaog1hjcbvc1/200_200_2619711fa078991f0a23d032687646b21/avatar-_13_.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Юрий Ви							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/artem-safarov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Артем Сафаров"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Артем Сафаров							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/darya-teplovodskaya-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Дарья Тепловодская"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Дарья Тепловодская							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/oleg-ritter-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Oleg Ritter"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Oleg Ritter							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/gagik-margaryan-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Gagik Margaryan"
+								 src="/upload/resize_cache/main/7d3/0h4u0bghqr0zaf7ps00herumj3wj05mg/100_100_2619711fa078991f0a23d032687646b21/HhHV_YFnm_dQejb5_ib2CVe2GG6_gjWMGCgQkvNDAOJo4Pe4LiPXHgFrua_rmeYhfhuZPx5bPifhhBo1YChpxUhO.jpg"  srcset="/upload/resize_cache/main/7d3/0h4u0bghqr0zaf7ps00herumj3wj05mg/200_200_2619711fa078991f0a23d032687646b21/HhHV_YFnm_dQejb5_ib2CVe2GG6_gjWMGCgQkvNDAOJo4Pe4LiPXHgFrua_rmeYhfhuZPx5bPifhhBo1YChpxUhO.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Gagik Margaryan							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/margarita-pahalyuk-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Маргарита Пахалюк"
+								 src="/upload/resize_cache/main/50b/i86td0c2u0xufv7cz6fg580ur3hiqjcl/100_100_2619711fa078991f0a23d032687646b21/Screenshot_2022_12_03_22_13_31_092_com.miui.gallery.jpg"  srcset="/upload/resize_cache/main/50b/i86td0c2u0xufv7cz6fg580ur3hiqjcl/200_200_2619711fa078991f0a23d032687646b21/Screenshot_2022_12_03_22_13_31_092_com.miui.gallery.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Маргарита Пахалюк							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/inga-ingulya-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Инга Ингуля"
+								 src="/upload/resize_cache/main/625/oz1jsmyev8cg4x3ztgcge3w9hbb0i94q/100_100_2619711fa078991f0a23d032687646b21/UJluhihP3frr3w7QfETYNmteYxv4U5lhydeheOR2Cksv1ivLoxcv8dJ5jaV07ZpFnjY4fzC_Ql6JSI9BOKbB58U5.jpg"  srcset="/upload/resize_cache/main/625/oz1jsmyev8cg4x3ztgcge3w9hbb0i94q/200_200_2619711fa078991f0a23d032687646b21/UJluhihP3frr3w7QfETYNmteYxv4U5lhydeheOR2Cksv1ivLoxcv8dJ5jaV07ZpFnjY4fzC_Ql6JSI9BOKbB58U5.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Инга Ингуля							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/nadezhda-kropmayer-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Надежда Кропмайер"
+								 src="/upload/resize_cache/main/504/dffa1vapmkym1s968emfnlgcpe1s3feq/100_100_2619711fa078991f0a23d032687646b21/20220523_162400.jpg"  srcset="/upload/resize_cache/main/504/dffa1vapmkym1s968emfnlgcpe1s3feq/200_200_2619711fa078991f0a23d032687646b21/20220523_162400.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Надежда Кропмайер							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/gax-man-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Gax Man"
+								 src="/upload/resize_cache/main/bc6/ehga11rrkphs3qrurffva03gxias775n/100_100_2619711fa078991f0a23d032687646b21/1666331329_TUTapjoy.png"  srcset="/upload/resize_cache/main/bc6/ehga11rrkphs3qrurffva03gxias775n/200_200_2619711fa078991f0a23d032687646b21/1666331329_TUTapjoy.png 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Gax Man							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/andrei-shemiatsiuk-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Andrei Shemiatsiuk"
+								 src="/upload/resize_cache/main/ae6/2zkt780gl348r2uhyag4329aop3wv62z/100_100_2619711fa078991f0a23d032687646b21/8c7a2f7f_l.jpeg"  srcset="/upload/resize_cache/main/ae6/2zkt780gl348r2uhyag4329aop3wv62z/200_200_2619711fa078991f0a23d032687646b21/8c7a2f7f_l.jpeg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Andrei Shemiatsiuk							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/potapov-sergey-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Потапов Сергей"
+								 src="/upload/resize_cache/main/c35/x525mhj25nzkgogl35bcxsdlrecmp32i/100_100_2619711fa078991f0a23d032687646b21/56_20220105_151749.jpg"  srcset="/upload/resize_cache/main/c35/x525mhj25nzkgogl35bcxsdlrecmp32i/200_200_2619711fa078991f0a23d032687646b21/56_20220105_151749.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Потапов Сергей							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/iren-perfiljewa-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Iren Perfiljewa"
+								 src="/upload/resize_cache/main/22b/4y3tltbrwo7l1oy0zp4dcgq4dp3jnsko/100_100_2619711fa078991f0a23d032687646b21/iren-perfiljewa.jpg"  srcset="/upload/resize_cache/main/22b/4y3tltbrwo7l1oy0zp4dcgq4dp3jnsko/200_200_1619711fa078991f0a23d032687646b21/iren-perfiljewa.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Iren Perfiljewa							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/viktor-gusev-3/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Виктор Гусев"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Виктор Гусев							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/nikolay-shabrov-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Николай Шабров"
+								 src="/upload/resize_cache/main/f81/y7hy0w2v3u1re6sx4i0tc6b9dko8ymuu/100_100_2619711fa078991f0a23d032687646b21/klevaya.jpg"  srcset="/upload/resize_cache/main/f81/y7hy0w2v3u1re6sx4i0tc6b9dko8ymuu/150_150_1619711fa078991f0a23d032687646b21/klevaya.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Николай Шабров							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/ivan-usov-3/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Иван Усов"
+								 src="/upload/resize_cache/main/d67/2l1oj0ipvexi3z4nv1cixd56odzdnxnx/100_100_2619711fa078991f0a23d032687646b21/Screenshot_20221129_211555.png"  srcset="/upload/resize_cache/main/d67/2l1oj0ipvexi3z4nv1cixd56odzdnxnx/200_200_2619711fa078991f0a23d032687646b21/Screenshot_20221129_211555.png 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Иван Усов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/viktoriya-linnik-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Виктория Линник"
+								 src="/upload/resize_cache/main/1ea/kaqgorwlsiryrx94u08ocprz1ryogugs/100_100_2619711fa078991f0a23d032687646b21/20221125_121715.jpg"  srcset="/upload/resize_cache/main/1ea/kaqgorwlsiryrx94u08ocprz1ryogugs/200_200_2619711fa078991f0a23d032687646b21/20221125_121715.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Виктория Линник							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/marat-hismatullin/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Марат Хисматуллин"
+								 src="/upload/resize_cache/main/1fd/100_100_2619711fa078991f0a23d032687646b21/ava_workspace2.jpg"  srcset="/upload/resize_cache/main/1fd/200_200_2619711fa078991f0a23d032687646b21/ava_workspace2.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Марат Хисматуллин							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/darya-ryzhakova/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Дарья Рыжакова"
+								 src="/upload/resize_cache/main/1d1/kqaujxhup8w43gyjseg7u36f4zypo6g5/100_100_2619711fa078991f0a23d032687646b21/foto.jpg"  srcset="/upload/resize_cache/main/1d1/kqaujxhup8w43gyjseg7u36f4zypo6g5/200_200_2619711fa078991f0a23d032687646b21/foto.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Дарья Рыжакова							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/anna-zueva-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Анна Зуева"
+								 src="/upload/resize_cache/main/9f0/12lz6393t0zcan2t90da6o0glf0waxo3/100_100_2619711fa078991f0a23d032687646b21/6yswSYvKyjA.jpg"  srcset="/upload/resize_cache/main/9f0/12lz6393t0zcan2t90da6o0glf0waxo3/154_147_1619711fa078991f0a23d032687646b21/6yswSYvKyjA.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Анна Зуева							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/mariya-sorokina-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Мария Сорокина"
+								 src="/upload/resize_cache/main/a64/100_100_2619711fa078991f0a23d032687646b21/yRFozafCiGE.jpg"  srcset="/upload/resize_cache/main/a64/200_200_2619711fa078991f0a23d032687646b21/yRFozafCiGE.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Мария Сорокина							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/evgeniy-fayzrahmanov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Евгений Файзрахманов"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Евгений Файзрахманов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/vyacheslav-maul-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Вячеслав Мауль"
+								 src="/local/templates/tender_v2/ws_build/images/work/man-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Вячеслав Мауль							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/polina-ryzhkova-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Полина Рыжкова"
+								 src="/upload/resize_cache/main/72c/100_100_2619711fa078991f0a23d032687646b21/IMG_2634.jpg"  srcset="/upload/resize_cache/main/72c/200_200_2619711fa078991f0a23d032687646b21/IMG_2634.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Полина Рыжкова							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aleksandr-kombarov-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Александр Комбаров"
+								 src="/upload/resize_cache/main/f48/100_100_2619711fa078991f0a23d032687646b21/Alexander.png"  srcset="/upload/resize_cache/main/f48/200_200_2619711fa078991f0a23d032687646b21/Alexander.png 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Александр Комбаров							</span>
+						</a>
+					</li>
+							</ul>
+	</div>
+
+			<div class="d-flex align-items-center justify-content-center u-mt-30 nowrap">
+			<div>
+				<span class="cases-detail-likes__see-more u-fw-700" data-liked-users-see-more="">
+					еще 47				</span>
+			</div>
+		</div>
+	</div>															</div>
+						</div>
+					</div>
+							</div>
+			</div>
+</article>
+<article class='journal-list__item journal-card u-pos-rel'>
+			<div class='awards__ribbon-box'>
+			<a href='/cases/doma-veka-korporativnyy-sayt-dlya-stroitelnoy-kompanii/' class='awards__ribbon-link' ></a>
+			<a href='/awards/' class='awards__ribbon' data-tooltip-link='WORKSPACE<br>DIGITAL<br>AWARDS <span>/ 23' target='_blank'>
+				<span class='awards__ribbon-text'>НОМИНАНТ WDA</span>
+			</a>
+		</div>
+		<a href='/cases/doma-veka-korporativnyy-sayt-dlya-stroitelnoy-kompanii/' class='journal-card__img-wrap '  >
+					<img class='journal-card__img _fixed-h'  src="/upload/resize_cache/executor_cases/b7b/99asw8628oeg33n8q7i8a1hptlie75g8/390_260_2619711fa078991f0a23d032687646b21/cover_2.jpg"  srcset="/upload/resize_cache/executor_cases/b7b/99asw8628oeg33n8q7i8a1hptlie75g8/780_520_1619711fa078991f0a23d032687646b21/cover_2.jpg 2x"  alt='Дома Века :: Корпоративный сайт для строительной компании'>
+			</a>
+
+	<div class='journal-card__content'>
+		<p class='journal-card__row'>
+							<a href='/cases/web/' class='journal-card__col journal-card__tag'>#Разработка сайтов</a>
+						<span class='journal-card__col journal-card__date' data-public-date='2021-03-03T09:02:45+00:00'></span>
+		</p>
+
+		<h4 class='journal-card__title'><a class='journal-card__title-link' href='/cases/doma-veka-korporativnyy-sayt-dlya-stroitelnoy-kompanii/' >Дома Века :: Корпоративный сайт для строительной компании</a></h4>
+
+					<div class='journal-card__row u-pos-rel' style='z-index: 2'>
+
+									<a href='/contractors/sagirov/' class='journal-card__col journal-card__author'>
+				
+						<div class='journal-card__author-img-wrap'>
+							<img  src="/upload/resize_cache/executor_logo/a48/3utbeopvjt4ed06gsfn1wd73ic136h9x/30_30_1619711fa078991f0a23d032687646b21/Framrterte-1.jpg"  srcset="/upload/resize_cache/executor_logo/a48/3utbeopvjt4ed06gsfn1wd73ic136h9x/60_60_1619711fa078991f0a23d032687646b21/Framrterte-1.jpg 2x"  alt='Студия SAGIROV.com' class='journal-card__author-img'>
+						</div>
+						<span><span class='journal-card__author-name'>Студия SAGIROV.com</span></span>
+
+									</a>
+				
+				<div class='journal-card__col journal-card__counter'>
+					<span>3673</span>&nbsp;<svg class='c-svg-icon _eye _sm _top'>
+						<use xlink:href='/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#eye2'></use>
+					</svg>
+				</div>
+
+									<div class='journal-card__col journal-card__likeds' data-likes-box='doma-veka-korporativnyy-sayt-dlya-stroitelnoy-kompanii'>
+						
+						<div class='user-like'>
+							<div class='user-like__box   _fill' data-login-popup-show="/login/login.php?ajax=Y" data-change-title="Войдите, чтобы оценить кейс" data-change-title-mods="_small" data-modal-popup-show-btn="auth-login" >
+								<svg class='c-svg-icon _sm _top user-like__ico'>
+									<use xlink:href='/local/templates/tender_v2/ws_build/images/header-sprite.svg?v=3#thumbs-up'></use>
+								</svg>
+
+								<span class='user-like__counter ' data-likes-counter-wrap>
+									<span data-likes-counter>32</span>
+								</span>
+							</div>
+
+							<div class='user-like-list hide' data-likes-list-wrap>
+																	
+<div class="cases-detail-likes__popup">
+			<div class="d-flex align-items-center u-mb-30 nowrap">
+			<div class="u-mr-30">
+															<span class="u-fw-700">32 людям</span>
+						нравится этот кейс												</div>
+		</div>
+	
+	<div class="cases-detail-likes__scroll-wrap modal-tooltip__sticked-right">
+		<ul class="cases-detail-likes__grid reset-list cases-detail-likes__grid--column-5" data-liked-users-list="">
+								<li>
+						<a class="c-link _black" href="/id/mikael-sagirov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Микаэл Сагиров"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Микаэл Сагиров							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/edik-vairon/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="эдик ваирон"
+								 src="/upload/resize_cache/main/96d/yrahpwk9sf2ecfapk33x1p0qip8ozj1h/100_100_2619711fa078991f0a23d032687646b21/43289929_l.jpg"  srcset="/upload/resize_cache/main/96d/yrahpwk9sf2ecfapk33x1p0qip8ozj1h/200_200_2619711fa078991f0a23d032687646b21/43289929_l.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								эдик ваирон							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/evgeniy-shkurkin/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Евгений Шкуркин"
+								 src="/upload/resize_cache/main/ce9/03v02zzytln0ybmsocppe0wpreo39ccm/100_100_2619711fa078991f0a23d032687646b21/1277640E_0142_4D72_AAFD_A1921B29733E.jpeg"  srcset="/upload/resize_cache/main/ce9/03v02zzytln0ybmsocppe0wpreo39ccm/200_200_2619711fa078991f0a23d032687646b21/1277640E_0142_4D72_AAFD_A1921B29733E.jpeg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Евгений Шкуркин							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/irina-yarovaya/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Irina Yarovaya"
+								 src="/upload/resize_cache/main/b5c/ru2e99pgkf64am5yqixbqiib0sz5mjeu/100_100_2619711fa078991f0a23d032687646b21/okras_resnic_i_biotatuazh_brovej_obuchenie.jpg"  srcset="/upload/resize_cache/main/b5c/ru2e99pgkf64am5yqixbqiib0sz5mjeu/200_200_2619711fa078991f0a23d032687646b21/okras_resnic_i_biotatuazh_brovej_obuchenie.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Irina Yarovaya							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/artem-golovin/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Артем Головин"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Артем Головин							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aleksandr-rezaykin/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Александр Резайкин"
+								 src="/upload/resize_cache/main/0cc/klf4lgz60rf2pzy0acvqkw3r7r1sb6ba/100_100_2619711fa078991f0a23d032687646b21/8BMUp9CwsMh_1P1_dTIH6K_p6VRl6meRp_GvlckPCYxDynbNyUBPydHE8Rw9FOzMKzkGA.jpg"  srcset="/upload/resize_cache/main/0cc/klf4lgz60rf2pzy0acvqkw3r7r1sb6ba/200_200_2619711fa078991f0a23d032687646b21/8BMUp9CwsMh_1P1_dTIH6K_p6VRl6meRp_GvlckPCYxDynbNyUBPydHE8Rw9FOzMKzkGA.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Александр Резайкин							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/natalya-vilischuk/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Наталья Вилищук"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Наталья Вилищук							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/guzel-habibullina/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Гузель Хабибуллина"
+								 src="/upload/resize_cache/main/d3b/fnemjot5t4vl39b0i34vysant3lpjj6t/100_100_2619711fa078991f0a23d032687646b21/IMG_20221129_124104_edit_53463587118404.jpg"  srcset="/upload/resize_cache/main/d3b/fnemjot5t4vl39b0i34vysant3lpjj6t/200_200_2619711fa078991f0a23d032687646b21/IMG_20221129_124104_edit_53463587118404.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Гузель Хабибуллина							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/elena-suhar/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Елена Сухарь"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Елена Сухарь							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/doge-/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Doge Esmaeilik"
+								 src="/upload/resize_cache/main/86a/yxi0ievh6f6ycg220swiztizmc8ldcbh/100_100_2619711fa078991f0a23d032687646b21/_.jpg"  srcset="/upload/resize_cache/main/86a/yxi0ievh6f6ycg220swiztizmc8ldcbh/200_200_2619711fa078991f0a23d032687646b21/_.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Doge Esmaeilik							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/karina-nemceva/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Карина Немцева"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Карина Немцева							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/azamat-atanaev/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Azamat Atanaev"
+								 src="/upload/resize_cache/main/6fa/h3tgl8rjyqw6hs7rgdj1ggk2r0gialgd/100_100_2619711fa078991f0a23d032687646b21/11_aa40c026ff3a06_2.jpg"  srcset="/upload/resize_cache/main/6fa/h3tgl8rjyqw6hs7rgdj1ggk2r0gialgd/120_120_1619711fa078991f0a23d032687646b21/11_aa40c026ff3a06_2.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Azamat Atanaev							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/elena-yastrebova/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Елена Ястребова"
+								 src="/upload/resize_cache/main/581/iiwzbr3v7mfhqvc1jc3p7acb6ngyyy35/100_100_2619711fa078991f0a23d032687646b21/ZFi5o3hNjSU.jpg"  srcset="/upload/resize_cache/main/581/iiwzbr3v7mfhqvc1jc3p7acb6ngyyy35/200_200_2619711fa078991f0a23d032687646b21/ZFi5o3hNjSU.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Елена Ястребова							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/nyzkaget-/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="NYZKAGET Ermalov"
+								 src="/upload/resize_cache/main/644/37i3z99ytg3zh21zuiig0kpqcpfmngso/100_100_2619711fa078991f0a23d032687646b21/WD_jpl3BsQA.jpg"  srcset="/upload/resize_cache/main/644/37i3z99ytg3zh21zuiig0kpqcpfmngso/200_200_2619711fa078991f0a23d032687646b21/WD_jpl3BsQA.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								NYZKAGET Ermalov							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aziz-rahmatov/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Азиз Рахматов"
+								 src="/upload/resize_cache/main/9b5/pkw38bjprzy3ltzwon27x2zghp8hphqs/100_100_2619711fa078991f0a23d032687646b21/d9e633187e77ca3de1ccd1838dda6a82.jpg"  srcset="/upload/resize_cache/main/9b5/pkw38bjprzy3ltzwon27x2zghp8hphqs/200_200_2619711fa078991f0a23d032687646b21/d9e633187e77ca3de1ccd1838dda6a82.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Азиз Рахматов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/oleg-prolskiy-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Олег Прольский"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Олег Прольский							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/zhanna-shulman-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Жанна Шульман"
+								 src="/upload/resize_cache/main/811/g4ct6zyundnvneq8km3iqjhobg1gw48t/100_100_2619711fa078991f0a23d032687646b21/IMG_20220929_141720_285.jpg"  srcset="/upload/resize_cache/main/811/g4ct6zyundnvneq8km3iqjhobg1gw48t/200_200_2619711fa078991f0a23d032687646b21/IMG_20220929_141720_285.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Жанна Шульман							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/annas-vox-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="annas vox"
+								 src="/upload/resize_cache/main/30b/7hvs28ctwz31xx9k7q7qnxlkw515g668/100_100_2619711fa078991f0a23d032687646b21/Capturekj.PNG"  srcset="/upload/resize_cache/main/30b/7hvs28ctwz31xx9k7q7qnxlkw515g668/176_121_1619711fa078991f0a23d032687646b21/Capturekj.PNG 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								annas vox							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/yuliya-kalnickaya-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Юлия Кальницкая"
+								 src="/upload/resize_cache/main/f19/mu43yimsv02kumhkc2a2xpe2mqp58ci3/100_100_2619711fa078991f0a23d032687646b21/IMG_20221230_223752_673.jpg"  srcset="/upload/resize_cache/main/f19/mu43yimsv02kumhkc2a2xpe2mqp58ci3/200_200_2619711fa078991f0a23d032687646b21/IMG_20221230_223752_673.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Юлия Кальницкая							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aleksey-yuzik-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Алексей Юзик"
+								 src="/upload/resize_cache/main/1c6/55lks29wgt51y5yu42vp5t41zlquyj4y/100_100_1619711fa078991f0a23d032687646b21/images.jpg" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Алексей Юзик							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/sveta-orlova-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Света Орлова"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Света Орлова							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/nikita-kochergin-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Никита Кочергин"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Никита Кочергин							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/evgeniy-miheev-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Евгений Михеев"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Евгений Михеев							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/evgeniy-ivanov-15/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Евгений Иванов"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Евгений Иванов							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/zelenevskaya-ekaterina-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Зеленевская Екатерина"
+								 src="/local/templates/tender_v2/ws_build/images/work/woman-userpic.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Зеленевская Екатерина							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/andrey-andreev-15/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Андрей Андреев"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Андрей Андреев							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/mikhail-punegov-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Mikhail Punegov"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Mikhail Punegov							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/yuliya-shegan-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Юлия Шеган"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Юлия Шеган							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/sk-sagor-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Sk Sagor"
+								 src="/local/templates/tender_v2/ws_build/images/work/big_splash_user.png" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Sk Sagor							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/zafarahmed--2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Zafarahmed Khan"
+								 src="/upload/resize_cache/main/957/15ap5lgn87nm0cx6f6m6vkxpfnc5rumy/100_100_2619711fa078991f0a23d032687646b21/IMG_20230117_WA0027.jpg"  srcset="/upload/resize_cache/main/957/15ap5lgn87nm0cx6f6m6vkxpfnc5rumy/200_200_2619711fa078991f0a23d032687646b21/IMG_20230117_WA0027.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Zafarahmed Khan							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/dafna-gref-2/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Дафна Греф"
+								 src="/upload/resize_cache/main/afa/tsn7vo6cnya92u7f2b01lrq7ysdpfrk0/100_100_2619711fa078991f0a23d032687646b21/1674206921.jpg"  srcset="/upload/resize_cache/main/afa/tsn7vo6cnya92u7f2b01lrq7ysdpfrk0/200_200_2619711fa078991f0a23d032687646b21/1674206921.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Дафна Греф							</span>
+						</a>
+					</li>
+										<li>
+						<a class="c-link _black" href="/id/aleksey-smirnov-10/" target="_blank">
+							<img class="cases-detail-likes__user-photo"
+							     alt="Алексей Смирнов"
+								 src="/upload/resize_cache/main/005/fgqihsoz993zf5gsxgk2fc36tvgngie5/100_100_2619711fa078991f0a23d032687646b21/IMG_e3dd0.jpg"  srcset="/upload/resize_cache/main/005/fgqihsoz993zf5gsxgk2fc36tvgngie5/200_200_2619711fa078991f0a23d032687646b21/IMG_e3dd0.jpg 2x" 							><br>
+
+							<span class="c-link__underlined cases-detail-likes__user-name">
+								Алексей Смирнов							</span>
+						</a>
+					</li>
+							</ul>
+	</div>
+
+			<div class="d-flex align-items-center justify-content-center u-mt-30 nowrap">
+			<div>
+				<span class="cases-detail-likes__see-more u-fw-700" data-liked-users-see-more="">
+					еще 27				</span>
+			</div>
+		</div>
+	</div>															</div>
+						</div>
+					</div>
+							</div>
+			</div>
+</article>		</div>
+
+		<a class='button button--outline _blue-d _lg _radius-lg text-uppercase u-fw-600 u-trs-fast'
+		   href='/cases/?sort=wda'>
+			Все кейсы
+			<svg class='c-svg-icon _xxsm u-ml-7 u-color-gray5'>
+				<use xlink:href='/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#triangle-right'></use>
+			</svg>
+		</a>
+	</div>
+</section>
+	<section class="main-new__section main-new__tabs-content" data-main-tabs-block='2'>
+		<div class="page-inner__container page-inner__container--mainpage t-a-c">
+			<h2 class="main-new__section-title u-mb-0">База знаний для агентств</h2>
+			<p class='main-new__section-subtitle'>Статьи, обзоры, интервью, шаблоны документов, полезные сервисы, каталоги ключевых ресурсов и организаций digital-отрасли</p>
+
+			<div class='main-new__blog-categories'>
+				<a href='/docs/contracts/' class='main-new-blog-category'>
+					<div><h3 class='main-new-blog-category__title'>Шаблоны договоров</h3></div>
+					<p class='u-mt-7 u-mb-0 u-color-gray5'>На создание сайтов и приложений, рекламу, маркетинг и пр.</p>
+					<img src='/local/templates/tender_v2/ws_build/images/main/templates.svg' alt='Шаблоны договоров' class='main-new-blog-category__img'>
+					<p class='u-mt-50 u-mb-0 u-color-gray5'>18 документов</p>
+				</a>
+				<a href='/brif/' class='main-new-blog-category'>
+					<div><h3 class='main-new-blog-category__title'>Шаблоны брифов</h3></div>
+					<p class='u-mt-7 u-mb-0 u-color-gray5'>На веб-разработку, маркетинг, SMM, айдентику, рекламу и др.</p>
+					<img src='/local/templates/tender_v2/ws_build/images/main/brifs.svg' alt='Шаблоны брифов' class='main-new-blog-category__img'>
+					<p class='u-mt-50 u-mb-0 u-color-gray5'>12 документов</p>
+				</a>
+				<a href='/guide/' class='main-new-blog-category'>
+					<div><h3 class='main-new-blog-category__title'>Энциклопедия</h3></div>
+					<p class='u-mt-7 u-mb-0 u-color-gray5'>Каталог рейтингов, конкурсов, мероприятий и пр.</p>
+					<img src='/local/templates/tender_v2/ws_build/images/main/encyclopedia.svg' alt='Энциклопедия' class='main-new-blog-category__img'>
+					<p class='u-mt-50 u-mb-0 u-color-gray5'>137 ресурсов</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-new__section _blue-d u-pb-0 main-new__tabs-content _active" data-main-tabs-block='1'>
+		<div class="page-inner__container page-inner__container--mainpage t-a-c">
+
+			<div class='main-page-review__nav pull-left'>
+				<button type='button' class='u-btn-reset main-page-review__nav-left' data-reviews-slider-prev='1'>
+					<svg class="c-svg-icon u-rotate-180">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#triangle-right"></use>
+					</svg>
+				</button>
+				<button type='button' class='u-btn-reset main-page-review__nav-right' data-reviews-slider-next='1'>
+					<svg class="c-svg-icon">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#triangle-right"></use>
+					</svg>
+				</button>
+			</div>
+
+			<h2 class="main-new__section-title _white u-mb-30">Отзывы клиентов</h2>
+
+			<div class='swiper-container' data-reviews-slider='1'>
+				<div class='swiper-wrapper'>
+											<article class='main-page-review swiper-slide'>
+							<div class='main-page-review__text'>
+								<div class='main-page-review__text-wrap'>Благодаря Workspace я&nbsp;сформировал крепкие партнерские отношения с&nbsp;разработчиками сайтов и&nbsp;агентствами по&nbsp;интернет-маркетингу. Реализовали более 20&nbsp;проектов за&nbsp;3&nbsp;года для&nbsp;WWF&nbsp;России.</div>
+								<div class='main-page-review__author'>
+									<div class='u-fw-700'>Михаил Волков</div>Head of Digital WWF России</div>
+							</div>
+							<img  src="/local/templates/tender_v2/ws_build/images/main/review-volkov.png"  srcset="/local/templates/tender_v2/ws_build/images/main/review-volkov@2x.png 2x"  alt='Михаил Волков' class='main-page-review__img'>
+						</article>
+											<article class='main-page-review swiper-slide'>
+							<div class='main-page-review__text'>
+								<div class='main-page-review__text-wrap'>Большое спасибо за предоставленную возможность выбора подрядчика! Было очень удобно просто разместить свои пожелания и получить выбор из потенциальных исполнителей. Сервис значительно экономит время, можно вести обсуждение задачи сразу с несколькими агентствами в одном месте.</div>
+								<div class='main-page-review__author'>
+									<div class='u-fw-700'>Матвей Заморкин</div>Руководитель футбольной школы «Спартак Юниор»</div>
+							</div>
+							<img  src="/local/templates/tender_v2/ws_build/images/main/review-ZAMORKIN-mainpage.png"  alt='Матвей Заморкин' class='main-page-review__img'>
+						</article>
+											<article class='main-page-review swiper-slide'>
+							<div class='main-page-review__text'>
+								<div class='main-page-review__text-wrap'>Наш тендер был срочный и объемный. За 4 дня откликнулась 21 компания. Все были готовы к серьезному сотрудничеству и произвели положительное впечатление. Спасибо Workspace за возможность оперативно решать задачи и знакомства с новыми digital-агентствами, к которым, возможно, обратимся с другими проектами.</div>
+								<div class='main-page-review__author'>
+									<div class='u-fw-700'>Скобелева Анна</div>Руководитель отдела маркетинга Game-Keeper Abonement</div>
+							</div>
+							<img  src="/local/templates/tender_v2/ws_build/images/main/review-SKOBELEWA-mainpage.png"  alt='Скобелева Анна' class='main-page-review__img'>
+						</article>
+									</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-new__section _blue-d u-pb-0 main-new__tabs-content" data-main-tabs-block='2'>
+		<div class="page-inner__container page-inner__container--mainpage t-a-c">
+
+			<div class='main-page-review__nav pull-left'>
+				<button type='button' class='u-btn-reset main-page-review__nav-left' data-reviews-slider-prev='2'>
+					<svg class="c-svg-icon u-rotate-180">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#triangle-right"></use>
+					</svg>
+				</button>
+				<button type='button' class='u-btn-reset main-page-review__nav-right' data-reviews-slider-next='2'>
+					<svg class="c-svg-icon">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#triangle-right"></use>
+					</svg>
+				</button>
+			</div>
+			<h2 class="main-new__section-title _white u-mb-30">Отзывы диджитал-агентств</h2>
+
+			<div class='swiper-container' data-reviews-slider='2'>
+				<div class='swiper-wrapper'>
+											<article class='main-page-review swiper-slide'>
+							<div class='main-page-review__text'>
+								<div class='main-page-review__text-wrap'>Понятная и&nbsp;удобная площадка для поиска теплых лидов. Pro-аккаунты окупаются практически с&nbsp;первого месяца, а&nbsp;победа в&nbsp;тендерах и&nbsp;отзывы от&nbsp;клиентов дополнительно повышают рейтинг в&nbsp;глазах потенциальных клиентов. Желаем команде и&nbsp;дальше проактивно развивать площадку и&nbsp;давать нам еще больше лидов!</div>
+
+								<div class='main-page-review__author'>
+									<div class='u-fw-700'>Владимир Пивульский</div>
+									Mediacontext								</div>
+							</div>
+							<img  src="/local/templates/tender_v2/ws_build/images/main/review-piwulski.png"  srcset="/local/templates/tender_v2/ws_build/images/main/review-piwulski@2x.png 2x"  alt='Владимир Пивульский' class='main-page-review__img'>
+						</article>
+											<article class='main-page-review swiper-slide'>
+							<div class='main-page-review__text'>
+								<div class='main-page-review__text-wrap'>При поиске новых каналов продаж мы&nbsp;столкнулись с&nbsp;очень неприятными реалиями рынка. Workspace&nbsp;&mdash; единственная площадка в&nbsp;IT-сфере, которая ежедневно &laquo;поставляет&raquo; качественные лиды. На&nbsp;Workspace мы&nbsp;познакомились с&nbsp;десятками клиентов и&nbsp;на&nbsp;несколько месяцев вперед обеспечили работой свои команды разработчиков.</div>
+
+								<div class='main-page-review__author'>
+									<div class='u-fw-700'>Иван Афанов</div>
+									Garpix								</div>
+							</div>
+							<img  src="/local/templates/tender_v2/ws_build/images/main/review-afanov.png"  srcset="/local/templates/tender_v2/ws_build/images/main/review-afanov@2x.png 2x"  alt='Иван Афанов' class='main-page-review__img'>
+						</article>
+											<article class='main-page-review swiper-slide'>
+							<div class='main-page-review__text'>
+								<div class='main-page-review__text-wrap'>Рад, что Workspace продолжает обрастать новым сервисами, при этом не&nbsp;глюча и&nbsp;не&nbsp;падая, что нечасто встречается в&nbsp;наше время. Платные опции&nbsp;&mdash; рабочие, но&nbsp;не&nbsp;забывайте снимать статистику и&nbsp;ценность конверсий.</div>
+
+								<div class='main-page-review__author'>
+									<div class='u-fw-700'>Олег Громов</div>
+									Extyl								</div>
+							</div>
+							<img  src="/local/templates/tender_v2/ws_build/images/main/review-gromov.png"  srcset="/local/templates/tender_v2/ws_build/images/main/review-gromov@2x.png 2x"  alt='Олег Громов' class='main-page-review__img'>
+						</article>
+											<article class='main-page-review swiper-slide'>
+							<div class='main-page-review__text'>
+								<div class='main-page-review__text-wrap'>Работать с Workspace — удобно, особенно со статусом «PRO-аккаунт». Менеджерам нравится простой процесс участия в тендерах и оперативное взаимодействие во внутреннем чате как с заказчиками, так и исполнителями. В моменты перегрузок удавалось оперативно находить достойные региональные команды, не нарушая корпоративные стандарты качества оказания услуг.</div>
+
+								<div class='main-page-review__author'>
+									<div class='u-fw-700'>Роман Клевцов</div>
+									«Оптимизм»								</div>
+							</div>
+							<img  src="/local/templates/tender_v2/ws_build/images/main/review-klevcov.png"  srcset="/local/templates/tender_v2/ws_build/images/main/review-klevcov@2x.png 2x"  alt='Роман Клевцов' class='main-page-review__img'>
+						</article>
+									</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-new__section _white _last main-new__tabs-content _active" data-main-tabs-block='1'>
+		<div class="page-inner__container page-inner__container--mainpage t-a-c">
+			<h2 class="main-new__section-title u-mb-0">Сервисом воспользовались</h2>
+			<p class='main-new__section-subtitle'>Более 5 000 компаний нашли исполнителей через Workspace</p>
+
+			<img src='/local/templates/tender_v2/ws_build/images/main/logos-1.png' srcset='/local/templates/tender_v2/ws_build/images/main/logos-1@2x.png' alt='Сервисом воспользовались'
+				 class='main-new__logos'>
+		</div>
+	</section>
+
+	<section class="main-new__section _white _last main-new__tabs-content" data-main-tabs-block='2'>
+		<div class="page-inner__container page-inner__container--mainpage t-a-c">
+			<h2 class="main-new__section-title u-mb-0">Получили клиентов</h2>
+			<p class='main-new__section-subtitle'>Более 3 000 диджитал-агентств нашли клиентов через Workspace</p>
+
+			<img src='/local/templates/tender_v2/ws_build/images/main/logos.png' srcset='/local/templates/tender_v2/ws_build/images/main/logos@2x.png' alt='Сервисом воспользовались' class='main-new__logos'>
+		</div>
+	</section>
+</div>
+	</div>
+
+	<footer data-footer class="footer _no_margin" data-opinion-btn-unfixed>
+		<div data-back-btn-unfixed class="footer__goto">
+			<a data-back-btn-fixed class="footer__goto-up" data-goto-up
+			   href="javascript:void(0);">Наверх <i class="fa fa-angle-up" aria-hidden="true"></i></a>
+		</div>
+		<div class='footer__chat-btns' data-fixed-cb-buttons>
+			<a href='https://t.me/workspace_robot' target='_blank' class='footer__chat-btn' data-ext-link-allow>
+				<svg class="c-svg-icon _lg u-va-txt-top">
+					<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#chatbot"></use>
+				</svg>&nbsp;
+				Чат-бот
+			</a>
+			<div class='footer__chat-btn-balloon _left'>Подпишитесь на тендеры/лиды/задачи, узнайте больше о работе проекта, оставьте отзыв или задайте вопрос</div>
+
+			<a href='/contacts/' target='_blank' class='footer__chat-btn'>Обратная связь</a>
+			<div class='footer__chat-btn-balloon nowrap'>Свяжитесь с менеджером проекта</div>
+		</div>
+
+		<div class='footer__grid page-inner__container'>
+			<div class='footer__grid-col d-flex align-items-center'><a class="footer__logo" href="/"></a></div>
+			<div class='footer__grid-col _subscribe d-flex align-items-center'>
+				<div class='footer__top-row-subscribe'>
+					Подписывайтесь на наш телеграм-канал:&nbsp;<a class='c-link _underline _gray3-type2' target='_blank' href='https://t.me/workspace' data-ext-link-allow>t.me/workspace</a>
+				</div>
+			</div>
+			<div class='footer__grid-col d-flex align-items-center'>
+				<a href='https://t.me/workspace_robot' target='_blank' class='button button--outline _radius-lg u-ml-auto u-px-20 u-trs-fast' data-ext-link-allow>
+					<svg class="c-svg-icon _lg u-va-txt-top">
+						<use xlink:href="/local/templates/tender_v2/ws_build/images/d-tender-sprite.svg#chatbot"></use>
+					</svg>&nbsp;
+					Чат-бот
+				</a>
+				<a href="/contacts/" aria-label="Обратная связь" class='button button--outline _radius-lg u-px-20 u-trs-fast'>Обратная связь</a>
+			</div>
+
+			
+		<section class='footer__grid-col footer__block'>
+							<h4 class="footer__block-title">Тендеры и лиды</h4>
+			
+			<ul class="footer__list">
+
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Тендерная площадка"
+							href="/b2b/"
+						>Тендерная площадка</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Перейти в каталог тендеров"
+							href="/tenders/"
+						>Каталог тендеров</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Биржа лидов"
+							href="/leads/"
+						>Биржа лидов</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+							data-footer-tender-create							aria-label="Организовать тендер"
+							href="/create/"
+						>Организовать тендер</a>					</li>
+							</ul>
+		</section>
+	
+		<section class='footer__grid-col footer__block'>
+							<h4 class="footer__block-title">Исполнители</h4>
+			
+			<ul class="footer__list">
+
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Перейти в каталог диджитал-агентств"
+							href="/contractors/"
+						>Диджитал-агентства</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Каталог специалистов"
+							href="/specialists/"
+						>Специалисты</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Отзывы об агентствах"
+							href="/reviews/"
+						>Отзывы об агентствах</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Узнать стоимость услуг агентств"
+							href="/calculator/"
+						>Стоимость услуг</a>					</li>
+							</ul>
+		</section>
+	
+		<section class='footer__grid-col footer__block'>
+							<h4 class="footer__block-title">Медиа</h4>
+			
+			<ul class="footer__list">
+
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Перейти в каталог кейсов"
+							href="/cases/"
+						>Кейсы</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Статьи"
+							href="/blog/"
+						>Статьи</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Афиша"
+							href="/events/"
+						>Афиша</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Слово экспертам"
+							href="/expert/"
+						>Слово экспертам</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Энциклопедия"
+							href="/guide/"
+						>Энциклопедия</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Документация"
+							href="/docs/"
+						>Документация</a>					</li>
+							</ul>
+		</section>
+	
+		<section class='footer__grid-col footer__block'>
+							<h4 class="footer__block-title">Информация</h4>
+			
+			<ul class="footer__list">
+
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="О проекте"
+							href="/about/"
+						>О проекте</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Команда проекта"
+							href="/team/"
+						>Команда</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Каталог задач"
+							href="/advertising/"
+						>Платные опции</a><span class="footer__list-item-fire"></span>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Помощь"
+							href="/help/"
+						>Помощь</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Премия"
+							href="/awards/"
+						>Премия</a>							<span class="header__menu-item-badge"></span>
+											</li>
+							</ul>
+		</section>
+	
+		<section class='footer__grid-col footer__block'>
+							<h4 class="footer__block-title">Другое</h4>
+			
+			<ul class="footer__list">
+
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Перейти в каталог инструментов"
+							href="/tools/"
+						>Инструменты</a>					</li>
+									<li class="footer__list-item">
+						<a
+							class='c-link _underline _gray3-type2'
+														aria-label="Вакансии"
+							href="/vacancies/"
+						>Вакансии</a>					</li>
+							</ul>
+		</section>
+	
+			<section class='footer__grid-col footer__bottom-col'>
+				<ul class="footer__social">
+					<li><a class="footer__social-item _fb" target="_blank" href="https://www.facebook.com/WORKSPACE.ru/" aria-label="Workspace на Facebook"
+					       rel="noopener noreferrer" data-ext-link-allow=""></a></li>
+					<li><a class="footer__social-item _vk" target="_blank" href="https://vk.com/workspace_ru" aria-label="Workspace в VK"
+					       rel="noopener noreferrer" data-ext-link-allow=""></a></li>
+					<li><a class="footer__social-item _yandex" target="_blank"
+					       href="https://dzen.ru/workspace" aria-label="Workspace на Яндекс.Дзен" rel="noopener noreferrer" data-ext-link-allow=""></a></li>
+					<li><a class="footer__social-item _telegram" target="_blank" href="https://t.me/workspace" aria-label="Workspace в
+					Telegram" rel="noopener noreferrer" data-ext-link-allow=""></a></li>
+				</ul>
+			</section>
+
+			<section class='footer__grid-col footer__copyright footer__bottom-col _middle'>© 2016—2023, Workspace</section>
+
+			<section class='footer__grid-col footer__bottom-col _last'>
+				<ul class="footer__confidential footer__list">
+					<li class="footer__confidential-item">
+						<a class='c-link _underline _gray4' href="/upload/security_policy.pdf" aria-label="Скачать файл 'Политика конфиденциальности'" target="_blank">
+							Политика конфиденциальности
+						</a>
+					</li>
+					<li class="footer__confidential-item">
+						<a class='c-link _underline _gray4' href="/upload/terms_of_use.pdf" aria-label="Скачать файл 'Пользовательское соглашение'" target="_blank">
+							Пользовательское соглашение
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</footer>
+<link href="/bitrix/cache/css/s1/tender_v2/template_ff93b7dbf87a219a736eb203b70ab2ff/template_ff93b7dbf87a219a736eb203b70ab2ff_v1.css?16887557361099287" type="text/css"  data-template-style="true" rel="stylesheet" />
+		<noscript>
+			<div><img src="https://mc.yandex.ru/watch/34152830" style="position:absolute; left:-9999px;" alt="" /></div>
+		</noscript>
+		<noscript><img src="//counter.rambler.ru/top100.cnt?pid=7123451" alt="Топ-100" /></noscript>
+	<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=yoHzv1CJLq20jn" style="display:none" height="1" width="1" alt="" /></noscript>
+		<noscript><img src="https://vk.com/rtrg?p=VK-RTRG-900899-1oTXR" style="position:fixed; left:-999px;" alt="" /></noscript>
+<script type="text/javascript"  src="/bitrix/cache/js/s1/tender_v2/template_a78f131a389ae5e30181323cf4df99e2/template_a78f131a389ae5e30181323cf4df99e2_v1.js?1688755869399783"></script>
+
+
+</body>
+</html>
+<div class="modal" data-ext-link-confirm-popup data-modal-popup>
+	<div class="modal__overlay" tabindex="-1">
+		<div class="pop-up__wrapper pop-up__wrapper--narrow2">
+			<button type="button" class="pop-up__close" data-modal-popup-close aria-label="Закрыть"></button>
+
+			<div class="pop-up__main">
+				<h3 class="pop-up__title">Переход на внешний сайт</h3>
+				<p class="pop-up__text">Подтвердите переход по ссылке:</p>
+				<p class="pop-up__text">
+					<a href=""
+					   class="button button--change _big pop-up__link-button"
+					   target="_blank"
+					   data-ext-link-confirm-link
+					   data-ext-link-allow
+					   data-metric-goals='{"yaText":"pop_up_go_to_external_site","gaCategory":"pop_up_external_site","gaAction":"click","gaLabel":"url"}'
+					>
+						<i class="button__icon button__icon--ext-link"></i>
+						Перейти на: <span data-ext-link-confirm-text></span>
+					</a>
+				</p>
+			</div>
+
+			<div class="pop-up__footer">
+				<div class="pop-up__text">
+					<div class="pop-up__note-create-tender">
+						<div><b>Создавайте тендеры на WORKSPACE.RU</b></div>
+						<div>17 000+ агентств готовы обсудить новый проект.</div>
+					</div>
+				</div>
+
+				<a href="/create/"
+				   class="pop-up__button pop-up__button--target"
+				   target="_blank"
+				   data-metric-goals='{"yaText":"pop_up_create_tender","gaCategory":"pop_up_external_site","gaAction":"click","gaLabel":"button"}'
+				>Организовать тендер</a>
+			</div>
+		</div>
+	</div>
+</div>

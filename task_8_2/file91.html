@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="StudLance.ru — интернет-биржа заказчиков и авторов студенческих работ. Помощь студентам в выполнении курсовых, рефератов, докладов, контрольных и других учебных работ." />
+<meta name="keywords" content="" />
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicons/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicons/apple-touch-icon-57x57.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/images/favicons/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="160x160" href="/static/images/favicons/favicon-160x160.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicons/favicon-16x16.png" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="msapplication-TileImage" content="/static/images/favicons/mstile-144x144.png" />
+<title>StudLance.ru — помощь студентам в выполнении курсовых, рефератов, дипломных и других студенческих работ</title>
+<meta property="og:image" content="https://studlance.ru/static/images/studlance.jpg" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic&amp;subset=latin,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+<link href="/static/lp/promo/css/susy.css" rel="stylesheet" />
+<link href="/static/lp/promo/css/index.css" rel="stylesheet" />
+
+
+
+
+<link href="/static/lp/promo/css/style-custom.css" rel="stylesheet" />
+<!-- JQUERY -->
+<script src="/static/js/lib/jquery-1.11.1.min.js"></script>
+
+<script src="/static/lp/promo/lib/jquery.datetimepicker.js"></script></head>
+    <body ng-class="showNotifications ? 'zero-padding' : ''">
+        <!-- ANGULAR --><script src="/static/bower_components/angular/angular.min.js"></script>
+<script src="/static/bower_components/angular-deferred-bootstrap/angular-deferred-bootstrap.min.js"></script>
+<script src="/static/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="/static/bower_components/angular-animate/angular-animate.min.js"></script>
+<!-- STUDLANCE -->
+<script src="/static/js/app/promo-app.js"></script>
+<!-- COOKIE -->
+<script src="/static/bower_components/angular-cookies/angular-cookies.min.js"></script>
+<!-- CHOSEN -->
+<script src="/static/bower_components/chosen/chosen.jquery.js"></script>
+<script src="/static/bower_components/angular-chosen-js/angular-chosen.min.js"></script>
+<!-- MOMENT -->
+<script src="/static/bower_components/moment/moment.js"></script>
+<!-- STUDLANCE -->
+<script src="/static/js/app/directive/common.js"></script>
+<script src="/static/js/app/service/validation.js"></script>
+<script src="/static/js/app/directive/validators.js"></script>
+<!-- script below is customized -->
+<script src="/static/bower_components/ng-notifications-bar/src/ngNotificationsBar.js"></script>
+<link href="/static/bower_components/ng-notifications-bar/dist/ngNotificationsBar.min.css" rel="stylesheet" />
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KKMGG8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">/*<![CDATA[*/(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKMGG8');/*]]>*/
+</script>
+        <div class="error-messages-underlay animate-show" ng-show="showNotifications"></div>
+        <notifications-bar class="notifications"></notifications-bar>
+
+        <header ng-class="showNotifications ? 'relative' : ''"><div class="container">
+        <div class="header__left"><a href="/" alt="StudLance.ru – помощь студентам" class="logotype"></a></div>
+        <div class="header__right">
+          <div class="header__phone"><i class="icon icon-phone2"></i>8 800 302-02-15
+          </div>
+          <div class="header__link"><a href="/authors" title="Автор студенческих работ / Вакансия">Вы эксперт?</a></div>
+          <div class="header__auth">
+              <a href="#_auth" class="button button--round button--orange header__sign-in hash-popup">Вход</a>
+              <a class="button button--round button--yellow button--outline header__sign-up hash-popup" href="#_registration">Регистрация</a>
+          </div>
+        </div>
+        <div id="popup--auth" class="popup">
+          <div class="popup__content">
+            <div class="form--wrapper"><form id="signin-form" action="/login/authenticate" method="post">  
+              <div class="form__row">
+                <div class="column-6">
+                  <div class="form__input">
+                    <input id="signin-email" type="text" placeholder="Email" name="username" />
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="column-6">
+                  <div class="form__input">
+                    <input id="signin-password" type="password" placeholder="Пароль" name="password" />
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="column-6">
+                  <div class="g-recaptcha" data-sitekey="6Lclmv8SAAAAABYA7cr1J6RwB3-9ol4WdWNTKG4w"></div>
+                </div>
+                <div class="column-6">
+                  <a id="do-login-button" href="#" class="button button--larger button--orange button--block">Войти в сервис</a>
+                </div>
+              </div></form>
+              <div class="form__row">
+                <div class="column-6" id="login-form-alert">
+                    <div class="form__notice text--center"><span class="text"></span></div>          
+                </div>
+              </div>              
+              <div class="form__row">
+                <div class="column-6"><a class="button button--larger button--blue button--block" href="/resetpassword">Забыли пароль?</a></div>
+              </div>
+              <div class="form__row">
+                <div class="column-6">
+                  <div class="form__notice text--center">Либо войдите через соц. сети</div>
+                </div>
+              </div>
+              <div class="form__row social--icons">
+                <div class="text--center">
+                    <a title="Вход ВК" class="button button--smaller button--round button--social button--vk button--icon" href="/auth/vkontakte"><i class="icon icon-vk"></i></a>
+                </div>
+              </div>    
+            </div>
+            <div class="popup__footer">
+              <p>Нет аккаунта? <a href="#_registration" class="hash-popup">Зарегистрируйтесь</a> прямо сейчас, это займет всего пару минут.</p>
+            </div>
+          </div>
+        </div>
+        <div id="registration-form">        
+            <div id="popup--registration" class="popup">
+               <div class="popup__content">
+                   <div class="registration-loading">
+                       <div class="sk-circle">
+                            <div class="sk-circle1 sk-child"></div>
+                            <div class="sk-circle2 sk-child"></div>
+                            <div class="sk-circle3 sk-child"></div>
+                            <div class="sk-circle4 sk-child"></div>
+                            <div class="sk-circle5 sk-child"></div>
+                            <div class="sk-circle6 sk-child"></div>
+                            <div class="sk-circle7 sk-child"></div>
+                            <div class="sk-circle8 sk-child"></div>
+                            <div class="sk-circle9 sk-child"></div>
+                            <div class="sk-circle10 sk-child"></div>
+                            <div class="sk-circle11 sk-child"></div>
+                            <div class="sk-circle12 sk-child"></div>
+                        </div>
+                   </div>
+                   <div class="form--wrapper">
+                        <div class="registration-success">
+                            <div class="form__row">
+                                <div class="column-6">
+                                    <img alt="Подтвердите регистрацию" src="/static/lp/promo/images/success-pop.png" />
+                                    <p>Перейдите в свою почту и подтвердите регистрацию</p>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="column-6">
+                                    <a href="#" class="button button--larger button--orange button--block popup__close">Продолжить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registration-form-inner"><form id="signup_form">   
+                            <div class="form__row">
+                                <div class="column-6">
+                                    <div class="form__input">
+                                        <input id="signup-email" type="email" placeholder="Email" name="email" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="column-6">
+                                    <div class="form__input">
+                                        <input id="signup-password" type="password" placeholder="Пароль" name="password" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="column-6">
+                                    <div class="g-recaptcha" data-sitekey="6Lclmv8SAAAAABYA7cr1J6RwB3-9ol4WdWNTKG4w"></div>
+                                </div>
+                                <div class="column-6">
+                                    <a id="do-register-button" href="#" class="button button--larger button--orange button--block">Регистрация</a>
+                                </div>
+                            </div></form>
+                            <div class="form__row">
+                                <div class="column-6" id="registration-form-alert">
+                                    <div class="form__notice text--center"><span class="text"></span></div>          
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="column-6">
+                                    <div class="form__notice text--center">Либо войдите через соц. сети</div>
+                                </div>
+                            </div>
+                            <div class="form__row social--icons">
+                                <div class="text--center">
+                                    <a title="Регистрация ВК" class="button button--smaller button--round button--social button--vk button--icon" href="/auth/vkontakte"><i class="icon icon-vk"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><a href="#_auth" class="header__nav popup-auth hash-popup"><i class="icon icon-nav"></i></a><a href="" class="header__nav popup-back"><i class="icon icon-popup-back"></i></a>
+      </div>
+</header>
+        
+        <main><section id="hero" class="hero scroll-section">
+        <div class="hero__base">
+          <div class="container">
+            <div class="hero__information">
+              <h1><b>Студланс</b> - фриланс биржа для<br />студентов и преподавателей</h1>
+              <div class="hero__subtitle">Помощь в обучении, проведение консультаций с лучшими экспертами, копирайтинг и переводы</div>
+              <ul class="hero__icons">
+                <li><i class="icon icon-team"></i><span>Без посредников</span>
+                </li>
+                <li><i class="icon icon-student"></i><span>У надёжных экспертов</span>
+                </li>
+                <li><i class="icon icon-shield"></i><span>С гарантией</span>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+              <div class="hero__buttons"><a href="/addorder" class="button button--orange">Разместить задание</a><a href="#how" class="button button--blue howitworks hash-popup">Как это работает?</a></div>
+            </div>
+          </div>
+        </div>
+        <section id="how-section" class="hero__how"><a href="" class="how__hide"><i class="icon icon-close"></i></a>
+      <ul class="how__items">
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">1</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_01.png" /></div>
+            <div class="how__item__description">Вы размещаете задание<br />на фриланс бирже<br />studlance.ru</div>
+          </div>
+        </li>
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">2</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_02.png" /></div>
+            <div class="how__item__description">Эксперт выдвигает<br />предложение по стоимости<br />работы и срокам её<br />выполнения</div>
+          </div>
+        </li>
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">3</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_03.png" /></div>
+            <div class="how__item__description">Вы выбираете исполнителя<br />среди откликнувшихся и оплачиваете<br />стоимость заказа</div>
+          </div>
+        </li>
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">4</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_04.png" /></div>
+            <div class="how__item__description">Исполнитель подтверждает<br />начало работы, деньги за заказ<br />резервируются в системе</div>
+          </div>
+        </li>
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">5</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_05.png" /></div>
+            <div class="how__item__description">Вы общаетесь с исполнителем<br />на сайте и отслеживаете статус заказа</div>
+          </div>
+        </li>
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">6</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_06.png" /></div>
+            <div class="how__item__description">Исполнитель работает над заказом —<br />консультирует по вашей теме и<br />отправляет итоговый материал<br />на проверку</div>
+          </div>
+        </li>
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">7</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_07.png" /></div>
+            <div class="how__item__description">Вы проверяете и принимаете работу,<br />если она выполнена качественно и<br />соответствует заданию</div>
+          </div>
+        </li>
+        <li class="how__item">
+          <div class="how__item__content">
+            <div class="how__item__index">8</div>
+            <div class="how__item__pic"><img src="/static/lp/promo/images/how/how_08.png" /></div>
+            <div class="how__item__description">Эксперт получает деньги за консультацию<br />и может вывести их любым удобным<br />для него способом</div>
+          </div>
+        </li>
+      </ul>
+      </section>
+      </section>
+      <section id="works" class="works scroll-section">
+        <div class="container">
+          <div class="column-12">
+              <div id="works__title" data-order="0" class="works__title">У нас можно разместить заказ <a href="#worklist" class="link--dashed hash-popup">любого</a> типа, по всем предметам</div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="column-12">
+            <ul class="works__list list--icons">
+              <li data-order="1"><i class="icon icon-graduation-hat"></i>
+                <div class="list--icons__description">
+                    <h4><a href="/zakaz/diplomnaya-rabota">Дипломная</a></h4>
+                  <div class="list--icons__subtitle">Поможем собрать материал</div>
+                </div>
+              </li>
+              <li data-order="2"><i class="icon icon-books-apple"></i>
+                <div class="list--icons__description">
+                    <h4><a href="/zakaz/otchet-po-praktike">Отчёт по практике</a></h4>
+                  <div class="list--icons__subtitle">Оформим по ГОСТу</div>
+                </div>
+              </li>
+              <li data-order="3"><i class="icon icon-diploma"></i>
+                <div class="list--icons__description">
+                  <h4><a href="/zakaz/kursovaya-rabota">Курсовая</a></h4>
+                  <div class="list--icons__subtitle">Поможем со структурой</div>
+                </div>
+              </li>
+              <li data-order="4"><i class="icon icon-blackboard-formula"></i>
+                <div class="list--icons__description">
+                  <h4><a href="/zakaz/reshenie-zadach">Решение задач</a></h4>
+                  <div class="list--icons__subtitle">Объясним решение</div>
+                </div>
+              </li>
+              <li data-order="5"><i class="icon icon-paper-exam"></i>
+                <div class="list--icons__description">
+                    <h4><a href="/zakaz/kontrolnaya-rabota">Контрольная</a></h4>
+                  <div class="list--icons__subtitle">Поможем с решением</div>
+                </div>
+              </li>
+              <li data-order="6"><i class="icon icon-paper-study"></i>
+                <div class="list--icons__description">
+                  <h4><a href="/zakaz/referat">Реферат</a></h4>
+                  <div class="list--icons__subtitle">Подберем литературу</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="safety" class="safety scroll-section">
+        <h2 class="header--blue">У нас все надежно</h2>
+        <div class="container">
+          <div class="column-lg-5 column-md-5 safety__shield"><img src="/static/lp/promo/images/safety.png" /></div>
+          <div class="column-lg-4 column-md-4 safety__information safety__information__left">
+            <div data-order="1" class="safety__information__item safety">
+              <h4>Безопасная сделка</h4>
+              <p>Исполнитель получает денежные средства только после успешного завершения работы</p>
+            </div>
+            <div data-order="3" class="safety__information__item reliable">
+              <h4>Надежные исполнители</h4>
+              <p>У нас нет случайных людей, все исполнители квалифицированные и опытные специалисты</p>
+            </div>
+            <div data-order="5" class="safety__information__item responsible">
+              <h4>Ответственный подход</h4>
+              <p>Исполнители заинтересованы в качественном и своевременном выполнении каждого задания, так как рискуют своим рейтингом и репутацией</p>
+            </div>
+          </div>
+          <div class="column-lg-3 column-md-3 safety__information safety__information__right">
+            <div data-order="2" class="safety__information__item guarantee">
+              <h4>Гарантия возврата</h4>
+              <p>Если вдруг вы останетесь недовольны качеством работы, мы вернем вам деньги без долгих разбирательств</p>
+            </div>
+            <div data-order="4" class="safety__information__item responsibility">
+              <h4>Принимаем ответственность</h4>
+              <p>Если что-то пошло не так, мы оперативно решаем вопросы и исправляем недоразумения</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="best" class="best scroll-section">
+        <h2 class="header--blue">Студланс – это лучший способ восполнить пробелы<br /> и получить помощь в обучении</h2>
+        <div class="container">
+          <div data-order="2" class="column-4 best__item"><i class="icon icon-security"></i>Без риска
+          </div>
+          <div data-order="3" class="column-4 best__item"><i class="icon icon-team"></i>Без посредников
+          </div>
+          <div data-order="4" class="column-4 best__item"><i class="icon icon-piggy-bank"></i>Без переплат
+          </div>
+        </div>
+        <div data-order="5" class="container best__content">
+          <p>Работа с экспертами напрямую позволяет нам гарантировать низкие цены</p>
+          <p>В рейтинге участвуют более 25 000 квалифицированных специалистов</p>
+          <p><a href="/pro">Нулевая комиссия</a> для постоянных клиентов</p>
+        </div>
+        <div class="best__footer">
+          <div class="container">
+            <div class="column-12">Разместите задание сейчас и получите бонус от Студланса<br /><a href="/addorder" class="button button--orange">Узнать стоимость</a></div>
+          </div>
+        </div>
+      </section>
+      <div id="popup--worklist" class="worklist"><h2>Доступные направления помощи</h2>
+        <ul class="worklist__list">
+          <li class="worklist__item kursovaya-rabota"><a href="zakaz/kursovaya-rabota" class="worklist__item__title">Курсовая работа</a>
+          </li>
+          <li class="worklist__item referat"><a href="/zakaz/referat" class="worklist__item__title">Реферат</a>
+          </li>
+          <li class="worklist__item tipovoy-raschet"><a href="zakaz/tipovoy-raschet" class="worklist__item__title">Типовой расчёт</a>
+          </li>
+          <li class="worklist__item diplomnaya-rabota"><a href="zakaz/diplomnaya-rabota" class="worklist__item__title">Дипломная работа</a>
+          </li>
+          <li class="worklist__item reshenie-zadach"><a href="zakaz/reshenie-zadach" class="worklist__item__title">Решение задач</a>
+          </li>
+          <li class="worklist__item chertezh"><a href="zakaz/chertezh" class="worklist__item__title">Чертеж</a>
+          </li>
+          <li class="worklist__item laboratornaya-rabota"><a href="zakaz/laboratornaya-rabota" class="worklist__item__title">Лабораторная работа</a>
+          </li>
+          <li class="worklist__item kontrolnaya-rabota"><a href="zakaz/kontrolnaya-rabota" class="worklist__item__title">Контрольная работа</a>
+          </li>
+          <li class="worklist__item otchet-po-praktike"><a href="zakaz/otchet-po-praktike" class="worklist__item__title">Отчёт по практике</a>
+          </li>
+          <li class="worklist__item doklad"><a href="zakaz/doklad" class="worklist__item__title">Доклад</a>
+          </li>
+          <li class="worklist__item prezentaciya"><a href="zakaz/prezentaciya" class="worklist__item__title">Презентация</a>
+          </li>
+          <li class="worklist__item perevod"><a href="zakaz/perevod" class="worklist__item__title">Перевод</a>
+          </li>
+          <li class="worklist__item esse"><a href="zakaz/esse" class="worklist__item__title">Эссе</a>
+          </li>
+          <li class="worklist__item sochinenie"><a href="zakaz/sochinenie" class="worklist__item__title">Сочинение</a>
+          </li>
+          <li class="worklist__item otvety-na-testy"><a href="zakaz/otvety-na-testy" class="worklist__item__title">Ответы на тесты</a>
+          </li>
+          <li class="worklist__item recenziya"><a href="zakaz/recenziya" class="worklist__item__title">Рецензия</a>
+          </li>
+          <li class="worklist__item shpargalki"><a href="zakaz/shpargalki" class="worklist__item__title">Шпаргалки</a>
+          </li>
+          <li class="worklist__item biznes-plan"><a href="zakaz/biznes-plan" class="worklist__item__title">Бизнес-план</a>
+          </li>
+          <li class="worklist__item otvety-na-voprosi"><a href="zakaz/otvety-na-voprosi" class="worklist__item__title">Ответы на вопросы</a>
+          </li>
+          <li class="worklist__item drugoe"><a class="worklist__item__title">И любая другая помощь в обучении!</a>
+          </li>
+        </ul>
+        <div class="clearfix"></div></div>
+      <script src="/static/lp/promo/lib/jquery.js"></script>
+      <script src="/static/lp/promo/lib/underscore.js"></script>
+      <script src="/static/lp/promo/lib/vex.js"></script>
+      <script src="/static/lp/promo/lib/ScrollMagic.js"></script>
+      <script src="/static/lp/promo/js/index.js"></script>
+      <script src="/static/lp/promo/js/how.js"></script>
+      <script src="/static/lp/promo/js/popups.js"></script>
+      </main>
+        
+        
+        
+        <footer><div class="container">
+        <div class="column-lg-3 gallery-md-6">
+          <div class="footer__title">Контакты</div>
+          <ul class="list--hidden footer__contacts">
+            <li><i class="icon icon-phone"></i>8 800 302-02-15
+            </li>
+            <li>По будням с 12:00 до 17:00</li>
+            <li><i class="icon icon-email"></i><a href="mailto:support@studlance.ru">support@studlance.ru</a>
+            </li>
+          </ul><a class="button button--white button--outline footer__callback" href="/feedback">Обратная связь</a>
+        </div>
+        <div class="column-lg-3 gallery-md-6">
+          <div class="footer__title">Принимаем к оплате</div>
+          <ul class="list--inline footer__payments">
+            <li><img src="/static/lp/promo/images/payments/mastercard.png" /></li>
+            <li><img src="/static/lp/promo/images/payments/qiwi.png" /></li>
+            <li><img src="/static/lp/promo/images/payments/visa.png" /></li>
+            <li><img src="/static/lp/promo/images/payments/webmoney.png" /></li>
+            <li><img src="/static/lp/promo/images/payments/yoomoney.png" /></li>
+          </ul>
+          <div class="footer__title" style="margin-top: 2rem;">Отзывы о нас на:</div>
+          <ul class="list--hidden footer__testimonials">
+            <li><a href="http://irecommend.ru/content/sait-studlanceru-0" target="_blank">irecommend.ru</a></li>
+          </ul>
+        </div>
+        <div class="column-lg-3 gallery-md-6">
+          <div class="footer__title">Страницы</div>
+          <ul>
+            <li><a href="/affiliate">Партнерская программа</a></li>            
+            <li><a href="/pro">Агентствам</a></li>
+            <li><a href="/blog/">Наш неофициальный блог</a></li>
+            <li><a href="/help">Помощь</a></li>
+            <li><a href="/legal/agreement">Соглашение</a></li>
+          </ul>
+        </div>
+        <div class="column-lg-3 gallery-md-6">
+          <div class="footer__title">Статистика</div>
+          <ul class="list--statistics">
+            <li>Зарегистрировано:&nbsp;<span style="text-decoration: underline;">247633</span></li>
+            <li>Экспертов на бирже:&nbsp;<a href="/studlancers">78532</a></li>
+            <li>Консультаций:&nbsp;<span style="text-decoration: underline;">670916</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+          <p style="text-align: center; font-size: 0.8rem; opacity: 0.4; color: #fff; font-weight: 300;">Специалисты сайта studlance.ru осуществляют работу по сбору, обработке и структурированию информации по предложенной Заказчиком теме. Результат подобной работы не является готовым научным трудом, однако может служить основным источником для его написания.</p>
+      </div>
+</footer>
+        <div id="popup--splash" class="popup--splash"></div>
+
+        <script type="text/javascript" src="/static/js/utility.js"></script>
+        <script type="text/javascript" src="/static/js/handler/signin-signup.js"></script>
+
+        
+        
+        
+        <script src="https://www.google.com/recaptcha/api.js?hl=ru"></script>
+    </body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>TopCreator - Галерея</title>
+		<meta name="description" content="" />
+		<meta name="keywords"    content="" />
+        <meta name='yandex-verification' content='4a66f843fcd53b75' />
+
+        <link rel="stylesheet" type="text/css" href="/css/normalize.css" media="screen, projection, print">
+        <link rel="stylesheet" type="text/css" href="/css/style.css?v11" media="screen, projection, print">
+        <link rel="stylesheet" href="/css/alertbox.css?1" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/css/dev.css?1" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/css/brain.css?2" type="text/css" media="screen" />
+
+        <link rel="stylesheet" type="text/css" href="/js/selectbox/jquery.selectBox.css" media="screen, projection, print">
+        <link rel="stylesheet" type="text/css" href="/js/checkbox/jquery.checkbox.css" media="screen, projection, print">
+        <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+
+        <link rel="stylesheet" type="text/css" href="/css/myW.css" media="screen, projection, print">
+
+        <!--<script src="/js/html5.js" type="text/javascript"></script>-->
+        <script src="/js/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>
+            !window.XMLHttpRequest && window.location.reload("/ie6/ie6.html");
+            !window.jQuery && document.write('<script src="/js/jquery-1.7.1.min.js"><\/script>');
+        </script>
+
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+        <script type="text/javascript" src="/js/selectbox/jquery.selectBox.patched.min.js"></script>
+        <script type="text/javascript" src="/js/checkbox/jquery.checkbox.min.js"></script>
+        <script type="text/javascript" src="/js/fancybox/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="/js/placeholder.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.dotdotdot-1.4.0-packed.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui-1.9.2.custom.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.ui.datepicker-ru.js"></script>
+        <script type="text/javascript" src="/js/jquery.Jcrop.min.js"></script>
+
+        <script type="text/javascript" src="/js/maxim.js?5"></script>
+        <script type="text/javascript" src="/js/main2.js?2"></script>
+
+        <!-- core js API -->
+        <script type="text/javascript" src="/js/core.js?8"></script>
+
+        <!-- plupload -->
+        <script type="text/javascript" src="/js/plupload/plupload.full.js"></script>
+        <script type="text/javascript" src="/js/uploader.init.js"></script>
+
+        <link title="TopCreator / Блог" type="application/rss+xml" rel="alternate" href="http://topcreator.org/rss.xml"/>
+
+        <meta name="facebook-domain-verification" content="c5kin2dwsf3wt1lq0qi1que307vhum" />
+
+            <meta property="og:title" content="TopCreator" />
+        <meta property="og:decription" content="TopCreator — это онлайн-галерея ваших работ" />
+        <meta property="og:url" content="http://topcreator.org/" />
+        <meta property="og:image" content="http://topcreator.org/img/logo200.jpg" />
+        <link rel="image_src" href="http://topcreator.org/img/logo200.jpg" />
+    
+        <script type="text/javascript" src="//use.typekit.net/aqv0gjb.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
+
+    <body class="b-main-body">
+
+    <div class = "b-wrapper">
+        <div class = "b-maincontent">
+            <div id="alertsContainer"></div>
+            <section class="b-top-header">
+                <div class="b-container">
+                    <header class = "b-headers clearfix" role = "banner">
+                        <div class="b-logo">
+                            <a href="/" class="b-logos__link">
+                                <img src="/img/logo-new.png" alt="TopCreator" class="b-logos__img" />
+                            </a>
+                        </div>
+
+                        <section class="b-blogs-buttons">
+    <ul class="b-blog-buttons__buttons-list">
+        <li class="b-blog-buttons__buttons-item">
+            <a href="/shots" class="b-heads-button ">Снимки</a>
+        </li>
+        <li class="b-blog-buttons__buttons-item">
+            <a href="/search/users" class="b-heads-button ">Участники</a>
+        </li>
+        <li class="b-blog-buttons__buttons-item">
+            <a href="/search/groups" class="b-heads-button ">Группы</a>
+        </li>
+        <li class="b-blog-buttons__buttons-item">
+            <a href="/freelance" class="b-heads-button ">Фриланс</a>
+        </li>
+        <li class="b-blog-buttons__buttons-item">
+            <a href="/pro" class="b-heads-button ">Стать<div class="b-discuss__user-status b-discuss__user-status_gray b-discuss__user-status_gray-va"></div></a>
+        </li>
+    </ul>
+</section>
+
+                        <div class="b-header_riding_block">
+                            <div class="b-topline__search">
+                                <div class="b-topline__search_wrap">
+                                    <form id="form_main_search">
+                                        <input class="b-topline__search_input" type="text" style="color: rgb(0, 0, 0);" name="data[global_search]"/>
+                                        <a id="search_button" class="b-grey-button b-blue__search save" href="#">
+                                            <span class="b-search-grey-input-bg"></span>
+                                        </a>
+                                    </form>
+                                    <a class="b-show-search_block" href="#">
+                                        <span class="b-search-grey-input-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="b-topline__item-list">
+    <li class="b-topline__item b-topline__item_noborder">
+        <a href="/auth/registration" class="b-topline__link b-topline__link_underspan">
+            <span class="b-head-reg-pic">
+                <img alt="" src="/img/sprites/grey_reg.png">
+            </span>
+            <span class="b-head__username">Регистрация</span>
+        </a>
+    </li>
+    <li class="b-topline__item">
+        <span class="b-topline__item-ver">|</span>
+        <a href="#b-enter-popup" class="b-topline__link fancy2" id="login_popup_show_button">Вход</a>
+    </li>
+</ul>
+                        </div>
+                    </header>
+                </div>
+
+                
+                <div class="b-green-main">
+    <div class="b-weeeeeelcome">
+        <div class="b-weeeeeelcome-inner">
+            <div class="b-weeeeeelcome-inner-big">TopCreator — это онлайн-галерея ваших работ.</div>
+            <div class="b-weeeeeelcome-inner-lit">Делись своим творчеством, вдохновляйся, ищи интересных людей или исполнителей проектов.</div>
+            <div class="b-weeeeeelcome-inner-but">
+                <a class="b-green-button b-weeeeeelcome-inner-but-link" href="/auth/registration">
+                    <span class="b-add-button__text">Начать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </section>
+
+            <div class = "b-container">
+                <!-- generate menu -->
+                
+                <!-- all the content output goes here -->
+                <div class="content clearfix">
+        <div class="b-layout-gallery" id="main_project_list">
+            <div class="b-pb-paginator b-top-paginator b-top-paginator-mb">
+                <div class="b-top-paginator__sort-block b-top-paginator__sort-block-left switcher" formID="form_main_project_list_pager">
+                    <div class="b-top-paginator__main-select-cont wide_cat_select">
+                        <select id="main_category_selector" name="category" data-reset="page@1">
+                            <option value="0">Все разделы</option>
+                            <option value="2">Архитектура</option><option value="40">Аэрография</option><option value="3">Брендинг</option><option value="4">Веб-дизайн</option><option value="5">Гейм-дизайн</option><option value="1">Графика</option><option value="6">Графический дизайн</option><option value="7">Граффити и стрит-арт</option><option value="8">Дизайн интерфейсов</option><option value="9">Дизайн интерьера</option><option value="10">Дизайн одежды</option><option value="11">Дизайн персонажей</option><option value="12">Дизайн упаковки</option><option value="31">Живопись</option><option value="13">Иллюстрация</option><option value="32">Каллиграфия</option><option value="39">Квиллинг</option><option value="36">Коллаж</option><option value="14">Концепт-арт</option><option value="38">Леттеринг</option><option value="15">Логотипы</option><option value="35">Мобильные приложения</option><option value="16">Мода</option><option value="17">Моушн графика</option><option value="18">Полиграфический дизайн</option><option value="19">Промышленный дизайн</option><option value="20">Реклама</option><option value="21">Ретушь</option><option value="22">Рисунок</option><option value="23">Скульптура</option><option value="24">Технический дизайн</option><option value="25">Типографика</option><option value="26">Фотография</option><option value="27">Хенд-мейд</option><option value="28">Цифровое искусство</option><option value="29">Эскизы</option><option value="33">3D-графика</option>                        </select>
+                    </div>
+                    <div class="b-top-paginator__main-select-cont">
+                        <select name="sort" data-reset="page@1">
+                            <option value="1">Популярные</option>
+                            <option value="2">Новые</option>
+                            <option value="3">Оценённые</option>
+                            <option value="4">Обсуждаемые</option>
+                            <option value="5">Просматриваемые</option>
+                        </select>
+                    </div>
+                    <div class="b-top-paginator__main-select-cont">
+                        <select name="period" data-reset="page@1">
+                            <option value="1">Сегодня</option>
+                            <option value="2">Неделя</option>
+                            <option value="3">Месяц</option>
+                            <option value="4" selected="selected">Все время</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="b-topline__search b-middleline__search">
+                    <div class="b-topline__search_wrap">
+                        <input class="b-topline__search_input switcher" formID="form_main_project_list_pager" type="text" style="color: rgb(0, 0, 0);" name="search" placeholder1="Поиск...">
+                        <a class="b-grey-button b-blue__search index_search" formID="form_main_project_list_pager" href="#">
+                            <span class="b-search-grey-input-bg"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="b-layout-gallery__list b_layout_list_main_page" id="ajax_project_block">
+                <!-- list loaded via ajax -->
+            </ul>
+
+
+            <div class="b-bottom-paginator__bottom-pager-cont b-bottom-paginator__bottom-buttons b-bottom-paginator-main pager">
+                <!-- pager loaded via ajax -->
+            </div>
+
+
+            <div class="preloader-wrap">
+                <div class="preloader-table">
+                    <div class="preload-like-cell">
+                        <div class="preload-exact">
+                            Загрузка...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-user-page-bot-sec">
+            <div class="b-user-page-activity b-user-page-bot-sec-left">
+    <div class="b-user-page-bot-sec-title">
+        <a href="/freelance">Работа и фриланс</a>
+    </div>
+        <ul class="b-user-page-workfree-list">
+                <li class="b-user-page-workfree-item b-user-page-workfree-item-grey">
+            <div class="b-user-page-workfree-item-name">
+                <a href="/freelance/order/410">Пакет из 29 иллюстраций: Книга для родителей по воспитанию детей</a>
+            </div>
+                    </li>
+                <li class="b-user-page-workfree-item b-user-page-workfree-item-grey">
+            <div class="b-user-page-workfree-item-name">
+                <a href="/freelance/order/409">Дизайн сайта</a>
+            </div>
+                    </li>
+                <li class="b-user-page-workfree-item b-user-page-workfree-item-grey">
+            <div class="b-user-page-workfree-item-name">
+                <a href="/freelance/order/407">Создать 3D-модель местности </a>
+            </div>
+                    </li>
+            </ul>
+    </div>
+            <div class="b-user-page-friends b-user-page-bot-sec-mid">
+    <div class="b-user-page-bot-sec-title">
+        <a href="/search/users">Участники</a>
+    </div>
+            <ul class="b-user-page-friends-list">
+                    <li class="b-friends-list__item ">
+                <a href="Kislinta" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/af/0a/59/7158_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="LuckyDi" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/4e/46/e9/4466_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="asty_bel" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/fb/d8/5d/7326_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="alexey866" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/d8/a3/a3/5972_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="MariBorets" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/75/20/fa/10145_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="ElisabethOst" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/54/5e/91/7408_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="michelle" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/0e/c0/4c/6826_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="Verscheka" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/ca/aa/29/6932_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="Troperok" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/41/ba/cf/10064_main.jpg">
+                </a>
+            </li>
+                    <li class="b-friends-list__item ">
+                <a href="dragondance" class="b-layout-friends__item-user-avatar b-userpic-large">
+                    <img src="/files/avatar/6c/25/0b/7993_main.jpg">
+                </a>
+            </li>
+                </ul>
+    </div>
+            <div class="b-user-page-groups b-user-page-bot-sec-right">
+                            </div>
+        </div>
+
+</div>
+
+<form class="ajax hashable" id="form_main_project_list_pager" reload="1">
+    <input type="hidden" name="page" value="1"/>
+    <input type="hidden" name="category" value="0"/>
+    <input type="hidden" name="sort" value="1"/>
+    <input type="hidden" name="period" value="4"/>
+    <input type="hidden" name="search" value=""/>
+    <input type="hidden" name="param.url" value="/index/ajax/projects/list"/>
+    <input type="hidden" name="param.output" value="#ajax_project_block"/>
+    <input type="hidden" name="param.container" value=".b-my-projects"/>
+    <input type="hidden" name="param.pager" value="#main_project_list .pager"/>
+    <input type="hidden" name="param.callback" value=""/>
+    <input type="hidden" name="param.preloader" value=".preloader-wrap"/>
+</form>
+
+<script type="text/javascript" src="/js/data/countries2.js?1"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('a.index_search').on('click', function(){
+            var input = $('input[name="search"]');
+            var value = input.attr('value');
+            //if (value != '') {
+                var form = '#' + input.attr('formID');
+                formSetValues(form, {search: value});
+                $(form).submit();
+            //}
+        });
+    });
+</script>
+                <!-- and here it all ends =) -->
+            </div>
+        </div>
+
+        <a href="#b-write-us-popup" class="beta_blue fancy2">
+            <p class="beta_blue_text"><span>Бета-версия. Пишите нам вопросы и предложения</span></p>
+            <div class="beta_pen"></div>
+        </a>
+        <div class="b-for-fancy">
+    <div id="b-write-us-popup" class="b-callback-wrap">
+        <div class="b-fancy-popup-middle">
+            <div class="b-groups__title b-gray-title">
+                <div class="b-gray-title__title">Обратная связь</div>
+            </div>
+            <form id="form_popup_msg" action="" class="b-edit-foto-form ajax">
+                <div class="b-form-item">
+                    <label for="b-edit-image-title" class="b-fancy-label">Тема</label>
+                    <input type="text" name="topic" id="b-edit-image-title" class="fancy-input req"/>
+                </div>
+                <div class="b-form-item">
+                    <label for="b-edit-image-description" class="b-fancy-label">Пожалуйста, подробно опишите  проблему или пожелание</label>
+                    <textarea name="text" id="b-edit-image-description" class="fancy-textarea req"></textarea>
+                </div>
+                <a id="send_msg_popup" class="b-blue-button b-button_mr" href="#">
+                    <span class="b-send-button__text">Отправить</span>
+                </a>
+                <input type="hidden" name="param.url" value="/ajax/popup/message.json"/>
+                <input type="hidden" name="param.callback" value="onPopupMsgSent"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="b-for-fancy">
+    <div id="b-thanks-popup" class="b-callback-wrap">
+        <a href="#b-thanks-popup" id="thanks_popup_link" class="fancy hidden"></a>
+
+        <div class="b-fancy-popup-middle">
+            <div class="b-reg-popup-wrap">
+                <div class="b-reg-popup-text-top">Спасибо!</div>
+                <div class="b-reg-popup-text-bot">..что помогаете улучшать наш сайт.<br>Письмо отправлено, и мы его обязательно прочтем.</div>
+
+                <div class="b-add-to-frieds-b">
+                    <a class="b-blue-button b-button_mr" href="/">
+                        <span class="b-send-button__text">Вернуться на сайт</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#send_msg_popup').on('click', function(){
+            var form = $('#form_popup_msg');
+            var valid = true;
+            form.find('.req').each(function(i, item) {
+                //console.log($(item).val().length);
+                if (!$(item).val().length) {
+                    valid = false;
+                    $(item).addClass('b-input-wrong');
+                } else {
+                    $(item).removeClass('b-input-wrong');
+                }
+            });
+            if (valid) {
+                form.submit();
+            }
+        });
+    });
+
+    function onPopupMsgSent(data, response) {
+        var form = $('#form_popup_msg');
+        if (response.status == 'ok') {
+            form.find('.req').val('');
+            $.fancybox.close();
+
+            $('#thanks_popup_link').trigger('click');
+        } else {
+            if (typeof response.validation !== 'undefined') {
+                for (var i in response.validation) {
+                    form.find('input[name="'+i+'"], textarea[name="'+i+'"]').addClass('b-input-wrong');
+                }
+            }
+        }
+    }
+</script>
+        <div class="backtotop"><div class="backtotopa"></div></div>
+        <div class = "b-wrapper__empty"></div>
+    </div>
+
+
+    <footer role = "contentinfo" class="b-footer">
+    <div class = "b-container b-container-footer">
+        <div class="b-footer-feather"></div>
+        <div class="b-footer-left-text">
+            <p>TopCreator это место для тех, кто не равнодушен к словам дизайн, творчество и искусство. Здесь ты можешь разместить свои работы, вдохновиться чужими, познакомиться с интересными людьми. </p>
+            <a href="/about" class="b-footer-left-text-link">Читать далее</a>
+        </div>
+        <ul class="b-footer-list b-footer-list-high">
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/about"><span class="b-footer__link-text">О нас</span></a></li>
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/page/faq"><span class="b-footer__link-text">FAQ</span></a></li>
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/page/manual"><span class="b-footer__link-text">Справочник</span></a></li>
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/page/privacy"><span class="b-footer__link-text">Приватность</span></a></li>
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/service"><span class="b-footer__link-text">Услуги</span></a></li>
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/page/instruction"><span class="b-footer__link-text">Правила</span></a></li>
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/blog"><span class="b-footer__link-text">Блог</span></a></li>
+                        <li class="b-footer-list-item"><a class="b-footer-list-link" href="/pro">
+                <span class="b-footer__link-text">Стать
+                    <div class="b-discuss__user-status b-discuss__user-status_gray b-discuss__user-status_gray-va"></div>
+                </span>
+            </a></li>
+        </ul>
+        <p class="b-footer-text b-footer-text-high"><span>© 2012-2023 Topcreator.</span> <span>Все права на снимки принадлежат их владельцам.</span></p>
+
+        <div class="b-footer-add-to-us b-footer-add-to-us-high">
+            <div class="b-footer-add-to-us-title">Добавляйтесь</div>
+            <ul class="b-footer-add-to-us-list">
+                <li class="b-footer-add-to-us-list_item">
+                    <a class="b-footer-add-to-us-link b-footer-add-to-us-vk" href="https://vk.com/topcreator"></a>
+                </li>
+                <li class="b-footer-add-to-us-list_item">
+                    <a class="b-footer-add-to-us-link b-footer-add-to-us-fc" href="https://www.facebook.com/wearetopcreator"></a>
+                </li>
+                <li class="b-footer-add-to-us-list_item">
+                    <a class="b-footer-add-to-us-link b-footer-add-to-us-tw" href="https://twitter.com/wearetopcreator"></a>
+                </li>
+                <li class="b-footer-add-to-us-list_item">
+                    <a class="b-footer-add-to-us-link b-footer-add-to-us-in" href="https://www.instagram.com/topcreator/"></a>
+                </li>
+                <li class="b-footer-add-to-us-list_item">
+                    <a class="b-footer-add-to-us-link b-footer-add-to-us-ma" href="mailto:hi@topcreator.org"></a>
+                </li>
+                <li class="b-footer-add-to-us-list_item">
+                    <a class="b-footer-add-to-us-link b-footer-add-to-us-rs" href="/rss.xml"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="b-footer-recommend-us">
+            <div class="b-footer-add-to-us-title">Порекомендуйте нас</div>
+
+            <div class="b-footer-likes">
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_EN/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-like" data-href="http://topcreator.org/" data-width="100" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://topcreator.org" data-text="TopCreator — это онлайн-галерея ваших работ" data-via="wearetopcreator" data-related="wearetopcreator">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <div class="b-for-fancy">
+    <div id="b-enter-popup">
+        <div class="b-enter__title b-gray-title">
+            <div class="b-gray-title__title">Вход в аккаунт</div>
+        </div>
+
+        <div class="b-enter-container b-enter-container-fancy">
+            <form action="#" class="b-enter__form ajax" id="form_login_bubble">
+                <dl>
+                    <dt class="b-enter__form__email-title">
+                        <label for="b-enter__form__email_input">Почта</label>
+                    </dt>
+                    <dd class="b-enter__form__email-enter">
+                        <input id="b-enter__form__email_input" type="email" name="email"/>
+                    </dd>
+                    <dt class="b-enter__form__password-title">
+                        <label for="b-enter__form__password_input">Пароль</label>
+                    </dt>
+                    <dd class="b-enter__form__password-enter">
+                        <input id="b-enter__form__password_input" type="password" name="password" placeholder=""/>
+                    </dd>
+                    <dd class="b-enter__form__remember-check">
+                        <input id="b-enter__form__remember-check_input" type="checkbox" name="save_me" checked="checked"/>
+                    </dd>
+                    <dt class="b-enter__form__remember-title">
+                        <label for="b-enter__form__remember-check_input">Запомнить меня</label>
+                        <a href="/auth/forgot" class="b-enter__form__forget">Забыли пароль?</a>
+                    </dt>
+                </dl>
+
+                <a class="b-blue-button b-enter__form__enter-button save" href="#">
+                    <span class="b-blue-button__text">Войти</span>
+                </a>
+
+                <input type="hidden" name="param.url" value="/auth/ajax/auth"/>
+                <input type="hidden" name="param.callback" value="setAuthError"/>
+                <input type="hidden" name="param.submitOnStatusOK" value=""/>
+            </form>
+
+            <div class="b-enter-webs">
+                <div>
+                    <a href="#" class="b-enter-webs__tw login_button_twitter">
+                        <div class="left_img"></div>
+                        <div class="right_text">Через Twitter</div>
+                    </a>
+                    <a href="#" class="b-enter-webs__fbook login_button_facebook">
+                        <div class="left_img"></div>
+                        <div class="right_text">Через Facebook</div>
+                    </a>
+                    <a href="#" class="b-enter-webs__vkont login_button_vk">
+                        <div class="left_img"></div>
+                        <div class="right_text">Через ВКонтакте</div>
+                    </a>
+                    <a href="#" class="b-enter-webs__google login_button_google">
+                        <div class="left_img"></div>
+                        <div class="right_text">Через Google</div>
+                    </a>
+                </div>
+                <div class="b-enter-webs__regist">
+                    <strong>или
+                        <a href="/auth/registration">зарегистрироваться</a>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="b-enter-not-correct hidden">
+                <div class="b-enter-not-correct__warning-icon"></div>
+                <div class="b-enter-not-correct__warning-text" id="auth_error_block"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/auth.js"></script>
+<script type="text/javascript" src="//connect.facebook.net/en_US/all.js"></script>
+<script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+<script src="https://apis.google.com/js/client.js"></script>
+<div id="fb-root"></div>
+
+<script type="text/javascript">
+    $('.login_button_facebook').click(function(){
+        FB.init({
+            appId: '130227303801918',
+            status: true,
+            cookie: true,
+            oauth: true
+        });
+
+        FB.login(function(response) {
+            if (response.authResponse) {
+                $.post('/auth/social/fb.json', {data: response.authResponse}, function(data){
+                    if(data.status == 'ok'){
+                        if(typeof data.redirect !== 'undefined'){
+                            redirectTo(data.redirect.url);
+                        }
+                    } else {
+                        alert(data.msg, false);
+                    }
+                });
+            }
+        });
+    });
+
+
+    $('.login_button_vk').click(function(){
+        VK.init({
+            apiId: 3267898        });
+
+        function loginInfo(response){
+            if(response.session){
+                $.post('/auth/social/vk.json', {data: response.session}, function(data){
+                    if(data.status == 'ok'){
+                        if(typeof data.redirect !== 'undefined'){
+                            redirectTo(data.redirect.url);
+                        }
+                    } else {
+                        alert(data.msg, false);
+                    }
+                });
+
+            }
+        }
+
+        VK.Auth.login(loginInfo);
+    });
+
+    function handleGoogleAuthResult(data){
+        if(typeof data.access_token !== 'undefined'){
+            $.post('/auth/social/google.json', {data: {token: data.access_token}}, function(response){
+                if(response.status == 'ok'){
+                    if(typeof response.redirect !== 'undefined'){
+                        redirectTo(response.redirect.url);
+                    }
+                } else {
+                    alert(response.msg, false);
+                }
+            });
+        } else {
+            alert('Ошибка авторизации');
+        }
+    }
+
+    $('.login_button_google').click(function(){
+        var clientId = '643348008299';
+        var apiKey = 'AIzaSyDy_O_yZJUTs9giUlbIPwLq6bxXG-ePEOk';
+        var scopes = ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'];
+
+        gapi.client.setApiKey(apiKey);
+        setTimeout(function(){
+            gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleGoogleAuthResult);
+        }, 1);
+    });
+
+    $('.login_button_twitter').click(function(){
+        $.post('/auth/social/twitter/connect.json',
+            function(response){
+                if (response.status == 'ok') {
+                    var win = window.open(response.auth_url,"Sign in TopCreator with Twitter",
+                        "width=760,height=600,scrollbars=no");
+                }
+            }
+        );
+    });
+
+    function socialTwitterAuth() {
+        $.post('/auth/ajax/twitter/auth.json', function(response){
+            if (response.status == 'ok'){
+                if (response.redirect.url !== 'undefined') {
+                    document.location.href = response.redirect.url;
+                } else {
+                    document.location.reload();
+                }
+            } else {
+                alert(response.msg, false);
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        $('#form_login_bubble input').on('keyup', function(e){
+            if (e.which == 13) {
+                var form = $('#form_login_bubble');
+                if (form.find('input[name="email"]').val()
+                    && form.find('input[name="password"]').val()) {
+
+                    form.submit();
+                }
+            }
+        });
+    });
+</script>
+    <!--debugger-->
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15752923-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" src="/js/webvisor.js"></script>
+    <noscript><div><img src="//mc.yandex.ru/watch/18939769" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Биржа переводов «Перевод 01» - поиск переводчиков и заказ перевода онлайн</title>
+	<meta http-equiv="Content-Type" content="text/html; windows-1251" />
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/css/customer.css" />
+	<script type="text/javascript" src="/js/jquery1.6.4.min.js"></script>
+	<script type="text/javascript" src="/js/search.js"></script>
+
+	<style type="text/css">
+	.paginator{
+
+	}
+		.paginator a,
+		.paginator span{
+			margin:0 5px;
+		}
+		.paginator a{
+			font-size:14px;
+		}
+		.paginator span{
+			font-size:16px;
+			font-weight:bold;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<div id="main">
+
+	<!-- Header -->
+	<div id="header">
+
+			<!-- logo -->
+			<div class="logo">
+				<a href="/index.php"><img src="/images/logo.gif" width="154" height="70" alt="" /></a>
+			</div>
+			
+			<!-- hmenu -->
+			<div class="hmenu">
+				
+				<p><a href="/customer/contract.php">[Для<i>]</i><br />
+				<span>заказчиков</span></a></p>
+
+				<p><a href="/translator/registration.php">[Для<i>]</i><br />
+				<span>переводчиков</span></a></p>
+
+			</div>
+			
+			<!-- registr -->
+			<div class="registr">
+				<p>
+					<a href="/login.php">вход</a>
+				</p>
+			</div>
+</div>
+	<!-- /Header -->
+		
+		<!-- Content -->
+	<div id="content">
+		<div id="for-center">
+			<div id="c-center">
+	
+				<div class="keep">
+					
+<!-- <div style="text-align: right"><a class="find-translator-button" href="/find-translator.php">Профессиональный подбор переводчика</a></div>	-->	
+		
+		<div class="search-body">
+		<div class="search-body-left">
+		<h2>Поиск переводчика</h2>
+							<form action="/search.php">
+		 Языковая пара: <select id="lang_pair" name="lang_pair"><OPTION value="" selected> выберите </OPTION><OPTION value="русский">русский</OPTION><OPTION disabled="disabled"></OPTION><OPTION value="азербайджанский" >азербайджанский</OPTION><OPTION value="албанский" >албанский</OPTION><OPTION value="английский" >английский</OPTION><OPTION value="арабский" >арабский</OPTION><OPTION value="армянский" >армянский</OPTION><OPTION value="белорусский" >белорусский</OPTION><OPTION value="болгарский" >болгарский</OPTION><OPTION value="босьнийский" >босьнийский</OPTION><OPTION value="венгерский" >венгерский</OPTION><OPTION value="вьетнамский" >вьетнамский</OPTION><OPTION value="голландский" >голландский</OPTION><OPTION value="греческий" >греческий</OPTION><OPTION value="грузинский" >грузинский</OPTION><OPTION value="датский" >датский</OPTION><OPTION value="иврит" >иврит</OPTION><OPTION value="исландский" >исландский</OPTION><OPTION value="испанский" >испанский</OPTION><OPTION value="итальянский" >итальянский</OPTION><OPTION value="казахский" >казахский</OPTION><OPTION value="каталанский" >каталанский</OPTION><OPTION value="киргизский" >киргизский</OPTION><OPTION value="китайский" >китайский</OPTION><OPTION value="корейский" >корейский</OPTION><OPTION value="курдский" >курдский</OPTION><OPTION value="кхмерский" >кхмерский</OPTION><OPTION value="латышский" >латышский</OPTION><OPTION value="литовский" >литовский</OPTION><OPTION value="македонский" >македонский</OPTION><OPTION value="малайзийский" >малайзийский</OPTION><OPTION value="молдавский" >молдавский</OPTION><OPTION value="монгольский" >монгольский</OPTION><OPTION value="немецкий" >немецкий</OPTION><OPTION value="норвежский" >норвежский</OPTION><OPTION value="польский" >польский</OPTION><OPTION value="португальский" >португальский</OPTION><OPTION value="пушту" >пушту</OPTION><OPTION value="румынский" >румынский</OPTION><OPTION value="русский" >русский</OPTION><OPTION value="сербский" >сербский</OPTION><OPTION value="словацкий" >словацкий</OPTION><OPTION value="словенский" >словенский</OPTION><OPTION value="таджикский" >таджикский</OPTION><OPTION value="татарский" >татарский</OPTION><OPTION value="турецкий" >турецкий</OPTION><OPTION value="туркменский" >туркменский</OPTION><OPTION value="узбекский" >узбекский</OPTION><OPTION value="украинский" >украинский</OPTION><OPTION value="урду" >урду</OPTION><OPTION value="фарси" >фарси</OPTION><OPTION value="финский" >финский</OPTION><OPTION value="французский" >французский</OPTION><OPTION value="хинди" >хинди</OPTION><OPTION value="хорватский" >хорватский</OPTION><OPTION value="чешский" >чешский</OPTION><OPTION value="шведский" >шведский</OPTION><OPTION value="эстонский" >эстонский</OPTION><OPTION value="японский" >японский</OPTION></select>						-  
+						<select id="lang_pair_" name="lang_pair_"><OPTION value="" selected> выберите </OPTION><OPTION value="русский">русский</OPTION><OPTION disabled="disabled"></OPTION><OPTION value="азербайджанский" >азербайджанский</OPTION><OPTION value="албанский" >албанский</OPTION><OPTION value="английский" >английский</OPTION><OPTION value="арабский" >арабский</OPTION><OPTION value="армянский" >армянский</OPTION><OPTION value="белорусский" >белорусский</OPTION><OPTION value="болгарский" >болгарский</OPTION><OPTION value="босьнийский" >босьнийский</OPTION><OPTION value="венгерский" >венгерский</OPTION><OPTION value="вьетнамский" >вьетнамский</OPTION><OPTION value="голландский" >голландский</OPTION><OPTION value="греческий" >греческий</OPTION><OPTION value="грузинский" >грузинский</OPTION><OPTION value="датский" >датский</OPTION><OPTION value="иврит" >иврит</OPTION><OPTION value="исландский" >исландский</OPTION><OPTION value="испанский" >испанский</OPTION><OPTION value="итальянский" >итальянский</OPTION><OPTION value="казахский" >казахский</OPTION><OPTION value="каталанский" >каталанский</OPTION><OPTION value="киргизский" >киргизский</OPTION><OPTION value="китайский" >китайский</OPTION><OPTION value="корейский" >корейский</OPTION><OPTION value="курдский" >курдский</OPTION><OPTION value="кхмерский" >кхмерский</OPTION><OPTION value="латышский" >латышский</OPTION><OPTION value="литовский" >литовский</OPTION><OPTION value="македонский" >македонский</OPTION><OPTION value="малайзийский" >малайзийский</OPTION><OPTION value="молдавский" >молдавский</OPTION><OPTION value="монгольский" >монгольский</OPTION><OPTION value="немецкий" >немецкий</OPTION><OPTION value="норвежский" >норвежский</OPTION><OPTION value="польский" >польский</OPTION><OPTION value="португальский" >португальский</OPTION><OPTION value="пушту" >пушту</OPTION><OPTION value="румынский" >румынский</OPTION><OPTION value="русский" >русский</OPTION><OPTION value="сербский" >сербский</OPTION><OPTION value="словацкий" >словацкий</OPTION><OPTION value="словенский" >словенский</OPTION><OPTION value="таджикский" >таджикский</OPTION><OPTION value="татарский" >татарский</OPTION><OPTION value="турецкий" >турецкий</OPTION><OPTION value="туркменский" >туркменский</OPTION><OPTION value="узбекский" >узбекский</OPTION><OPTION value="украинский" >украинский</OPTION><OPTION value="урду" >урду</OPTION><OPTION value="фарси" >фарси</OPTION><OPTION value="финский" >финский</OPTION><OPTION value="французский" >французский</OPTION><OPTION value="хинди" >хинди</OPTION><OPTION value="хорватский" >хорватский</OPTION><OPTION value="чешский" >чешский</OPTION><OPTION value="шведский" >шведский</OPTION><OPTION value="эстонский" >эстонский</OPTION><OPTION value="японский" >японский</OPTION></select>							<br />
+											Специализация: 
+											<select id="specialist" name="specialist"><OPTION value="" selected> выберите </OPTION><OPTION value="Авиация и космонавтика" >Авиация и космонавтика</OPTION><OPTION value="Анатомия и физиология" >Анатомия и физиология</OPTION><OPTION value="Антропология" >Антропология</OPTION><OPTION value="Археология" >Археология</OPTION><OPTION value="Архитектура" >Архитектура</OPTION><OPTION value="Астрономия" >Астрономия</OPTION><OPTION value="Бактериология" >Бактериология</OPTION><OPTION value="Банковское дело" >Банковское дело</OPTION><OPTION value="Библиография" >Библиография</OPTION><OPTION value="Биография" >Биография</OPTION><OPTION value="Биология" >Биология</OPTION><OPTION value="Ботаника" >Ботаника</OPTION><OPTION value="Военное дело" >Военное дело</OPTION><OPTION value="География и картография" >География и картография</OPTION><OPTION value="Геология" >Геология</OPTION><OPTION value="Гражданское право" >Гражданское право</OPTION><OPTION value="Демография" >Демография</OPTION><OPTION value="Детская литература" >Детская литература</OPTION><OPTION value="Журналистика" >Журналистика</OPTION><OPTION value="Зоология" >Зоология</OPTION><OPTION value="ИТ" >ИТ</OPTION><OPTION value="Индустрия" >Индустрия</OPTION><OPTION value="Искусство" >Искусство</OPTION><OPTION value="История" >История</OPTION><OPTION value="Кинематограф" >Кинематограф</OPTION><OPTION value="Корпоративное право" >Корпоративное право</OPTION><OPTION value="Косметика" >Косметика</OPTION><OPTION value="Криминология" >Криминология</OPTION><OPTION value="Лингвистика" >Лингвистика</OPTION><OPTION value="Литература" >Литература</OPTION><OPTION value="Маркетинг" >Маркетинг</OPTION><OPTION value="Математика и статистика" >Математика и статистика</OPTION><OPTION value="Медицина" >Медицина</OPTION><OPTION value="Менеджмент" >Менеджмент</OPTION><OPTION value="Металлургия" >Металлургия</OPTION><OPTION value="Минералогия" >Минералогия</OPTION><OPTION value="Море, рыбное хозяйство" >Море, рыбное хозяйство</OPTION><OPTION value="Музыка" >Музыка</OPTION><OPTION value="Мультимедиа" >Мультимедиа</OPTION><OPTION value="Недвижимость" >Недвижимость</OPTION><OPTION value="Нетрадиционная медицина" >Нетрадиционная медицина</OPTION><OPTION value="Новации и технологии" >Новации и технологии</OPTION><OPTION value="Образование" >Образование</OPTION><OPTION value="Пищевая" >Пищевая</OPTION><OPTION value="Политика" >Политика</OPTION><OPTION value="Пресса" >Пресса</OPTION><OPTION value="Программирование" >Программирование</OPTION><OPTION value="Психология" >Психология</OPTION><OPTION value="Путешествия, туризм" >Путешествия, туризм</OPTION><OPTION value="Религия" >Религия</OPTION><OPTION value="Сельское хозяйство" >Сельское хозяйство</OPTION><OPTION value="Социология" >Социология</OPTION><OPTION value="Спорт" >Спорт</OPTION><OPTION value="Страхование" >Страхование</OPTION><OPTION value="Строительство" >Строительство</OPTION><OPTION value="Театр" >Театр</OPTION><OPTION value="Телевидение и радио" >Телевидение и радио</OPTION><OPTION value="Телекоммуникации" >Телекоммуникации</OPTION><OPTION value="Техника" >Техника</OPTION><OPTION value="Транспорт" >Транспорт</OPTION><OPTION value="Физика" >Физика</OPTION><OPTION value="Философия" >Философия</OPTION><OPTION value="Фотография" >Фотография</OPTION><OPTION value="Химия" >Химия</OPTION><OPTION value="Экология" >Экология</OPTION><OPTION value="Экономика и финансы" >Экономика и финансы</OPTION><OPTION value="Электроника" >Электроника</OPTION><OPTION value="Энергетика" >Энергетика</OPTION><OPTION value="Юриспруденция" >Юриспруденция</OPTION></select>						</div>
+									<div class="search-submit-wrap">
+										<input class="search-submit-btn" type="submit" value="Найти" />
+									</div>
+							</form>
+						</div>
+<br />
+
+<p>С <b>Перевод01</b> легко подобрать опытных переводчиков для реализации письменных переводов.</p>
+
+<p>Преимущества системы:</p>
+<span class="circl">Рекомендация переводчиков сразу после публикации проекта</span><br />
+<span class="circl">15 минут — среднее время подбора переводчика</span><br />
+<span class="circl">Проверенные дипломированные переводчики</span><br />
+<span class="circl">Реальные отзывы заказчиков похожих проектов</span><br />
+<span class="circl">Переводчики со статусом юридического лица</span><br /><br />
+
+<p>Как оперативно перевести документ? <b>Перевод01</b> позволяет переводить в 3 раза быстрее и дешевле по сравнению с традиционными способами. Наша платформа дает возможность искать переводчиков эффективнее и быстрее, чем в агентствах и биржах удаленной работы.</p>
+
+<div style="text-align:center;margin:25px 0;">	
+	<a class="registration-submit" href="/customer/registration.php">Опубликовать проект бесплатно</a>
+</div>	
+
+<br />
+
+<div align="center">
+<!-- Yandex.RTB R-A-97059-2 -->
+
+</div>
+
+
+<br />
+
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11925">Техническая инструкция</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;английский - русский перевод</span></h2>												
+											
+											<h3>
+												Техника																									<span style="color: gray; margin-left: 11px">5 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+													Техническая инструкция утюга											</p>
+											
+											<a href="/translate/11925" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11924">Банковские выписки</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;английский - русский перевод</span></h2>												
+											
+											<h3>
+												Экономика и финансы																									<span style="color: gray; margin-left: 11px">1 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+																								</p>
+											
+											<a href="/translate/11924" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11922">Экспортная декларация</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;китайский - русский перевод</span></h2>												
+											
+											<h3>
+												Экономика и финансы																									<span style="color: gray; margin-left: 11px">2 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+																								</p>
+											
+											<a href="/translate/11922" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11921">Справки НДФЛ</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;русский - английский перевод</span></h2>												
+											
+											<h3>
+												Экономика и финансы																									<span style="color: gray; margin-left: 11px">6 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+																								</p>
+											
+											<a href="/translate/11921" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11920">Трудовая книжка</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;русский - английский перевод</span></h2>												
+											
+											<h3>
+												Гражданское право																									<span style="color: gray; margin-left: 11px">4 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+																								</p>
+											
+											<a href="/translate/11920" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11919">Справка о задолженностях заёмщика, История операций по кредитному договору</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;русский - английский перевод</span></h2>												
+											
+											<h3>
+												Гражданское право																									<span style="color: gray; margin-left: 11px">7 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+																								</p>
+											
+											<a href="/translate/11919" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11918">Электронная переписка</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;английский - русский перевод</span></h2>												
+											
+											<h3>
+												Корпоративное право																									<span style="color: gray; margin-left: 11px">3 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+																								</p>
+											
+											<a href="/translate/11918" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11917">Перевод с картинки</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;китайский - русский перевод</span></h2>												
+											
+											<h3>
+												Зоология																							</h3>
+											<p class="order-body-description">
+													Перевести с китайского на русский язык, с картнкиЧтобы перевод был оригинальный, не с интернета											</p>
+																								<span class="order-body-file-to-translate"><a href="/login.php">состав архив.rar</a></span>
+											
+											<a href="/translate/11917" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11916">Договор купли-продажи ТС</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;армянский - русский перевод</span></h2>												
+											
+											<h3>
+												Гражданское право																									<span style="color: gray; margin-left: 11px">5 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+													Нужен максимально качественный перевод договора.											</p>
+											
+											<a href="/translate/11916" class="order-body-more">подробнее</a>
+					</div>
+									<div class="order-body-wrap">
+
+											
+											
+											
+											<div class="order-body-time">
+																																															</div>
+											
+																						<h2 class="order-body-title"><a href="/translate/11915">Паспорта безопасности веществ</a><span class="order-body-range">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;английский - русский перевод</span></h2>												
+											
+											<h3>
+												Химия																									<span style="color: gray; margin-left: 11px">1 стр.</span>
+																							</h3>
+											<p class="order-body-description">
+																								</p>
+											
+											<a href="/translate/11915" class="order-body-more">подробнее</a>
+					</div>
+				<br /><div class="paginator"><span>1</span><a href="/index.php?page=2">2</a><a href="/index.php?page=3">3</a><a href="/index.php?page=4">4</a><a href="/index.php?page=5">5</a><a href="/index.php?page=6">6</a><a href="/index.php?page=7">7</a><a href="/index.php?page=8">8</a><a href="/index.php?page=9">9</a><a href="/index.php?page=10">10</a><a href="/index.php?page=2">&rarr;</a></div>			
+			</div>
+
+				
+			</div>
+		</div>
+		
+		<!-- Aside -->
+		<div id="c-left">
+			
+	<div class="lmenu">
+		
+		
+		<div class="box">
+                    <p>Статистика системы:</p><p>проекты - 15921</p><p>переводчики - 24576</p>		</div>
+		
+		<div class="box">
+                    <p><a href="/about.php">О нас</a></p>
+                    <p><a href="/customer/info.php">Заказчикам</a></p>
+                    <p><a href="/translator/info.php">Переводчикам</a></p>
+                    <p><a href="/feedback.php">Помощь</a></p>
+                    <p></p>
+					<br />
+		</div>
+		
+	</div>
+	
+<div class="box">
+<p align="center">
+
+<!-- реклама 0 -->
+<!-- <a href="http://www.norma-tm.ru/" target="_blank"><img src="/images/adv/norma_2.gif" border=0></a> -->
+<!-- реклама 0 -->
+
+<!-- <br /><br /> -->
+<!-- реклама 1 -->
+<!-- <a href="http://www.переводим.рф" target="_blank"><img src="/images/adv/perevodim.jpg" border=0></a> -->
+<!-- реклама 1 -->
+
+<br /><br />
+
+<!-- perevod01_left -->
+
+<br /><br />
+
+<!-- Yandex.RTB R-A-97059-1 -->
+<div id="yandex_rtb_R-A-97059-1"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-97059-1",
+                renderTo: "yandex_rtb_R-A-97059-1",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+</p>
+</div>			
+		</div>
+		<!-- /Aside -->
+		
+		<div class="c-foot"></div>
+		<div id="sub_footer"></div>
+		
+	</div>
+	<!-- /Content -->
+	
+</div>
+
+
+<!-- Footer -->
+	<div id="footer">
+
+	<div class="contacts">
+			<p>БИРЖА переводов - perevod01.ru</p>
+			<p>создание вебсервиса <a href="http://www.brom.ru">www.brom.ru</a></p>
+	</div>
+	
+</div>
+
+<div id="feedback">
+
+	<div class="links">
+		<p><a href="/about.php">О проекте</a> :: <a href="/information.php">Информационные бюллетени</a> :: <a href="/top100.php">TOP 100 Переводчиков</a> :: <a href="/study.php">Обучение</a> :: <a href="/4advertising.php">Реклама на сайте</a> :: <a href="/agreement.php">Пользовательское соглашение</a> <!-- :: <a href="/adv.php">Для партнёров</a> --> :: <a href="/feedback.php">Обратная связь</a> </p>
+	</div>
+	
+</div>
+
+
+
+<div class="clear"></div>
+<div>
+  <p align="center"><br />
+<!-- G.Ads -->
+
+<!-- G.Ads -->
+  </p>
+</div>
+<div class="clear"></div>
+
+
+
+<script type="text/javascript">	
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2651871-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter11445043 = new Ya.Metrika({id:11445043, enableAll: true, webvisor:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/11445043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t45.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='1' height='1'><\/a>")
+//--></script><!--/LiveInternet-->	
+<!-- /Footer -->
+
+</body>
+</html>
