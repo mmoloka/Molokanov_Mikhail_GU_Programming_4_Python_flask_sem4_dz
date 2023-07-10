@@ -23,7 +23,6 @@ def main():
     parser = argparse.ArgumentParser(description='Загрузкаа файлов с заданных URL')
     parser.add_argument('-f', '--file', default='urls.txt', type=str, help='Путь к файлу с URL')
     parser.add_argument('-m', '--mode', choices=['a', 't', 'm'], default='t', help='Режим выполнения (async, threading, multiprocessing)')
-    parser.add_argument('-p', '--process', type=int, default=4, help='Количество процессов/потоков (для threading, multiprocessing)')
     args = parser.parse_args()
 
     if not args.file:
